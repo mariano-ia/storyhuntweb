@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="StoryHunt is recruiting the first generation of StoryHunters. The city is not what you think. Phase 01 begins globally.">
+    <title>StoryHunt | Phase 01</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+    <!-- Noise & Grain Overlays -->
+    <div class="noise-overlay"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Cinematic Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline poster="placeholder.png" id="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-city-at-night-with-bokeh-lights-1188-large.mp4"
+                type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Abstract Coordinate Lines -->
+    <div class="map-grid"></div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch reveal-text" data-text="The City Is Not What You Think.">The City Is Not What You
+                        Think.</h1>
+                </div>
+                <p class="subtitle reveal-text" id="typewriter-text"></p>
+                <div class="scroll-indicator">
+                    <span class="mono">PHASE_01 // BUILDING</span>
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section class="manifesto" id="manifesto">
+            <div class="container smaller">
+                <div class="manifesto-grid">
+                    <div class="manifesto-item reveal-text" style="--d: 0.1s">
+                        <span class="step-num mono">[01]</span>
+                        <p>You don’t visit a city. <span class="accent">You decode it.</span></p>
+                    </div>
+                    <div class="manifesto-item reveal-text" style="--d: 0.2s">
+                        <span class="step-num mono">[02]</span>
+                        <p>You don’t follow a tour. <span class="accent">You follow a voice.</span></p>
+                    </div>
+                    <div class="manifesto-item reveal-text" style="--d: 0.3s">
+                        <span class="step-num mono">[03]</span>
+                        <p>You don’t observe. <span class="accent">You hunt.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Positioning -->
+        <section class="global" id="global">
+            <div class="container">
+                <h2 class="section-title reveal-text">Phase 01 begins.</h2>
+                <div class="cities-grid">
+                    <div class="city reveal-text" style="--d: 0.4s">
+                        <span class="mono">40.4168° N</span>
+                        <h3>MADRID</h3>
+                    </div>
+                    <div class="city reveal-text" style="--d: 0.5s">
+                        <span class="mono">52.5200° N</span>
+                        <h3>BERLIN</h3>
+                    </div>
+                    <div class="city reveal-text" style="--d: 0.6s">
+                        <span class="mono">40.7128° N</span>
+                        <h3>NEW YORK</h3>
+                    </div>
+                    <div class="city reveal-text" style="--d: 0.7s">
+                        <span class="mono">35.6762° N</span>
+                        <h3>TOKYO</h3>
+                    </div>
+                </div>
+                <p class="more-cities mono reveal-text" style="--d: 0.8s">MORE_CITIES_LOADING...</p>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta" id="cta">
+            <div class="container smaller">
+                <h2 class="reveal-text">Apply to become a StoryHunter.</h2>
+                <form action="https://formsubmit.co/marianonoceti@gmail.com" method="POST"
+                    class="recruitment-form reveal-text" style="--d: 0.2s">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="EMAIL_ADDRESS" required id="email" class="mono">
+                        <!-- Custom settings for FormSubmit -->
+                        <input type="hidden" name="_next" value="https://mariano-ia.github.com/storyhuntweb/">
+                        <input type="hidden" name="_subject" value="New StoryHunter Recruitment Request!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="submit-btn mono">
+                            <span class="btn-text">REQUEST_ACCESS</span>
+                            <span class="btn-hover">EXECUTE_REQUEST</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container flex-footer">
+            <div class="footer-left mono">
+                <p>THIS_IS_NOT_A_TOUR.</p>
+                <p>LAUNCHING_GLOBALLY.</p>
+            </div>
+            <div class="footer-right mono">
+                <p>STORYHUNT ©</p>
+                <p>PHASE_01_RECRUITMENT_MODE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
