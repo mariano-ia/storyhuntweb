@@ -1,0 +1,8 @@
+.agent/
+.claude/
+.gemini/
+.stitch/
+node_modules/
+.DS_Store
+*.md
+!README.md
