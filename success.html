@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryHunt | Application Received</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #ff0033;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Space Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .container {
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .accent {
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            opacity: 0.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--text);
+            text-decoration: none;
+            border: 1px solid var(--text);
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="accent">APPLICATION_RECEIVED // [200]</h1>
+        <p>Your credentials have been logged in our encrypted database. Phase 01 candidates are selected based on merit
+            and geographical priority.</p>
+        <p>Do not contact us. We will find you.</p>
+        <a href="/" class="back-link">RETURN_TO_BASE</a>
+    </div>
+</body>
+
+</html>
