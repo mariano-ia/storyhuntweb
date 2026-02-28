@@ -467,51 +467,53 @@ footer {
 }
 
 @keyframes glitch-anim {
-    0% {
-        clip: rect(10px, 9999px, 50px, 0);
-    }
 
-    20% {
-        clip: rect(60px, 9999px, 80px, 0);
-    }
-
-    40% {
-        clip: rect(20px, 9999px, 40px, 0);
-    }
-
-    60% {
-        clip: rect(70px, 9999px, 90px, 0);
-    }
-
-    80% {
-        clip: rect(40px, 9999px, 60px, 0);
-    }
-
+    0%,
     100% {
-        clip: rect(80px, 9999px, 100px, 0);
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.5deg);
     }
+
+    5% {
+        clip: rect(12px, 9999px, 56px, 0);
+        transform: skew(0.8deg);
+    }
+
+    10% {
+        clip: rect(48px, 9999px, 88px, 0);
+        transform: skew(-0.5deg);
+    }
+
+    15% {
+        clip: rect(0, 0, 0, 0);
+    }
+
+    /* Hidden most of the time */
 }
 
 @keyframes glitch-anim2 {
-    0% {
-        clip: rect(10px, 9999px, 40px, 0);
-    }
 
-    25% {
-        clip: rect(70px, 9999px, 80px, 0);
-    }
-
-    50% {
-        clip: rect(30px, 9999px, 50px, 0);
-    }
-
-    75% {
-        clip: rect(80px, 9999px, 90px, 0);
-    }
-
+    0%,
     100% {
-        clip: rect(20px, 9999px, 60px, 0);
+        clip: rect(10px, 9999px, 50px, 0);
+        transform: skew(-0.5deg);
     }
+
+    5% {
+        clip: rect(60px, 9999px, 80px, 0);
+        transform: skew(0.5deg);
+    }
+
+    10% {
+        clip: rect(20px, 9999px, 40px, 0);
+        transform: skew(-0.8deg);
+    }
+
+    15% {
+        clip: rect(0, 0, 0, 0);
+    }
+
+    /* Hidden most of the time */
 }
 
 @media (max-width: 768px) {
