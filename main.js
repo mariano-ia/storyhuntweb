@@ -40,32 +40,53 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Handle Form Submission handled by FormSubmit (commented out for native post)
-    /*
+    // Handle Form Submission handled by FormSubmit via AJAX
     const form = document.querySelector('.recruitment-form');
-    const submitBtn = form.querySelector('.submit-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
+    if (form) {
+        const submitBtn = form.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        // Disable form during "processing"
-        form.style.opacity = '0.5';
-        form.style.pointerEvents = 'none';
-        btnText.innerText = 'PROCESSING_REQUEST...';
+            // Disable form during "processing"
+            form.style.opacity = '0.5';
+            form.style.pointerEvents = 'none';
+            btnText.innerText = 'PROCESSING_REQUEST...';
 
-        // Simulate recruitment phase processing
-        setTimeout(() => {
-            form.innerHTML = `
-                <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--accent); padding: 2rem;">
-                    <p class="mono accent">APPLICATION_RECEIVED // [200]</p>
-                    <p class="mono" style="font-size: 0.8rem; margin-top: 1rem;">YOUR_CREDENTIALS_ARE_UNDER_REVIEW. WE_WILL_CONTACT_YOU_IF_YOU_ARE_CHOSEN_FOR_PHASE_01.</p>
-                </div>
-            `;
-        }, 2000);
-    });
-    */
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if(response.ok) {
+                    form.style.opacity = '1';
+                    form.style.pointerEvents = 'auto';
+                    form.innerHTML = `
+                        <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--accent); padding: 2rem; opacity: 1; transform: translateY(0);">
+                            <p class="mono accent" style="font-size: 1.2rem; margin-bottom: 1rem;">APPLICATION_RECEIVED // [200]</p>
+                            <p class="mono" style="font-size: 0.8rem; line-height: 1.6;">YOUR_CREDENTIALS_HAVE_BEEN_LOGGED.<br>WE_WILL_CONTACT_YOU_SHORTLY.</p>
+                        </div>
+                    `;
+                } else {
+                    btnText.innerText = 'ERROR. TRY_AGAIN.';
+                    form.style.opacity = '1';
+                    form.style.pointerEvents = 'auto';
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form', error);
+                btnText.innerText = 'ERROR. TRY_AGAIN.';
+                form.style.opacity = '1';
+                form.style.pointerEvents = 'auto';
+            });
+        });
+    }
 
     // Subtle parallax for the background grain
     window.addEventListener('scroll', () => {
