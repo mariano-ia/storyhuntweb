@@ -178,10 +178,9 @@ body.loading {
 }
 
 .main-logo {
-    height: 40px;
+    height: 60px;
     width: auto;
-    filter: invert(1);
-    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.4));
     transition: transform 0.3s var(--ease);
 }
 
