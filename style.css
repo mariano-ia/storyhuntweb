@@ -386,6 +386,47 @@ section {
     }
 }
 
+/* System Status (Countdown & Spots) */
+.system-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+}
+
+.status-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.status-block .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.status-block .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.electric-blue {
+    color: var(--electric-blue);
+}
+
+.status-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
 /* Form */
 .cta h2 {
     font-size: clamp(2rem, 5vw, 4rem);
@@ -614,6 +655,23 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         align-items: center;
+    }
+
+    .system-status {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .status-block {
+        align-items: center;
+    }
+
+    .status-divider {
+        width: 100%;
+        height: 1px;
     }
 
     /* Video Fallback for Mobile to ensure performance */
