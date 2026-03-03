@@ -6,4 +6,19 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://storyhuntweb.vercel.app/date-ideas-nyc.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/soho.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/chelsea.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/midtown.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/central-park.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/west-village.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/tribeca.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/flatiron.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/dumbo.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhuntweb.vercel.app/explore/williamsburg.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
 </urlset>
