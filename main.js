@@ -63,28 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if(response.ok) {
-                    form.style.opacity = '1';
-                    form.style.pointerEvents = 'auto';
-                    form.innerHTML = `
-                        <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--accent); padding: 2rem; opacity: 1; transform: translateY(0);">
-                            <p class="mono accent" style="font-size: 1.2rem; margin-bottom: 1rem;">APPLICATION_RECEIVED // [200]</p>
+                .then(response => {
+                    if (response.ok) {
+                        form.style.opacity = '1';
+                        form.style.pointerEvents = 'auto';
+                        form.innerHTML = `
+                        <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--electric-blue); padding: 2rem; opacity: 1; transform: translateY(0);">
+                            <p class="mono" style="color: var(--electric-blue); font-size: 1.2rem; margin-bottom: 1rem;">APPLICATION_RECEIVED // [200]</p>
                             <p class="mono" style="font-size: 0.8rem; line-height: 1.6;">YOUR_CREDENTIALS_HAVE_BEEN_LOGGED.<br>WE_WILL_CONTACT_YOU_SHORTLY.</p>
                         </div>
                     `;
-                } else {
+                    } else {
+                        btnText.innerText = 'ERROR. TRY_AGAIN.';
+                        form.style.opacity = '1';
+                        form.style.pointerEvents = 'auto';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form', error);
                     btnText.innerText = 'ERROR. TRY_AGAIN.';
                     form.style.opacity = '1';
                     form.style.pointerEvents = 'auto';
-                }
-            })
-            .catch(error => {
-                console.error('Error submitting form', error);
-                btnText.innerText = 'ERROR. TRY_AGAIN.';
-                form.style.opacity = '1';
-                form.style.pointerEvents = 'auto';
-            });
+                });
         });
     }
 
