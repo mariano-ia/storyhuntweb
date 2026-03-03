@@ -180,7 +180,7 @@ body.loading {
 .main-logo {
     height: 40px;
     width: auto;
-    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
+    filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
     transition: transform 0.3s var(--ease);
 }
 
