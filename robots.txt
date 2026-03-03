@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://storyhuntweb.vercel.app/sitemap.xml

@@ -464,6 +464,22 @@ footer {
     margin: 0.2rem 0;
 }
 
+.made-by {
+    font-size: 0.6rem !important;
+    opacity: 0.3 !important;
+    margin-top: 1rem !important;
+}
+
+.made-by a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.made-by a:hover {
+    color: var(--accent);
+}
+
 /* Reveal Animations */
 .reveal-text {
     opacity: 0;

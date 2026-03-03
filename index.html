@@ -5,8 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="StoryHunt is recruiting the first generation of StoryHunters. The city is not what you think. Phase 01 begins globally.">
-    <title>StoryHunt | Phase 01</title>
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city. Play our scavenger hunt and escape room alternative across NYC and globally.">
+    <meta name="keywords"
+        content="StoryHunt, interactive urban adventure, NYC scavenger hunt, mystery walk, escape room alternative, city game, storytelling">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://storyhuntweb.vercel.app/">
+    <meta property="og:title" content="StoryHunt | Interactive Urban Adventure">
+    <meta property="og:description"
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="StoryHunt | Interactive Urban Adventure">
+    <meta property="twitter:description"
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city.">
+
+    <title>StoryHunt | Interactive Urban Adventure</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +31,28 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD Schema for StoryHunt -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "StoryHunt",
+      "url": "https://storyhuntweb.vercel.app/",
+      "description": "An interactive urban adventure and mystery game played in the physical world.",
+      "applicationCategory": "GameApplication",
+      "genre": "Urban Adventure, Scavenger Hunt",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "0"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "StoryHunt"
+      }
+    }
+    </script>
 </head>
 
 <body class="loading">
@@ -136,6 +174,8 @@
             <div class="footer-right mono">
                 <p>STORYHUNT ©</p>
                 <p>PHASE_01_RECRUITMENT_MODE</p>
+                <p class="made-by">MADE_BY_<a href="https://www.yacare.io" target="_blank"
+                        rel="noopener noreferrer">YACARÉ</a></p>
             </div>
         </div>
     </footer>
