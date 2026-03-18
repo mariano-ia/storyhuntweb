@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city. Play our scavenger hunt and escape room alternative across NYC and globally.">
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour. Decode the city. Play our scavenger hunt and escape room alternative across NYC and globally.">
     <meta name="keywords"
         content="StoryHunt, interactive urban adventure, NYC scavenger hunt, mystery walk, escape room alternative, city game, storytelling">
 
@@ -14,13 +14,13 @@
     <meta property="og:url" content="https://storyhuntweb.vercel.app/">
     <meta property="og:title" content="StoryHunt | Interactive Urban Adventure">
     <meta property="og:description"
-        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city.">
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour. Decode the city.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="StoryHunt | Interactive Urban Adventure">
     <meta property="twitter:description"
-        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour—decode the city.">
+        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour. Decode the city.">
 
     <title>StoryHunt | Interactive Urban Adventure</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,11 +85,15 @@
     <nav class="nav">
         <div class="container flex-nav">
             <a href="/" class="logo-link">
-                <img src="assets/logo.png" alt="StoryHunt Logo" class="main-logo">
+                <img src="assets/logo_story_hunt.png" alt="StoryHunt Logo" class="main-logo">
             </a>
-            <div class="nav-right mono">
-                <span class="status-dot"></span>
-                LIVE_FEED_ACTIVE
+            <div class="nav-links">
+                <a href="#experiences">EXPERIENCES</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#testimonials">HUNTERS</a>
+            </div>
+            <div class="nav-right">
+                <a href="#cta" class="nav-cta-btn mono">BOOK_NOW</a>
             </div>
         </div>
     </nav>
@@ -99,8 +103,7 @@
         <section class="hero" id="hero">
             <div class="container">
                 <div class="glitch-wrapper">
-                    <h1 class="glitch reveal-text" data-text="The City Is Not What You Think.">The City Is Not What You
-                        Think.</h1>
+                    <h1 class="glitch reveal-text" data-text="Decode the City. Live the Story.">Decode the City. Live the Story.</h1>
                 </div>
                 <p class="subtitle reveal-text" id="typewriter-text"></p>
 
@@ -117,13 +120,14 @@
                 </div>
 
                 <div class="hero-actions reveal-text" style="--d: 0.8s">
-                    <a href="#cta" class="primary-btn mono">
-                        <span class="btn-text">JOIN_THE_HUNT</span>
-                        <span class="btn-hover">EXECUTE_RECRUITMENT</span>
+                    <a href="#experiences" class="primary-btn mono">
+                        <span class="btn-text">SEE_EXPERIENCES</span>
+                        <span class="btn-hover">EXPLORE_CITIES</span>
                     </a>
+                    <a href="#cta" class="secondary-btn mono">BOOK_NYC_NOW</a>
                 </div>
                 <div class="scroll-indicator">
-                    <span class="mono">PHASE_01 // BUILDING</span>
+                    <span class="mono">PHASE_01 // ACTIVE</span>
                     <div class="mouse">
                         <div class="wheel"></div>
                     </div>
@@ -137,64 +141,339 @@
                 <div class="manifesto-grid">
                     <div class="manifesto-item reveal-text" style="--d: 0.1s">
                         <span class="step-num mono">[01]</span>
-                        <p>You don’t visit a city. <span class="accent">You decode it.</span></p>
+                        <p>Pick a city. Choose a story. <span class="accent">You receive a curated mystery mission set in a real neighborhood.</span></p>
                     </div>
                     <div class="manifesto-item reveal-text" style="--d: 0.2s">
                         <span class="step-num mono">[02]</span>
-                        <p>You don’t follow a tour. <span class="accent">You follow a voice.</span></p>
+                        <p>Follow clues through the streets. <span class="accent">Everything happens via chat. Your phone sends you clues, riddles, and directions to hidden spots, secret doors, and forgotten places.</span></p>
                     </div>
                     <div class="manifesto-item reveal-text" style="--d: 0.3s">
                         <span class="step-num mono">[03]</span>
-                        <p>You don’t observe. <span class="accent">You hunt.</span></p>
+                        <p>Solve the puzzle. Live the legend. <span class="accent">2-3 hours of immersive adventure. No guide. No bus. Just you and the city.</span></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Global Positioning -->
-        <section class="global" id="global">
+        <!-- Experience Cards -->
+        <section class="experiences" id="experiences">
+            <div class="container-wide">
+                <h2 class="section-title reveal-text">SELECT_YOUR_MISSION</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    ACTIVE_OPERATIONS: 1 / 6 &nbsp;|&nbsp; CITIES_EXPANDING
+                </p>
+                <div class="experience-grid">
+
+                    <!-- NYC Card - ACTIVE -->
+                    <div class="experience-card active reveal-text" style="--d: 0.2s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono">
+                                    <span class="status-dot"></span> LIVE
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=600&q=80" alt="New York City" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">40.7128° N, 74.0060° W</span>
+                                    <h3>NEW YORK CITY</h3>
+                                    <p class="card-tagline">The Midtown Protocol</p>
+                                    <div class="card-countdown mono" id="nyc-countdown"></div>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE MIDTOWN PROTOCOL</h3>
+                                <p class="card-description">A classified signal has been intercepted in Midtown Manhattan. A chat-based guide sends you clues in real time. You have 2.5 hours to follow the trail through iconic landmarks, hidden corridors, and forgotten history before the transmission goes dark.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">DURATION:</span> 2.5 HRS</div>
+                                    <div><span class="label">DISTANCE:</span> ~3 KM</div>
+                                    <div><span class="label">DIFFICULTY:</span> ███░░</div>
+                                    <div><span class="label">PRICE:</span> <span class="price-old">$8</span> <span class="price-free">FREE</span> <span class="price-promo">LAUNCH_PROMO</span></div>
+                                </div>
+                                <a href="#cta" class="primary-btn mono card-buy-btn">
+                                    <span class="btn-text">GET_FREE_ACCESS</span>
+                                    <span class="btn-hover">SECURE_YOUR_SPOT</span>
+                                </a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chelsea Card - COMING SOON (NYC) -->
+                    <div class="experience-card coming-soon reveal-text" style="--d: 0.25s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono coming-soon-badge">
+                                    <span class="status-dot status-dot--pending"></span> COMING_SOON
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1728930684463-876c208c2640?w=600&q=80" alt="Chelsea" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">40.7465° N, 74.0014° W</span>
+                                    <h3>CHELSEA</h3>
+                                    <p class="card-tagline">The Gallery Cipher</p>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE GALLERY CIPHER</h3>
+                                <p class="card-description">Art collectors are disappearing. A series of coded messages hidden in plain sight across Chelsea's gallery district. The paintings are watching. Follow the frames before the exhibition closes forever.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                                    <div><span class="label">ETA:</span> Q3 2026</div>
+                                </div>
+                                <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- East Village Card - COMING SOON (NYC) -->
+                    <div class="experience-card coming-soon reveal-text" style="--d: 0.28s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono coming-soon-badge">
+                                    <span class="status-dot status-dot--pending"></span> COMING_SOON
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1639999472003-dc2320ce5708?w=600&q=80" alt="East Village" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">40.7265° N, 73.9815° W</span>
+                                    <h3>EAST VILLAGE</h3>
+                                    <p class="card-tagline">The Punk Frequency</p>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE PUNK FREQUENCY</h3>
+                                <p class="card-description">A pirate radio station from 1977 has started broadcasting again. Trace the signal through CBGB's ghost, underground tattoo parlors, and walls that still scream. The counterculture never died. It just went underground.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                                    <div><span class="label">ETA:</span> Q3 2026</div>
+                                </div>
+                                <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Madrid Card - COMING SOON -->
+                    <div class="experience-card coming-soon reveal-text" style="--d: 0.3s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono coming-soon-badge">
+                                    <span class="status-dot status-dot--pending"></span> COMING_SOON
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=600&q=80" alt="Madrid" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">40.4168° N, 3.7038° W</span>
+                                    <h3>MADRID</h3>
+                                    <p class="card-tagline">The Prado Protocol</p>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE PRADO PROTOCOL</h3>
+                                <p class="card-description">A stolen masterpiece. A trail of cryptic symbols through Retiro Park and the old quarter. Madrid’s greatest mystery awaits its first hunters.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                                    <div><span class="label">ETA:</span> Q3 2026</div>
+                                </div>
+                                <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Berlin Card - COMING SOON -->
+                    <div class="experience-card coming-soon reveal-text" style="--d: 0.4s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono coming-soon-badge">
+                                    <span class="status-dot status-dot--pending"></span> COMING_SOON
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1546726747-421c6d69c929?w=600&q=80" alt="Berlin" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">52.5200° N, 13.4050° E</span>
+                                    <h3>BERLIN</h3>
+                                    <p class="card-tagline">The Wall Frequency</p>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE WALL FREQUENCY</h3>
+                                <p class="card-description">A Cold War numbers station has reactivated. Trace its signal through divided streets, underground bunkers, and Berlin’s layered ghosts. History speaks if you know how to listen.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                                    <div><span class="label">ETA:</span> Q4 2026</div>
+                                </div>
+                                <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tokyo Card - COMING SOON -->
+                    <div class="experience-card coming-soon reveal-text" style="--d: 0.5s">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="card-status mono coming-soon-badge">
+                                    <span class="status-dot status-dot--pending"></span> COMING_SOON
+                                </div>
+                                <img class="card-image" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&q=80" alt="Tokyo" loading="lazy">
+                                <div class="card-content">
+                                    <span class="card-coords mono">35.6762° N, 139.6503° E</span>
+                                    <h3>TOKYO</h3>
+                                    <p class="card-tagline">The Shibuya Signal</p>
+                                    <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>THE SHIBUYA SIGNAL</h3>
+                                <p class="card-description">Neon signs flicker in code. A digital anomaly pulses beneath the crossing. Navigate Tokyo’s intersection of ancient tradition and future technology to decode the signal.</p>
+                                <div class="card-meta">
+                                    <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                                    <div><span class="label">ETA:</span> 2027</div>
+                                </div>
+                                <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                                <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery" id="gallery">
             <div class="container">
-                <h2 class="section-title reveal-text">Phase 01 begins.</h2>
-                <div class="cities-grid">
-                    <div class="city reveal-text" style="--d: 0.4s">
-                        <span class="mono">40.4168° N</span>
-                        <h3>MADRID</h3>
+                <h2 class="section-title reveal-text">FIELD_REPORTS</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    INTERCEPTED_FROM_ACTIVE_HUNTERS
+                </p>
+                <div class="gallery-grid">
+                    <div class="gallery-item gallery-item--tall reveal-text" style="--d: 0.2s">
+                        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=600&q=80"
+                             alt="Hunters decoding clues on a NYC street" loading="lazy">
+                        <div class="gallery-caption mono">NYC // MISSION_ACTIVE</div>
                     </div>
-                    <div class="city reveal-text" style="--d: 0.5s">
-                        <span class="mono">52.5200° N</span>
-                        <h3>BERLIN</h3>
+                    <div class="gallery-item reveal-text" style="--d: 0.3s">
+                        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80"
+                             alt="NYC street at dusk during a StoryHunt mission" loading="lazy">
+                        <div class="gallery-caption mono">MANHATTAN // DUSK_OPS</div>
                     </div>
-                    <div class="city reveal-text" style="--d: 0.6s">
-                        <span class="mono">40.7128° N</span>
-                        <h3>NEW YORK</h3>
+                    <div class="gallery-item reveal-text" style="--d: 0.4s">
+                        <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=600&q=80"
+                             alt="Hunter navigating with phone through city streets" loading="lazy">
+                        <div class="gallery-caption mono">HUNTER_01 // TRACKING</div>
                     </div>
-                    <div class="city reveal-text" style="--d: 0.7s">
-                        <span class="mono">35.6762° N</span>
-                        <h3>TOKYO</h3>
+                    <div class="gallery-item reveal-text" style="--d: 0.5s">
+                        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80"
+                             alt="NYC cityscape at dusk" loading="lazy">
+                        <div class="gallery-caption mono">SECTOR_04 // ACTIVE_ZONE</div>
+                    </div>
+                    <div class="gallery-item reveal-text" style="--d: 0.6s">
+                        <img src="https://images.unsplash.com/photo-1769837375176-d216857cf2d8?w=600&q=80"
+                             alt="Mysterious urban alley with hidden clues" loading="lazy">
+                        <div class="gallery-caption mono">LOCATION_07 // CLASSIFIED</div>
+                    </div>
+                    <div class="gallery-item reveal-text" style="--d: 0.7s">
+                        <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80"
+                             alt="NYC skyline at night - the hunting ground" loading="lazy">
+                        <div class="gallery-caption mono">OPERATION_ZONE // NYC</div>
                     </div>
                 </div>
-                <p class="more-cities mono reveal-text" style="--d: 0.8s">MORE_CITIES_LOADING...</p>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="section-title reveal-text">HUNTER_DEBRIEFS</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    CLASSIFIED_FIELD_REVIEWS // CLEARANCE_LEVEL: PUBLIC
+                </p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal-text" style="--d: 0.2s">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote>
+                            "We thought we knew New York. We were wrong. The Midtown Protocol took us to places we’d walked past a hundred times and made us see them for the first time. My girlfriend is still talking about the hidden signal."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar mono">JR</div>
+                            <div>
+                                <p class="author-name">Jake R.</p>
+                                <p class="author-meta mono">NYC // MISSION_COMPLETED</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal-text" style="--d: 0.3s">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote>
+                            "I was nervous doing it alone, but that made it even better. I felt like a detective in my own movie. Three hours flew by and I didn’t check Instagram once. The Midtown Protocol is the real deal."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar mono">MS</div>
+                            <div>
+                                <p class="author-name">Mia S.</p>
+                                <p class="author-meta mono">NYC // SOLO_OPERATIVE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal-text" style="--d: 0.4s">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote>
+                            "We did this for a team offsite instead of another boring escape room. Best decision ever. The whole team was arguing about clues in the best possible way. Already planning the next one."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar mono">CT</div>
+                            <div>
+                                <p class="author-name">Carlos & Team</p>
+                                <p class="author-meta mono">NYC // SQUAD_MISSION</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Proof Counter -->
+                <div class="social-proof reveal-text" style="--d: 0.6s">
+                    <div class="avatar-stack">
+                        <span class="stack-avatar" style="background: #ff0033;">MK</span>
+                        <span class="stack-avatar" style="background: #00d2ff;">JR</span>
+                        <span class="stack-avatar" style="background: #00ff66;">AL</span>
+                        <span class="stack-avatar" style="background: #ff6600;">TS</span>
+                        <span class="stack-avatar" style="background: #cc00ff;">ND</span>
+                        <span class="stack-avatar" style="background: #ffcc00; color: #000;">WP</span>
+                    </div>
+                    <div class="social-proof-text">
+                        <span class="social-proof-count">500+</span>
+                        <span class="social-proof-label mono">HUNTERS_COMPLETED_THE_MISSION</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Call to Action -->
         <section class="cta" id="cta">
             <div class="container smaller">
-                <h2 class="reveal-text">Apply to become a StoryHunter.</h2>
-                <form action="https://formsubmit.co/marianonoceti@gmail.com" method="POST"
+                <h2 class="reveal-text">Ready to Hunt?</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    LEAVE_YOUR_EMAIL. AS_SOON_AS_WE_GO_LIVE, YOU_GET_FREE_ACCESS.
+                </p>
+                <form action="https://storyhunt-app.vercel.app/api/contacts" method="POST"
                     class="recruitment-form reveal-text" style="--d: 0.2s">
                     <div class="input-group">
                         <input type="email" name="email" placeholder="EMAIL_ADDRESS" required id="email" class="mono">
-                        <!-- Custom settings for FormSubmit -->
-                        <input type="hidden" name="_subject" value="New StoryHunter Recruitment Request!">
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_captcha" value="false">
                         <button type="submit" class="submit-btn mono">
                             <span class="btn-text">REQUEST_ACCESS</span>
                             <span class="btn-hover">EXECUTE_REQUEST</span>
                         </button>
                     </div>
                 </form>
+                <div class="trust-signals mono reveal-text" style="--d: 0.4s">
+                    <span>NO_SPAM_EVER</span>
+                    <span>INSTANT_CONFIRMATION</span>
+                    <span>FREE_CANCELLATION</span>
+                </div>
             </div>
         </section>
     </main>

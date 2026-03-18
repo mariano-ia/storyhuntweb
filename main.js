@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typewriter Effect
     const typewriterElement = document.getElementById('typewriter-text');
-    const textToType = "An interactive city adventure is about to begin in New York City.";
+    const textToType = "An immersive mystery walk through NYC's hidden layers. Not a tour. A chat-based adventure you play with your phone, your wits, and the streets.";
     let index = 0;
 
     function typeWriter() {
@@ -96,11 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.innerText = 'PROCESSING_REQUEST...';
 
             const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
 
             fetch(form.action, {
                 method: "POST",
-                body: formData,
+                body: JSON.stringify(data),
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             })
@@ -115,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         form.innerHTML = `
                         <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--electric-blue); padding: 2rem; opacity: 1; transform: translateY(0);">
                             <p class="mono" style="color: var(--electric-blue); font-size: 1.2rem; margin-bottom: 1rem;">APPLICATION_RECEIVED // [200]</p>
-                            <p class="mono" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">YOUR_CREDENTIALS_HAVE_BEEN_LOGGED. SPOT SECURED.<br>WE_WILL_CONTACT_YOU_SHORTLY.</p>
+                            <p class="mono" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">YOUR_SPOT_IS_SECURED. WHEN_WE_GO_LIVE, YOU_GET_FREE_ACCESS.<br>CHECK_YOUR_INBOX_FOR_CONFIRMATION.</p>
                             <a href="/" class="primary-btn mono" style="padding: 0.8rem 2rem; font-size: 0.8rem;">
                                 <span class="btn-text">RETURN_TO_BASE</span>
                                 <span class="btn-hover">EXECUTE_RETURN</span>
@@ -137,10 +139,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Subtle parallax for the background grain
-    window.addEventListener('scroll', () => {
-        const offset = window.pageYOffset;
-        const main = document.getElementById('main-content');
-        // Slight parallax for the noise layer if needed, but keeping it minimal for "serious" vibe
+    // Card Flip Interaction
+    document.querySelectorAll('.experience-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't flip if clicking a link or button inside the card
+            if (e.target.closest('a') || e.target.closest('button')) return;
+            card.classList.toggle('flipped');
+        });
+    });
+
+    // NYC Card Countdown Timer
+    function updateNYCCardCountdown() {
+        const nycCountdownEl = document.getElementById('nyc-countdown');
+        if (!nycCountdownEl) return;
+
+        const now = new Date();
+        const diff = Math.max(0, launchDate - now);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        nycCountdownEl.innerHTML = `LAUNCH: ${days}D ${hours}H ${mins}M`;
+    }
+    updateNYCCardCountdown();
+    setInterval(updateNYCCardCountdown, 60000);
+
+    // Nav Scroll Effect
+    const nav = document.querySelector('.nav');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('nav--scrolled');
+            } else {
+                nav.classList.remove('nav--scrolled');
+            }
+        });
+    }
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const targetId = anchor.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
 });
