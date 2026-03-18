@@ -1485,8 +1485,25 @@ footer {
    ============================================= */
 
 @media (max-width: 768px) {
+    .nav {
+        padding: 1rem 0;
+    }
+
+    .main-logo {
+        height: 36px;
+    }
+
     .nav-links {
         display: none;
+    }
+
+    .nav-cta-btn {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .hero {
+        padding-top: 90px;
     }
 
     .hero-actions {
@@ -1495,10 +1512,17 @@ footer {
         gap: 1rem;
     }
 
+    .primary-btn {
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+    }
+
     .secondary-btn {
         margin-left: 0;
         text-align: center;
         justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
     }
 
     .experience-grid {
