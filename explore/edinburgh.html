@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover the secrets of Edinburgh with StoryHunt. An interactive urban adventure through the city's coolest neighborhoods. Mystery walks and hidden gems.">
+    <meta name="keywords"
+        content="Edinburgh, Edinburgh walk, StoryHunt, interactive adventure, hidden gems Edinburgh, Edinburgh mystery game">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://storyhuntweb.vercel.app/explore/edinburgh.html">
+    <meta property="og:title" content="The Edinburgh Secret Society | StoryHunt Interactive Adventure">
+
+    <title>Edinburgh Mystery | StoryHunt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EWN9RMYR9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-4EWN9RMYR9');
+    </script>
+</head>
+
+<body class="loading">
+    <div class="noise-overlay"></div>
+    <div class="grain-overlay"></div>
+    <div class="video-background">
+        <div class="video-overlay"></div>
+    </div>
+    <div class="map-grid"></div>
+
+    <nav class="nav">
+        <div class="container flex-nav">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/logo_story_hunt.png" alt="StoryHunt Logo" class="main-logo">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#experiences">EXPERIENCES</a>
+                <a href="../index.html#gallery">GALLERY</a>
+                <a href="../index.html#testimonials">HUNTERS</a>
+            </div>
+            <div class="nav-right">
+                <a href="#cta" class="nav-cta-btn mono">BOOK_NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch reveal-text" data-text="Decode Edinburgh.">Decode Edinburgh.</h1>
+                </div>
+                <p class="subtitle reveal-text">Warehouse parties aren't the only secrets here. The hunt explores the heart of Edinburgh.</p>
+
+                <div class="system-status reveal-text" style="--d: 0.5s">
+                    <div class="status-block mono">
+                        <span class="label">SYSTEM_LAUNCH:</span>
+                        <span class="value accent" id="countdown-days">CALCULATING...</span>
+                    </div>
+                    <div class="status-divider"></div>
+                    <div class="status-block mono">
+                        <span class="label">FREE_ACCESS_GRANTS:</span>
+                        <span class="value electric-blue" id="spots-counter">100 / 100</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions reveal-text" style="--d: 0.8s">
+                    <a href="#cta" class="primary-btn mono">
+                        <span class="btn-text">JOIN_THE_HUNT_IN_EDINBURGH</span>
+                        <span class="btn-hover">SECURE_YOUR_SPOT</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="manifesto" id="how-it-works">
+            <div class="container smaller">
+                <div class="manifesto-grid">
+                    <div class="manifesto-item reveal-text" style="--d: 0.1s">
+                        <span class="step-num mono">[01]</span>
+                        <p>Pick a city. Choose a story. <span class="accent">You receive a curated mystery mission set in a real neighborhood.</span></p>
+                    </div>
+                    <div class="manifesto-item reveal-text" style="--d: 0.2s">
+                        <span class="step-num mono">[02]</span>
+                        <p>Follow clues through the streets. <span class="accent">Everything happens via chat. Your phone sends you clues, riddles, and directions to hidden spots, secret doors, and forgotten places.</span></p>
+                    </div>
+                    <div class="manifesto-item reveal-text" style="--d: 0.3s">
+                        <span class="step-num mono">[03]</span>
+                        <p>Solve the puzzle. Live the legend. <span class="accent">2-3 hours of immersive adventure. No guide. No bus. Just you and the city.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta" id="cta">
+            <div class="container smaller">
+                <h2 class="reveal-text">Ready to Hunt?</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    LEAVE_YOUR_EMAIL. AS_SOON_AS_WE_GO_LIVE, YOU_GET_FREE_ACCESS.
+                </p>
+                <form action="https://storyhunt-app.vercel.app/api/contacts" method="POST"
+                    class="recruitment-form reveal-text" style="--d: 0.2s">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="EMAIL_ADDRESS" required id="email" class="mono">
+                        <button type="submit" class="submit-btn mono">
+                            <span class="btn-text">REQUEST_ACCESS</span>
+                            <span class="btn-hover">EXECUTE_REQUEST</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Social Proof Counter -->
+                <div class="social-proof reveal-text" style="--d: 0.4s">
+                    <div class="avatar-stack">
+                        <span class="stack-avatar" style="background: #ff0033;">MK</span>
+                        <span class="stack-avatar" style="background: #00d2ff;">JR</span>
+                        <span class="stack-avatar" style="background: #00ff66;">AL</span>
+                        <span class="stack-avatar" style="background: #ff6600;">TS</span>
+                        <span class="stack-avatar" style="background: #cc00ff;">ND</span>
+                        <span class="stack-avatar" style="background: #ffcc00; color: #000;">WP</span>
+                    </div>
+                    <div class="social-proof-text">
+                        <span class="social-proof-count">500+</span>
+                        <span class="social-proof-label mono">HUNTERS_COMPLETED_THE_MISSION</span>
+                    </div>
+                </div>
+
+                <div class="trust-signals mono reveal-text" style="--d: 0.5s">
+                    <span>NO_SPAM_EVER</span>
+                    <span>INSTANT_CONFIRMATION</span>
+                    <span>FREE_CANCELLATION</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container flex-footer">
+            <div class="footer-left mono">
+                <p>LOCATION: EDINBURGH</p>
+                <p>STATUS: ANALYZING_STREET_ART_PATTERNS</p>
+            </div>
+            <div class="footer-right mono">
+                <p>STORYHUNT &copy;</p>
+                <p class="made-by">MADE_BY_<a href="https://www.yacare.io" target="_blank"
+                        rel="noopener noreferrer">YACAR&Eacute;</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
