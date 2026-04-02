@@ -1,0 +1,144 @@
+{
+  "posts": [
+    {
+      "date": "2026-04-03",
+      "day_of_week": "Friday",
+      "content_type": "MYSTERY_TEASER",
+      "topic": "The building at 112 Prince Street in SoHo hides 150 years of secrets behind its cast-iron facade",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-06",
+      "day_of_week": "Monday",
+      "content_type": "DID_YOU_KNOW",
+      "topic": "Grand Central Terminal has a secret platform (Track 61) used by President Roosevelt",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-07",
+      "day_of_week": "Tuesday",
+      "content_type": "NEIGHBORHOOD_SPOTLIGHT",
+      "topic": "West Village: the narrowest house in NYC is at 75\u00bd Bedford Street \u2014 just 9.5 feet wide",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-08",
+      "day_of_week": "Wednesday",
+      "content_type": "BEHIND_THE_HUNT",
+      "topic": "What happens when your phone sends you into a hidden alley in Midtown at 3PM",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-09",
+      "day_of_week": "Thursday",
+      "content_type": "MYSTERY_TEASER",
+      "topic": "There is a whispering gallery in Grand Central where secrets travel across the ceiling",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-10",
+      "day_of_week": "Friday",
+      "content_type": "DID_YOU_KNOW",
+      "topic": "Below Bryant Park lies an entire underground extension of the NY Public Library",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-13",
+      "day_of_week": "Monday",
+      "content_type": "NEIGHBORHOOD_SPOTLIGHT",
+      "topic": "Harlem: the Cotton Club, Strivers Row, and jazz legends that still haunt the streets",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-14",
+      "day_of_week": "Tuesday",
+      "content_type": "QUOTE",
+      "topic": "The city is not a place. It is a puzzle waiting to be decoded.",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-15",
+      "day_of_week": "Wednesday",
+      "content_type": "MYSTERY_TEASER",
+      "topic": "A hidden bar behind an unmarked door in the Flatiron District has been serving drinks since 1854",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-16",
+      "day_of_week": "Thursday",
+      "content_type": "DID_YOU_KNOW",
+      "topic": "The Brooklyn Bridge has a secret wine cellar built into its stone arches",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-17",
+      "day_of_week": "Friday",
+      "content_type": "NEIGHBORHOOD_SPOTLIGHT",
+      "topic": "DUMBO: the Manhattan Bridge view that every photographer knows \u2014 but the real secrets are underground",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-20",
+      "day_of_week": "Monday",
+      "content_type": "BEHIND_THE_HUNT",
+      "topic": "You get a message: Follow the mosaic trail. The first clue is under your feet.",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-21",
+      "day_of_week": "Tuesday",
+      "content_type": "MYSTERY_TEASER",
+      "topic": "There is an abandoned subway station directly beneath City Hall \u2014 and you can see it if you know how",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-22",
+      "day_of_week": "Wednesday",
+      "content_type": "DID_YOU_KNOW",
+      "topic": "The Chrysler Building lobby has a ceiling mural that almost nobody looks up to see",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-23",
+      "day_of_week": "Thursday",
+      "content_type": "NEIGHBORHOOD_SPOTLIGHT",
+      "topic": "Chelsea: 200+ art galleries in 10 blocks, and a former Nabisco factory turned food hall",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-24",
+      "day_of_week": "Friday",
+      "content_type": "QUOTE",
+      "topic": "Every building has a story. Most of them are classified.",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-27",
+      "day_of_week": "Monday",
+      "content_type": "MYSTERY_TEASER",
+      "topic": "Somewhere in Tribeca, the original Ghostbusters firehouse still stands \u2014 and it is still in use",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-28",
+      "day_of_week": "Tuesday",
+      "content_type": "DID_YOU_KNOW",
+      "topic": "Central Park has a hidden cave called The Ramble that most New Yorkers have never found",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-29",
+      "day_of_week": "Wednesday",
+      "content_type": "NEIGHBORHOOD_SPOTLIGHT",
+      "topic": "Greenwich Village: where the Beat Generation wrote, the Stonewall uprising started, and Bob Dylan played his first NYC gig",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-30",
+      "day_of_week": "Thursday",
+      "content_type": "BEHIND_THE_HUNT",
+      "topic": "The chat says: Look up. The answer is in the architecture. You have 90 seconds.",
+      "status": "pending"
+    }
+  ]
+}
