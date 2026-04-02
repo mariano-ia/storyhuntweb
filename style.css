@@ -546,6 +546,66 @@ section {
     transform: translateY(-100%);
 }
 
+/* Neighborhood Content Section */
+.neighborhood-content {
+    padding: 8vh 0;
+    position: relative;
+}
+
+.content-block {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.content-title {
+    font-family: var(--font-mono);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.content-block p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.content-block p .accent {
+    color: var(--accent);
+}
+
+.related-hunts {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+}
+
+.related-hunts span:first-child {
+    color: var(--text-muted);
+}
+
+.related-hunts a {
+    color: var(--electric-blue);
+    text-decoration: none;
+    padding: 4px 12px;
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.related-hunts a:hover {
+    background: rgba(0, 210, 255, 0.1);
+    border-color: var(--electric-blue);
+}
+
 /* Footer */
 footer {
     padding: 10vh 0 5vh;

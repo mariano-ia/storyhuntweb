@@ -1,87 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typewriter Effect
     const typewriterElement = document.getElementById('typewriter-text');
-    const textToType = "An immersive mystery walk through NYC's hidden layers. Not a tour. A chat-based adventure you play with your phone, your wits, and the streets.";
-    let index = 0;
+    if (typewriterElement) {
+        const textToType = "An immersive mystery walk through NYC's hidden layers. Not a tour. A chat-based adventure you play with your phone, your wits, and the streets.";
+        let index = 0;
 
-    function typeWriter() {
-        if (index < textToType.length) {
-            typewriterElement.innerHTML += textToType.charAt(index);
-            index++;
-            setTimeout(typeWriter, 50);
-        } else {
-            typewriterElement.classList.add('visible');
-        }
-    }
-
-    // Remove loading class
-    setTimeout(() => {
-        document.body.classList.remove('loading');
-        const glitchEl = document.querySelector('.glitch');
-        if (glitchEl) glitchEl.classList.add('visible');
-        typeWriter();
-    }, 1500);
-
-    // System Launch & Spots counter logic
-    const launchDate = new Date('2026-04-03T00:00:00-05:00'); // Fixed 30 days from March 3rd
-    const maxSpots = 100;
-
-    function updateSystemStatus() {
-        const now = new Date();
-        const diffTime = Math.max(0, launchDate - now);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-        const countdownEl = document.getElementById('countdown-days');
-        if (countdownEl) {
-            countdownEl.innerText = `T-MINUS ${diffDays} DAYS`;
-        }
-
-        // Simulate scarcity dynamically using time logic so it naturally decays globally
-        const totalCampaignDays = 30;
-        const daysPassed = Math.max(0, totalCampaignDays - diffDays);
-        // Decrease roughly 2-3 spots per day, capping at 0.
-        let simulatedSpots = maxSpots - Math.floor(daysPassed * 2.8);
-
-        // If the user has already registered on this browser, guarantee it drops by 1 to show instant effect
-        if (localStorage.getItem('storyhunt_access_requested') === 'true') {
-            simulatedSpots = simulatedSpots - 1;
-        }
-
-        simulatedSpots = Math.max(0, simulatedSpots); // Never go below 0
-
-        const spotsEl = document.getElementById('spots-counter');
-        if (spotsEl) {
-            spotsEl.innerText = `${simulatedSpots} / 100`;
-            if (simulatedSpots < 20) {
-                spotsEl.classList.remove('electric-blue');
-                spotsEl.classList.add('accent'); // Turn red if scarcity is high
+        function typeWriter() {
+            if (index < textToType.length) {
+                typewriterElement.innerHTML += textToType.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50);
+            } else {
+                typewriterElement.classList.add('visible');
             }
         }
+
+        // Remove loading class
+        setTimeout(() => {
+            document.body.classList.remove('loading');
+            const glitchEl = document.querySelector('.glitch');
+            if (glitchEl) glitchEl.classList.add('visible');
+            typeWriter();
+        }, 1500);
+    } else {
+        // Explore pages: just remove loading
+        setTimeout(() => {
+            document.body.classList.remove('loading');
+            const glitchEl = document.querySelector('.glitch');
+            if (glitchEl) glitchEl.classList.add('visible');
+        }, 1500);
     }
 
-    // Initialize counters
-    updateSystemStatus();
-
     // Intersection Observer for sections
-    const observerOptions = {
-        threshold: 0.2
-    };
-
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: stop observing once revealed
-                // revealObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.reveal-text').forEach(el => {
         revealObserver.observe(el);
     });
 
-    // Handle Form Submission handled by FormSubmit via AJAX
+    // Handle Form Submission via AJAX
     const form = document.querySelector('.recruitment-form');
     if (form) {
         const submitBtn = form.querySelector('.submit-btn');
@@ -90,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // Disable form during "processing"
             form.style.opacity = '0.5';
             form.style.pointerEvents = 'none';
             btnText.innerText = 'PROCESSING_REQUEST...';
@@ -108,16 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
                 .then(response => {
                     if (response.ok) {
-                        // Notify system that user requested access
-                        localStorage.setItem('storyhunt_access_requested', 'true');
-                        updateSystemStatus(); // Decrement counter immediately
-
                         form.style.opacity = '1';
                         form.style.pointerEvents = 'auto';
                         form.innerHTML = `
                         <div class="reveal-text visible" style="margin-top: 2rem; border: 1px solid var(--electric-blue); padding: 2rem; opacity: 1; transform: translateY(0);">
                             <p class="mono" style="color: var(--electric-blue); font-size: 1.2rem; margin-bottom: 1rem;">APPLICATION_RECEIVED // [200]</p>
-                            <p class="mono" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">YOUR_SPOT_IS_SECURED. WHEN_WE_GO_LIVE, YOU_GET_FREE_ACCESS.<br>CHECK_YOUR_INBOX_FOR_CONFIRMATION.</p>
+                            <p class="mono" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">YOUR_SPOT_IS_SECURED. YOU_GET_FREE_ACCESS_TO_YOUR_FIRST_HUNT.<br>CHECK_YOUR_INBOX_FOR_CONFIRMATION.</p>
                             <a href="/" class="primary-btn mono" style="padding: 0.8rem 2rem; font-size: 0.8rem;">
                                 <span class="btn-text">RETURN_TO_BASE</span>
                                 <span class="btn-hover">EXECUTE_RETURN</span>
@@ -142,28 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Card Flip Interaction
     document.querySelectorAll('.experience-card').forEach(card => {
         card.addEventListener('click', (e) => {
-            // Don't flip if clicking a link or button inside the card
             if (e.target.closest('a') || e.target.closest('button')) return;
             card.classList.toggle('flipped');
         });
     });
-
-    // NYC Card Countdown Timer
-    function updateNYCCardCountdown() {
-        const nycCountdownEl = document.getElementById('nyc-countdown');
-        if (!nycCountdownEl) return;
-
-        const now = new Date();
-        const diff = Math.max(0, launchDate - now);
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-        nycCountdownEl.innerHTML = `LAUNCH: ${days}D ${hours}H ${mins}M`;
-    }
-    updateNYCCardCountdown();
-    setInterval(updateNYCCardCountdown, 60000);
 
     // Nav Scroll Effect
     const nav = document.querySelector('.nav');

@@ -1,57 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://storyhuntweb.vercel.app/</loc>
-    <lastmod>2026-03-03</lastmod>
+    <loc>https://storyhunt.city/</loc>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://storyhuntweb.vercel.app/date-ideas-nyc.html</loc>
-    <lastmod>2026-03-03</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://storyhunt.city/date-ideas-nyc.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/soho.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/chelsea.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/midtown.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/central-park.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/west-village.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/tribeca.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/flatiron.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/dumbo.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/williamsburg.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/harlem.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/bushwick.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/times-square.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/greenwich-village.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/bryant-park.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/high-line.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/hidden-places-nyc.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/upper-east-side.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/grand-central.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/secret-spots-nyc.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/urban-legends-nyc.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/mysteries-in-nyc.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/weird-places-nyc.html</loc><lastmod>2026-03-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/true-crime-tours-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/haunted-places-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/ghost-tours-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/speakeasies-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/mob-history-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/abandoned-places-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/movie-locations-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/literary-tours-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/architectural-marvels-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/underground-tunnels-nyc.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/haunted-places-greenwich-village.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/true-crime-lower-east-side.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/hidden-speakeasies-soho.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/secret-gardens-central-park.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/mob-history-little-italy.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/ghosts-of-broadway.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/abandoned-stations-nyc-subway.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/weird-history-williamsburg.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/literary-secrets-west-village.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
-  <url><loc>https://storyhuntweb.vercel.app/explore/hidden-art-dumbo.html</loc><lastmod>2026-03-04</lastmod><priority>0.7</priority></url>
+  <!-- NYC Neighborhoods -->
+  <url><loc>https://storyhunt.city/explore/soho.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/chelsea.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/midtown.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/central-park.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/west-village.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/tribeca.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/flatiron.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/dumbo.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/williamsburg.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/harlem.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/bushwick.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/times-square.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/greenwich-village.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/bryant-park.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/high-line.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/upper-east-side.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://storyhunt.city/explore/grand-central.html</loc><lastmod>2026-04-02</lastmod><priority>0.8</priority></url>
+  <!-- NYC Topics -->
+  <url><loc>https://storyhunt.city/explore/hidden-places-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/secret-spots-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/urban-legends-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/mysteries-in-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/weird-places-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/true-crime-tours-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/haunted-places-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/ghost-tours-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/speakeasies-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/mob-history-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/abandoned-places-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/movie-locations-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/literary-tours-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/architectural-marvels-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/underground-tunnels-nyc.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <!-- NYC Deep Dives -->
+  <url><loc>https://storyhunt.city/explore/haunted-places-greenwich-village.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/true-crime-lower-east-side.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/hidden-speakeasies-soho.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/secret-gardens-central-park.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/mob-history-little-italy.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/ghosts-of-broadway.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/abandoned-stations-nyc-subway.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/weird-history-williamsburg.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/literary-secrets-west-village.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://storyhunt.city/explore/hidden-art-dumbo.html</loc><lastmod>2026-04-02</lastmod><priority>0.7</priority></url>
 </urlset>
