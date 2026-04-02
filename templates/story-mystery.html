@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; width: 1080px; height: 1920px; overflow: hidden; }
+.story { width: 1080px; height: 1920px; position: relative; overflow: hidden; background: #050505; font-family: 'Inter', sans-serif; }
+.bg-image { position: absolute; inset: 0; background: var(--bg) center/cover; filter: brightness(0.3) contrast(1.1); }
+.scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px); }
+.vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%); }
+.content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 56px; }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.status { font-family: 'Space Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.4); letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
+.dot { width: 10px; height: 10px; background: #ff0033; border-radius: 50%; box-shadow: 0 0 10px #ff0033; }
+.logo { font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }
+.logo span { color: #ff0033; }
+.middle { display: flex; flex-direction: column; gap: 28px; }
+.location { font-family: 'Space Mono', monospace; font-size: 16px; color: #00d2ff; letter-spacing: 0.15em; }
+.headline { font-size: 64px; font-weight: 900; color: #fff; line-height: 1.08; text-shadow: 4px 0 #ff0033, -4px 0 #00d2ff; }
+.subtext { font-size: 22px; color: rgba(255,255,255,0.7); line-height: 1.5; max-width: 900px; }
+.bottom { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.swipe-cta { font-family: 'Space Mono', monospace; font-size: 18px; color: #ff0033; letter-spacing: 0.1em; font-weight: 700; text-align: center; }
+.swipe-arrow { font-size: 24px; color: #ff0033; animation: pulse 1.5s infinite; text-align: center; }
+@keyframes pulse { 0%, 100% { opacity: 0.5; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-6px); } }
+.url { font-family: 'Space Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.3); text-align: center; letter-spacing: 0.1em; }
+</style></head>
+<body>
+<div class="story">
+    <div class="bg-image" style="--bg: var(--bg-url)"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+    <div class="content">
+        <div class="top">
+            <div class="status"><div class="dot"></div>LIVE_TRANSMISSION</div>
+            <div class="logo">STORY<span>HUNT</span></div>
+        </div>
+        <div class="middle">
+            <div class="location" id="location"></div>
+            <div class="headline" id="headline"></div>
+            <div class="subtext" id="subtext"></div>
+        </div>
+        <div class="bottom">
+            <div class="swipe-cta">DECODE_THE_CITY</div>
+            <div class="swipe-arrow">↑</div>
+            <div class="url">STORYHUNT.CITY</div>
+        </div>
+    </div>
+</div>
+</body></html>
