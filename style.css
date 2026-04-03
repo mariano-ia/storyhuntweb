@@ -260,9 +260,8 @@ section {
     color: var(--text-muted);
     font-weight: 400;
     max-width: 600px;
-    height: 1.5em;
-    /* Prevent layout shift */
-    margin-bottom: 3rem;
+    min-height: 3em;
+    margin-bottom: 2rem;
 }
 
 .hero-actions {
