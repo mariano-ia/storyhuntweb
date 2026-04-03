@@ -156,9 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         ? `<button class="primary-btn mono card-front-cta" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');">${ctaLabel}</button>`
                         : `<a href="#cta" class="secondary-btn mono card-front-cta" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
 
-                    // Back CTA
+                    // Back CTA with language selector
                     const backCTA = isLive
-                        ? `<button class="primary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');"><span class="btn-text">${ctaLabel}</span><span class="btn-hover">SECURE_YOUR_SPOT</span></button>`
+                        ? `<div class="card-lang-row">
+                            <button class="primary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');"><span class="btn-text">PLAY_IN_ENGLISH</span></button>
+                            <button class="secondary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'es');"><span class="btn-text">JUGAR_EN_ESPANOL</span></button>
+                           </div>`
                         : `<a href="#cta" class="secondary-btn mono card-notify-btn" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
 
                     return `
