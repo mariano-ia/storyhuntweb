@@ -1055,6 +1055,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-y: auto;
 }
 
 .card-back h3 {
@@ -1095,10 +1096,14 @@ footer {
 
 .card-buy-btn,
 .card-notify-btn {
-    align-self: flex-start;
+    align-self: stretch;
+    width: 100%;
     padding: 0.8rem 2rem;
     font-size: 0.75rem;
     cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .card-lang-row {
