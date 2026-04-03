@@ -1114,6 +1114,7 @@ footer {
     margin-bottom: 0.4rem;
     z-index: 3;
     position: relative;
+    cursor: pointer;
 }
 
 /* Flip hint styling */

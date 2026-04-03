@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <div class="card-content">
                                         ${exp.location ? `<span class="card-location-badge mono">${exp.location.toUpperCase()}</span>` : ''}
                                         <h3>${(exp.name || '').toUpperCase()}</h3>
-                                        <p class="card-tagline">${exp.web_description ? exp.web_description.slice(0, 80) : ''}</p>
+                                        <p class="card-tagline">${exp.web_tagline || ''}</p>
                                         ${frontCTA}
                                         <span class="card-flip-hint mono">TAP_FOR_DETAILS &gt;</span>
                                     </div>
