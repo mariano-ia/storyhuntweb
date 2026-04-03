@@ -130,21 +130,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dotClass = isLive ? '' : 'status-dot--pending';
                     const badgeClass = isLive ? '' : 'coming-soon-badge';
                     const delay = (0.2 + i * 0.08).toFixed(2);
+                    const priceLabel = exp.price > 0 ? `$${exp.price}` : 'FREE';
+                    const ctaLabel = exp.price > 0 ? 'BUY_ACCESS' : 'GET_FREE_ACCESS';
 
                     const backContent = isLive ? `
                         <h3>${(exp.name || '').toUpperCase()}</h3>
-                        <p class="card-description">${exp.web_description || exp.description || ''}</p>
+                        <p class="card-description">${exp.web_description || ''}</p>
                         <div class="card-meta">
                             ${exp.duration ? `<div><span class="label">DURATION:</span> ${exp.duration.toUpperCase()}</div>` : ''}
                             ${exp.distance ? `<div><span class="label">DISTANCE:</span> ${exp.distance.toUpperCase()}</div>` : ''}
                             ${exp.difficulty ? `<div><span class="label">DIFFICULTY:</span> ${difficultyBar(exp.difficulty)}</div>` : ''}
-                            <div><span class="label">PRICE:</span> ${exp.price > 0 ? `$${exp.price}` : '<span class="price-free">FREE</span>'}</div>
+                            <div><span class="label">PRICE:</span> ${priceLabel}</div>
                         </div>
-                        <a href="${API_BASE}/api/checkout?experience_id=${exp.id}&lang=en" class="primary-btn mono card-buy-btn"
-                           onclick="event.preventDefault(); startCheckout('${exp.id}', 'en');">
-                            <span class="btn-text">${exp.price > 0 ? 'BUY_ACCESS' : 'GET_FREE_ACCESS'}</span>
-                            <span class="btn-hover">SECURE_YOUR_SPOT</span>
-                        </a>
                     ` : `
                         <h3>${(exp.name || '').toUpperCase()}</h3>
                         <p class="card-description">${exp.web_description || ''}</p>
@@ -152,8 +149,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
                             ${exp.location ? `<div><span class="label">LOCATION:</span> ${exp.location.toUpperCase()}</div>` : ''}
                         </div>
-                        <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
                     `;
+
+                    // CTA button on the front (visible without flip)
+                    const frontCTA = isLive
+                        ? `<button class="primary-btn mono card-front-cta" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');">${ctaLabel}</button>`
+                        : `<a href="#cta" class="secondary-btn mono card-front-cta" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
+
+                    // Back CTA
+                    const backCTA = isLive
+                        ? `<button class="primary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');"><span class="btn-text">${ctaLabel}</span><span class="btn-hover">SECURE_YOUR_SPOT</span></button>`
+                        : `<a href="#cta" class="secondary-btn mono card-notify-btn" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
 
                     return `
                         <div class="experience-card ${cardClass} reveal-text" style="--d: ${delay}s">
@@ -164,14 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                     ${exp.web_image ? `<img class="card-image" src="${exp.web_image}" alt="${exp.name}" loading="lazy">` : '<div class="card-image" style="background:#111;"></div>'}
                                     <div class="card-content">
-                                        ${exp.location ? `<span class="card-coords mono">${exp.location.toUpperCase()}</span>` : ''}
+                                        ${exp.location ? `<span class="card-location-badge mono">${exp.location.toUpperCase()}</span>` : ''}
                                         <h3>${(exp.name || '').toUpperCase()}</h3>
-                                        <p class="card-tagline">${exp.web_description ? exp.web_description.slice(0, 60) : ''}</p>
-                                        <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                        <p class="card-tagline">${exp.web_description ? exp.web_description.slice(0, 80) : ''}</p>
+                                        ${frontCTA}
+                                        <span class="card-flip-hint mono">TAP_FOR_DETAILS &gt;</span>
                                     </div>
                                 </div>
                                 <div class="card-back">
                                     ${backContent}
+                                    ${backCTA}
                                     <span class="card-flip-hint">&lt; FLIP_BACK</span>
                                 </div>
                             </div>
