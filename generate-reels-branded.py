@@ -31,7 +31,7 @@ REELS = [
     # 2. Apr 6 — Grand Central
     {
         "video_prompt": "Cinematic interior of Grand Central Terminal, camera slowly tilting up to reveal astronomical ceiling. Golden light through arched windows. Art deco details. Vertical 9:16.",
-        "intro": ["The chat says:", "Go to the lower level.", "Find the tile that doesn't belong."],
+        "intro": ["The chat says:", "Go to the lower level.", "Find the tile that does not belong."],
         "headline": ["A secret platform", "61 feet below.", "Nobody knows it exists."],
         "highlight": ["An interactive adventure", "played entirely through your phone."],
         "secondary": "Real streets. Real clues. Real mystery.",
@@ -246,16 +246,27 @@ def wait_for_video(request_id):
     return None
 
 
+def esc(text):
+    """Escape text for FFmpeg drawtext filter."""
+    return text.replace("\\", "\\\\").replace("'", "\u2019").replace(":", "\\:").replace("%", "%%")
+
+
 def brand_video(raw_path, out_path, reel):
-    intro = reel["intro"]
-    hl = reel["headline"]
-    hi = reel["highlight"]
+    intro = list(reel["intro"])
+    hl = list(reel["headline"])
+    hi = list(reel["highlight"])
     sec = reel["secondary"]
 
-    # Pad arrays to 3 elements
+    # Pad arrays
     while len(intro) < 3: intro.append("")
     while len(hl) < 3: hl.append("")
     while len(hi) < 2: hi.append("")
+
+    # Escape all text for FFmpeg
+    intro = [esc(t) for t in intro]
+    hl = [esc(t) for t in hl]
+    hi = [esc(t) for t in hi]
+    sec = esc(sec)
 
     filters = f"""
     [0:v]crop=in_h*9/16:in_h,scale=1080:1920[bg];
@@ -284,7 +295,11 @@ def brand_video(raw_path, out_path, reel):
         "-c:v", "libx264", "-preset", "fast", "-crf", "23", "-an", out_path
     ], capture_output=True, timeout=60, text=True)
 
-    return os.path.exists(out_path) and os.path.getsize(out_path) > 50000
+    if not (os.path.exists(out_path) and os.path.getsize(out_path) > 50000):
+        if result.stderr:
+            print(f"    FFMPEG ERROR: {result.stderr[:200]}")
+        return False
+    return True
 
 
 def main():
