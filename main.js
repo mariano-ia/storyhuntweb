@@ -173,8 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                         ${exp.location ? `<span class="card-location-badge mono">${exp.location.toUpperCase()}</span>` : ''}
                                         <h3>${(exp.name || '').toUpperCase()}</h3>
                                         <p class="card-tagline">${exp.web_tagline || ''}</p>
-                                        ${frontCTA}
-                                        <span class="card-flip-hint mono">TAP_FOR_DETAILS &gt;</span>
+                                        <div class="card-front-footer">
+                                            <span class="card-price mono">${isLive ? (exp.price > 0 ? `$${exp.price} USD` : 'FREE') : 'COMING_SOON'}</span>
+                                            ${frontCTA}
+                                        </div>
+                                        <span class="card-flip-hint mono always-visible">TAP_FOR_DETAILS &gt;</span>
                                     </div>
                                 </div>
                                 <div class="card-back">
