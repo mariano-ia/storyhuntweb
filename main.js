@@ -153,15 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // CTA button on the front (visible without flip)
                     const frontCTA = isLive
-                        ? `<button class="primary-btn mono card-front-cta" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');">${ctaLabel}</button>`
+                        ? `<button class="primary-btn mono card-front-cta" onclick="event.stopPropagation(); showLangPicker('${exp.id}');">${ctaLabel}</button>`
                         : `<a href="#cta" class="secondary-btn mono card-front-cta" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
 
-                    // Back CTA with language selector
+                    // Back CTA — single buy button
                     const backCTA = isLive
-                        ? `<div class="card-lang-row">
-                            <button class="primary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'en');"><span class="btn-text">PLAY_IN_ENGLISH</span></button>
-                            <button class="secondary-btn mono card-buy-btn" onclick="event.stopPropagation(); startCheckout('${exp.id}', 'es');"><span class="btn-text">JUGAR_EN_ESPANOL</span></button>
-                           </div>`
+                        ? `<button class="primary-btn mono card-buy-btn" onclick="event.stopPropagation(); showLangPicker('${exp.id}');"><span class="btn-text">${ctaLabel}</span></button>`
                         : `<a href="#cta" class="secondary-btn mono card-notify-btn" onclick="event.stopPropagation();">NOTIFY_ME</a>`;
 
                     return `
@@ -176,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         ${exp.location ? `<span class="card-location-badge mono">${exp.location.toUpperCase()}</span>` : ''}
                                         <h3>${(exp.name || '').toUpperCase()}</h3>
                                         <p class="card-tagline">${exp.web_tagline || ''}</p>
+                                        ${isLive ? '<span class="card-langs mono">EN | ES</span>' : ''}
                                         <div class="card-front-footer">
                                             <span class="card-price mono">${isLive ? (exp.price > 0 ? `$${exp.price} USD` : 'FREE') : 'COMING_SOON'}</span>
                                             ${frontCTA}
@@ -208,8 +206,39 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    // ─── Language Picker (pre-checkout) ─────────────────────────────────────────
+    window.showLangPicker = function(experienceId) {
+        // Remove any existing picker
+        const existing = document.getElementById('lang-picker-overlay');
+        if (existing) existing.remove();
+
+        const overlay = document.createElement('div');
+        overlay.id = 'lang-picker-overlay';
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease';
+        overlay.innerHTML = `
+            <div style="background:#0a0a0a;border:1px solid rgba(124,58,237,0.4);border-radius:12px;padding:2.5rem;max-width:360px;width:90%;text-align:center;">
+                <p class="mono" style="color:#7C3AED;font-size:0.75rem;margin-bottom:0.5rem;letter-spacing:2px;">SELECT_LANGUAGE</p>
+                <p class="mono" style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin-bottom:1.5rem;">CHOOSE_YOUR_PREFERRED_LANGUAGE</p>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <button class="primary-btn mono" onclick="startCheckout('${experienceId}', 'en')" style="width:100%;padding:0.9rem;font-size:0.8rem;">
+                        <span class="btn-text">ENGLISH</span>
+                    </button>
+                    <button class="secondary-btn mono" onclick="startCheckout('${experienceId}', 'es')" style="width:100%;padding:0.9rem;font-size:0.8rem;">
+                        <span class="btn-text">ESPANOL</span>
+                    </button>
+                </div>
+                <button class="mono" onclick="document.getElementById('lang-picker-overlay').remove()" style="background:none;border:none;color:rgba(255,255,255,0.3);margin-top:1rem;cursor:pointer;font-size:0.7rem;">CANCEL</button>
+            </div>
+        `;
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+        document.body.appendChild(overlay);
+    };
+
     // ─── Stripe Checkout ──────────────────────────────────────────────────────
     window.startCheckout = async function(experienceId, lang) {
+        // Close lang picker if open
+        const picker = document.getElementById('lang-picker-overlay');
+        if (picker) picker.remove();
         try {
             const res = await fetch(`${API_BASE}/api/checkout`, {
                 method: 'POST',
