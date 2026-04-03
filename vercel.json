@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://storyhunt-app.vercel.app/api/:path*" },
+    { "source": "/play/:path*", "destination": "https://storyhunt-app.vercel.app/play/:path*" }
+  ]
+}

@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ─── Load Experiences from API ────────────────────────────────────────────
-    const API_BASE = 'https://storyhunt-app.vercel.app';
+    const API_BASE = '';
     const grid = document.getElementById('experience-grid');
     const subtitle = document.getElementById('missions-subtitle');
 
