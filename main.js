@@ -97,13 +97,122 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Card Flip Interaction
-    document.querySelectorAll('.experience-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            if (e.target.closest('a') || e.target.closest('button')) return;
-            card.classList.toggle('flipped');
-        });
-    });
+    // ─── Load Experiences from API ────────────────────────────────────────────
+    const API_BASE = 'https://storyhunt-app.vercel.app';
+    const grid = document.getElementById('experience-grid');
+    const subtitle = document.getElementById('missions-subtitle');
+
+    if (grid) {
+        fetch(`${API_BASE}/api/public/experiences`)
+            .then(res => res.json())
+            .then(experiences => {
+                if (!Array.isArray(experiences) || experiences.length === 0) {
+                    subtitle.textContent = 'NO_ACTIVE_MISSIONS';
+                    grid.innerHTML = '<p class="mono" style="text-align:center;color:var(--text-muted);grid-column:1/-1;">STANDBY_MODE // NO_MISSIONS_AVAILABLE</p>';
+                    return;
+                }
+
+                const published = experiences.filter(e => e.status === 'published').length;
+                const coming = experiences.filter(e => e.status === 'coming_soon').length;
+                subtitle.textContent = `ACTIVE_OPERATIONS: ${published} / ${experiences.length}  |  COMING_SOON: ${coming}`;
+
+                const difficultyBar = (d) => {
+                    if (d === 'easy') return '██░░░';
+                    if (d === 'medium') return '███░░';
+                    if (d === 'hard') return '█████';
+                    return '░░░░░';
+                };
+
+                grid.innerHTML = experiences.map((exp, i) => {
+                    const isLive = exp.status === 'published';
+                    const cardClass = isLive ? 'active' : 'coming-soon';
+                    const statusLabel = isLive ? 'LIVE' : 'COMING_SOON';
+                    const dotClass = isLive ? '' : 'status-dot--pending';
+                    const badgeClass = isLive ? '' : 'coming-soon-badge';
+                    const delay = (0.2 + i * 0.08).toFixed(2);
+
+                    const backContent = isLive ? `
+                        <h3>${(exp.name || '').toUpperCase()}</h3>
+                        <p class="card-description">${exp.web_description || exp.description || ''}</p>
+                        <div class="card-meta">
+                            ${exp.duration ? `<div><span class="label">DURATION:</span> ${exp.duration.toUpperCase()}</div>` : ''}
+                            ${exp.distance ? `<div><span class="label">DISTANCE:</span> ${exp.distance.toUpperCase()}</div>` : ''}
+                            ${exp.difficulty ? `<div><span class="label">DIFFICULTY:</span> ${difficultyBar(exp.difficulty)}</div>` : ''}
+                            <div><span class="label">PRICE:</span> ${exp.price > 0 ? `$${exp.price}` : '<span class="price-free">FREE</span>'}</div>
+                        </div>
+                        <a href="${API_BASE}/api/checkout?experience_id=${exp.id}&lang=en" class="primary-btn mono card-buy-btn"
+                           onclick="event.preventDefault(); startCheckout('${exp.id}', 'en');">
+                            <span class="btn-text">${exp.price > 0 ? 'BUY_ACCESS' : 'GET_FREE_ACCESS'}</span>
+                            <span class="btn-hover">SECURE_YOUR_SPOT</span>
+                        </a>
+                    ` : `
+                        <h3>${(exp.name || '').toUpperCase()}</h3>
+                        <p class="card-description">${exp.web_description || ''}</p>
+                        <div class="card-meta">
+                            <div><span class="label">STATUS:</span> IN_DEVELOPMENT</div>
+                            ${exp.location ? `<div><span class="label">LOCATION:</span> ${exp.location.toUpperCase()}</div>` : ''}
+                        </div>
+                        <a href="#cta" class="secondary-btn mono card-notify-btn">NOTIFY_ME</a>
+                    `;
+
+                    return `
+                        <div class="experience-card ${cardClass} reveal-text" style="--d: ${delay}s">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-status mono ${badgeClass}">
+                                        <span class="status-dot ${dotClass}"></span> ${statusLabel}
+                                    </div>
+                                    ${exp.web_image ? `<img class="card-image" src="${exp.web_image}" alt="${exp.name}" loading="lazy">` : '<div class="card-image" style="background:#111;"></div>'}
+                                    <div class="card-content">
+                                        ${exp.location ? `<span class="card-coords mono">${exp.location.toUpperCase()}</span>` : ''}
+                                        <h3>${(exp.name || '').toUpperCase()}</h3>
+                                        <p class="card-tagline">${exp.web_description ? exp.web_description.slice(0, 60) : ''}</p>
+                                        <span class="card-flip-hint">TAP_TO_REVEAL &gt;</span>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    ${backContent}
+                                    <span class="card-flip-hint">&lt; FLIP_BACK</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Re-attach flip handlers and observers
+                grid.querySelectorAll('.experience-card').forEach(card => {
+                    card.addEventListener('click', (e) => {
+                        if (e.target.closest('a') || e.target.closest('button')) return;
+                        card.classList.toggle('flipped');
+                    });
+                });
+                grid.querySelectorAll('.reveal-text').forEach(el => revealObserver.observe(el));
+            })
+            .catch(err => {
+                console.error('Error loading experiences:', err);
+                subtitle.textContent = 'CONNECTION_ERROR // RETRY_LATER';
+            });
+    }
+
+    // ─── Stripe Checkout ──────────────────────────────────────────────────────
+    window.startCheckout = async function(experienceId, lang) {
+        try {
+            const res = await fetch(`${API_BASE}/api/checkout`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ experience_id: experienceId, lang: lang }),
+            });
+            const data = await res.json();
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                alert(data.error || 'Error creating checkout session');
+            }
+        } catch (err) {
+            console.error('Checkout error:', err);
+            alert('Connection error. Please try again.');
+        }
+    };
 
     // Nav Scroll Effect
     const nav = document.querySelector('.nav');
