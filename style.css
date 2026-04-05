@@ -245,9 +245,113 @@ section {
     padding: 10vh 0;
 }
 
+/* Hero Split Layout */
+.hero-split {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-right {
+    flex: 0 0 340px;
+    max-width: 340px;
+}
+
+/* Hero Chat Preview */
+.hero-chat {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-chat::before {
+    content: 'STORYHUNT_PREVIEW';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-bubble {
+    max-width: 85%;
+    padding: 8px 14px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0;
+    animation: bubbleIn 0.4s ease forwards;
+}
+
+.chat-bubble--narrator {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-left-radius: 4px;
+}
+
+.chat-bubble--user {
+    align-self: flex-end;
+    background: var(--accent);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+}
+
+.chat-bubble--typing {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 18px;
+    border-bottom-left-radius: 4px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.chat-bubble--typing span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    animation: typingDot 1.4s infinite;
+}
+
+.chat-bubble--typing span:nth-child(2) { animation-delay: 0.2s; }
+.chat-bubble--typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bubbleIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typingDot {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-3px); }
+}
+
+.glitch-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
 /* Hero */
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     line-height: 0.95;
     text-transform: uppercase;
@@ -380,28 +484,80 @@ section {
     }
 }
 
-/* Manifesto */
-.manifesto-grid {
+/* How It Works */
+.how-it-works {
+    min-height: auto;
+    padding: 8rem 0;
+}
+
+.hiw-grid {
     display: grid;
-    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
-.manifesto-item {
+.hiw-step {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
-.manifesto-item p {
-    font-size: clamp(1.5rem, 4vw, 3rem);
+.hiw-num {
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.hiw-title {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
     font-weight: 700;
-    line-height: 1.1;
+    letter-spacing: 1px;
+    color: #fff;
     margin: 0;
 }
 
-.step-num {
+.hiw-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.hiw-icon-row {
+    display: flex;
+    gap: 0.5rem;
     margin-top: 0.5rem;
-    color: var(--accent);
+}
+
+.hiw-tag {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    padding: 0.35rem 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mini chat demo inside HIW */
+.hiw-chat-demo {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 120px;
+    justify-content: flex-end;
+}
+
+.hiw-chat-demo .chat-bubble {
+    font-size: 0.75rem;
+    padding: 6px 11px;
+    max-width: 90%;
 }
 
 .accent {
@@ -677,6 +833,7 @@ footer {
     text-shadow: -2px 0 var(--electric-blue);
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
+    overflow: hidden;
 }
 
 .glitch::after {
@@ -684,6 +841,7 @@ footer {
     text-shadow: -2px 0 var(--accent);
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim2 5s infinite linear alternate-reverse;
+    overflow: hidden;
 }
 
 @keyframes glitch-anim {
@@ -744,13 +902,34 @@ footer {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         line-height: 1;
     }
 
     .hero .subtitle {
         font-size: 1.1rem;
         max-width: 100%;
+    }
+
+    .hero-split {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-right {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-chat {
+        min-height: 260px;
+        padding: 1.2rem 0.8rem;
+    }
+
+    .hiw-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     section {
@@ -886,7 +1065,7 @@ footer {
 
 /* Section Titles */
 .section-title {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.03em;
@@ -1028,6 +1207,7 @@ footer {
     font-size: 1.8rem;
     font-weight: 900;
     letter-spacing: -0.02em;
+    line-height: 1;
     margin-bottom: 0.3rem;
 }
 
@@ -1061,6 +1241,7 @@ footer {
 .card-back h3 {
     font-size: 1.3rem;
     font-weight: 900;
+    line-height: 1;
     margin-bottom: 1rem;
     color: var(--accent);
     text-transform: uppercase;

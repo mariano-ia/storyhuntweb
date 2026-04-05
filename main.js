@@ -31,6 +31,103 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1500);
     }
 
+    // ─── Chat Demo Animation (Hero + HOW_IT_WORKS) ─────────────────────────────
+    const chatConversations = [
+        [
+            { role: 'narrator', text: "Look up. The ceiling above you holds a secret most people walk right past." },
+            { role: 'user', text: "The constellation mural on the ceiling?" },
+            { role: 'narrator', text: "Yes. But did you notice? The stars are painted backwards. A deliberate mistake... or a message?" },
+            { role: 'user', text: "Wait, backwards? Like a mirror?" },
+            { role: 'narrator', text: "Exactly. Now find the one constellation that IS correct. That's your next clue." },
+        ],
+        [
+            { role: 'narrator', text: "You're standing where a man jumped to his death in 1886. Except... he didn't die." },
+            { role: 'user', text: "What happened to him?" },
+            { role: 'narrator', text: "He survived. And what he built next changed this city forever. Look at the plaque on your left." },
+            { role: 'user', text: "I see it! Washington Roebling?" },
+            { role: 'narrator', text: "The man who built the bridge from his bedroom window. Now cross it. Your next clue is waiting on the other side." },
+        ],
+        [
+            { role: 'narrator', text: "There's a door behind you. Most people think it's a janitor's closet." },
+            { role: 'user', text: "I see a small green door with no sign" },
+            { role: 'narrator', text: "That's the one. In 1924, this was the entrance to a speakeasy run by a woman known only as 'The Duchess'." },
+            { role: 'user', text: "No way. Can I open it?" },
+            { role: 'narrator', text: "Try knocking three times. Slowly." },
+        ],
+    ];
+
+    const hiwConversation = [
+        { role: 'narrator', text: "Find the bronze owl hidden on the facade." },
+        { role: 'user', text: "Found it! Above the second window" },
+        { role: 'narrator', text: "Correct. The owl marks a secret passage..." },
+    ];
+
+    function animateChat(container, conversation, opts = {}) {
+        if (!container) return;
+        const { loop = true, delayBetween = 2000, pauseAtEnd = 4000 } = opts;
+        let convIndex = 0;
+
+        async function playConversation(messages) {
+            container.innerHTML = '';
+            for (let i = 0; i < messages.length; i++) {
+                const msg = messages[i];
+                // Show typing indicator
+                const typing = document.createElement('div');
+                typing.className = 'chat-bubble chat-bubble--typing';
+                typing.innerHTML = '<span></span><span></span><span></span>';
+                if (msg.role === 'user') typing.style.alignSelf = 'flex-end';
+                container.appendChild(typing);
+                container.scrollTop = container.scrollHeight;
+                await new Promise(r => setTimeout(r, 800 + Math.random() * 600));
+                typing.remove();
+
+                // Show message
+                const bubble = document.createElement('div');
+                bubble.className = `chat-bubble chat-bubble--${msg.role === 'narrator' ? 'narrator' : 'user'}`;
+                bubble.textContent = msg.text;
+                container.appendChild(bubble);
+                container.scrollTop = container.scrollHeight;
+                await new Promise(r => setTimeout(r, delayBetween));
+            }
+            // Pause at end, then fade out
+            await new Promise(r => setTimeout(r, pauseAtEnd));
+            container.style.opacity = '0';
+            container.style.transition = 'opacity 0.6s ease';
+            await new Promise(r => setTimeout(r, 600));
+            container.style.opacity = '1';
+        }
+
+        async function run() {
+            const msgs = Array.isArray(conversation[0]) ? conversation[convIndex % conversation.length] : conversation;
+            await playConversation(msgs);
+            if (loop && Array.isArray(conversation[0])) {
+                convIndex++;
+                run();
+            } else if (loop) {
+                run();
+            }
+        }
+
+        // Start when visible
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                observer.disconnect();
+                run();
+            }
+        }, { threshold: 0.3 });
+        observer.observe(container);
+    }
+
+    // Hero chat — loops through conversations
+    animateChat(document.getElementById('hero-chat'), chatConversations, {
+        loop: true, delayBetween: 1800, pauseAtEnd: 3000,
+    });
+
+    // HIW mini chat — loops same short conversation
+    animateChat(document.getElementById('hiw-chat-demo'), hiwConversation, {
+        loop: true, delayBetween: 1500, pauseAtEnd: 2500,
+    });
+
     // Intersection Observer for sections
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

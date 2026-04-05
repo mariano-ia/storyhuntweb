@@ -88,6 +88,7 @@
                 <img src="assets/logo_story_hunt.png" alt="StoryHunt Logo" class="main-logo">
             </a>
             <div class="nav-links">
+                <a href="#how-it-works">HOW_IT_WORKS</a>
                 <a href="#experiences">EXPERIENCES</a>
                 <a href="#gallery">GALLERY</a>
                 <a href="#testimonials">HUNTERS</a>
@@ -102,17 +103,24 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <div class="container">
-                <div class="glitch-wrapper">
-                    <h1 class="glitch reveal-text" data-text="Decode the City. Live the Story.">Decode the City. Live the Story.</h1>
-                </div>
-                <p class="subtitle reveal-text" id="typewriter-text"></p>
-
-
-                <div class="hero-actions reveal-text" style="--d: 0.8s">
-                    <a href="#experiences" class="primary-btn mono">
-                        <span class="btn-text">EXPLORE_MISSIONS</span>
-                        <span class="btn-hover">CHOOSE_YOUR_CITY</span>
-                    </a>
+                <div class="hero-split">
+                    <div class="hero-left">
+                        <div class="glitch-wrapper">
+                            <h1 class="glitch reveal-text" data-text="Decode the City. Live the Story.">Decode the City.<br>Live the Story.</h1>
+                        </div>
+                        <p class="subtitle reveal-text" id="typewriter-text"></p>
+                        <div class="hero-actions reveal-text" style="--d: 0.8s">
+                            <a href="#experiences" class="primary-btn mono">
+                                <span class="btn-text">EXPLORE_MISSIONS</span>
+                                <span class="btn-hover">CHOOSE_YOUR_CITY</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-right reveal-text" style="--d: 0.6s">
+                        <div class="hero-chat" id="hero-chat">
+                            <!-- Chat bubbles injected by JS -->
+                        </div>
+                    </div>
                 </div>
                 <div class="scroll-indicator">
                     <span class="mono">PHASE_01 // ACTIVE</span>
@@ -123,21 +131,36 @@
             </div>
         </section>
 
-        <!-- Manifesto Section -->
-        <section class="manifesto" id="manifesto">
-            <div class="container smaller">
-                <div class="manifesto-grid">
-                    <div class="manifesto-item reveal-text" style="--d: 0.1s">
-                        <span class="step-num mono">[01]</span>
-                        <p>Pick a city. Choose a story. <span class="accent">You receive a curated mystery mission set in a real neighborhood.</span></p>
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title reveal-text">HOW_IT_WORKS</h2>
+                <div class="hiw-grid">
+                    <div class="hiw-step reveal-text" style="--d: 0.1s">
+                        <span class="hiw-num mono">[01]</span>
+                        <h3 class="hiw-title">BUY_YOUR_TICKET</h3>
+                        <p class="hiw-desc">Choose a mission. Pick your language. Get a unique access link sent to your email.</p>
+                        <div class="hiw-icon-row mono">
+                            <span class="hiw-tag">EN | ES</span>
+                            <span class="hiw-tag">$9-15 USD</span>
+                        </div>
                     </div>
-                    <div class="manifesto-item reveal-text" style="--d: 0.2s">
-                        <span class="step-num mono">[02]</span>
-                        <p>Follow clues through the streets. <span class="accent">Everything happens via chat. Your phone sends you clues, riddles, and directions to hidden spots, secret doors, and forgotten places.</span></p>
+                    <div class="hiw-step hiw-step--chat reveal-text" style="--d: 0.2s">
+                        <span class="hiw-num mono">[02]</span>
+                        <h3 class="hiw-title">FOLLOW_THE_CHAT</h3>
+                        <p class="hiw-desc">A narrator guides you through the streets via chat. Solve riddles, find hidden spots, uncover the story.</p>
+                        <div class="hiw-chat-demo" id="hiw-chat-demo">
+                            <!-- Mini chat demo injected by JS -->
+                        </div>
                     </div>
-                    <div class="manifesto-item reveal-text" style="--d: 0.3s">
-                        <span class="step-num mono">[03]</span>
-                        <p>Solve the puzzle. Live the legend. <span class="accent">2-3 hours of immersive adventure. No guide. No bus. Just you and the city.</span></p>
+                    <div class="hiw-step reveal-text" style="--d: 0.3s">
+                        <span class="hiw-num mono">[03]</span>
+                        <h3 class="hiw-title">EXPLORE_THE_CITY</h3>
+                        <p class="hiw-desc">2-3 hours of immersive adventure. No guide. No bus. Just you, your phone, and the city.</p>
+                        <div class="hiw-icon-row mono">
+                            <span class="hiw-tag">2-3 HS</span>
+                            <span class="hiw-tag">SELF-GUIDED</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,8 +325,8 @@
             <div class="footer-right mono">
                 <p>STORYHUNT ©</p>
                 <p>NOW_LIVE</p>
-                <p class="made-by">MADE_BY_<a href="https://www.yacare.io" target="_blank"
-                        rel="noopener noreferrer">YACARÉ</a></p>
+                <p class="made-by"><a href="https://www.yacare.io" target="_blank"
+                        rel="noopener noreferrer">YACARE_LAB</a></p>
             </div>
         </div>
     </footer>
