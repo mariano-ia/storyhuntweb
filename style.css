@@ -924,7 +924,7 @@ footer {
 
 .experience-card {
     perspective: 1000px;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 4.5;
     cursor: pointer;
 }
 

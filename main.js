@@ -220,12 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="mono" style="color:#7C3AED;font-size:0.75rem;margin-bottom:0.5rem;letter-spacing:2px;">SELECT_LANGUAGE</p>
                 <p class="mono" style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin-bottom:1.5rem;">CHOOSE_YOUR_PREFERRED_LANGUAGE</p>
                 <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <button class="primary-btn mono" onclick="startCheckout('${experienceId}', 'en')" style="width:100%;padding:0.9rem;font-size:0.8rem;">
-                        <span class="btn-text">ENGLISH</span>
-                    </button>
-                    <button class="secondary-btn mono" onclick="startCheckout('${experienceId}', 'es')" style="width:100%;padding:0.9rem;font-size:0.8rem;">
-                        <span class="btn-text">ESPANOL</span>
-                    </button>
+                    <button class="mono" onclick="startCheckout('${experienceId}', 'en')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer;">ENGLISH</button>
+                    <button class="mono" onclick="startCheckout('${experienceId}', 'es')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:6px;cursor:pointer;">ESPANOL</button>
                 </div>
                 <button class="mono" onclick="document.getElementById('lang-picker-overlay').remove()" style="background:none;border:none;color:rgba(255,255,255,0.3);margin-top:1rem;cursor:pointer;font-size:0.7rem;">CANCEL</button>
             </div>
