@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+.story { width: 1080px; height: 1920px; position: relative; overflow: hidden; font-family: 'Inter', sans-serif; background: transparent; }
+.vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%); }
+.darken { position: absolute; inset: 0; background: rgba(0,0,0,0.3); }
+.content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 56px; }
+.top { display: flex; justify-content: space-between; align-items: center; }
+.status { font-family: 'Space Mono', monospace; font-size: 18px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
+.dot { width: 12px; height: 12px; background: #ff0033; border-radius: 50%; box-shadow: 0 0 12px #ff0033; }
+.logo { font-family: 'Space Mono', monospace; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }
+.logo span { color: #ff0033; }
+.middle { display: flex; flex-direction: column; gap: 28px; }
+.location { font-family: 'Space Mono', monospace; font-size: 22px; color: #00d2ff; letter-spacing: 0.15em; }
+.headline { font-size: 96px; font-weight: 900; color: #fff; line-height: 1.05; text-shadow: 4px 0 #ff0033, -4px 0 #00d2ff; }
+.subtext { font-size: 38px; color: rgba(255,255,255,0.75); line-height: 1.35; max-width: 950px; }
+.bottom { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.swipe-cta { font-family: 'Space Mono', monospace; font-size: 24px; color: #ff0033; letter-spacing: 0.1em; font-weight: 700; text-align: center; }
+.url { font-family: 'Space Mono', monospace; font-size: 18px; color: rgba(255,255,255,0.35); text-align: center; letter-spacing: 0.1em; }
+</style></head>
+<body>
+<div class="story">
+    <div class="darken"></div>
+    <div class="vignette"></div>
+    <div class="content">
+        <div class="top">
+            <div class="status"><div class="dot"></div>LIVE_TRANSMISSION</div>
+            <div class="logo">STORY<span>HUNT</span></div>
+        </div>
+        <div class="middle">
+            <div class="location" id="location"></div>
+            <div class="headline" id="headline"></div>
+            <div class="subtext" id="subtext"></div>
+        </div>
+        <div class="bottom">
+            <div class="swipe-cta">DECODE_THE_CITY</div>
+            <div class="url">STORYHUNT.CITY</div>
+        </div>
+    </div>
+</div>
+</body></html>
