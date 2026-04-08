@@ -320,6 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="mono" onclick="startCheckout('${experienceId}', 'en')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer;">ENGLISH</button>
                     <button class="mono" onclick="startCheckout('${experienceId}', 'es')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:6px;cursor:pointer;">ESPANOL</button>
                 </div>
+                <div style="margin-top:1.2rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;">
+                    <input id="promo-code-input" type="text" placeholder="PROMO_CODE" class="mono" style="width:100%;padding:0.6rem;font-size:0.7rem;letter-spacing:2px;background:rgba(255,255,255,0.05);color:#fff;border:1px solid rgba(255,255,255,0.15);border-radius:4px;text-align:center;text-transform:uppercase;" />
+                </div>
                 <button class="mono" onclick="document.getElementById('lang-picker-overlay').remove()" style="background:none;border:none;color:rgba(255,255,255,0.3);margin-top:1rem;cursor:pointer;font-size:0.7rem;">CANCEL</button>
             </div>
         `;
@@ -329,14 +332,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Stripe Checkout ──────────────────────────────────────────────────────
     window.startCheckout = async function(experienceId, lang) {
-        // Close lang picker if open
+        // Read promo code before closing picker
+        const promoInput = document.getElementById('promo-code-input');
+        const couponCode = promoInput ? promoInput.value.trim().toUpperCase() : '';
+        // Close lang picker
         const picker = document.getElementById('lang-picker-overlay');
         if (picker) picker.remove();
         try {
+            const body = { experience_id: experienceId, lang: lang };
+            if (couponCode) body.coupon_code = couponCode;
             const res = await fetch(`${API_BASE}/api/checkout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ experience_id: experienceId, lang: lang }),
+                body: JSON.stringify(body),
             });
             const data = await res.json();
             if (data.url) {
