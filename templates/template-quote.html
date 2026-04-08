@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.post {
+    width: 1080px; height: 1080px;
+    position: relative; overflow: hidden;
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+}
+.gradient-accent {
+    position: absolute; bottom: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,0,51,0.12) 0%, transparent 70%);
+}
+.gradient-accent-2 {
+    position: absolute; top: -150px; right: -150px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,210,255,0.08) 0%, transparent 70%);
+}
+.border-line {
+    position: absolute; inset: 32px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.noise {
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+.content {
+    position: relative; z-index: 2;
+    height: 100%; display: flex; flex-direction: column;
+    justify-content: space-between; padding: 80px;
+}
+.top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.marker {
+    font-family: 'Space Mono', monospace; font-size: 64px;
+    color: rgba(255,0,51,0.25); font-weight: 700; line-height: 1;
+}
+.logo {
+    font-family: 'Space Mono', monospace; font-size: 14px;
+    font-weight: 700; color: #fff; letter-spacing: 0.1em;
+}
+.logo span { color: #ff0033; }
+.quote-block {
+    display: flex; flex-direction: column; gap: 32px;
+}
+.quote {
+    font-size: 56px; font-weight: 900; color: #fff;
+    line-height: 1.2; max-width: 900px;
+    letter-spacing: -0.01em;
+}
+.quote .em {
+    color: #00d2ff;
+    text-decoration: underline;
+    text-decoration-color: rgba(0,210,255,0.3);
+    text-underline-offset: 6px;
+}
+.divider {
+    width: 60px; height: 3px; background: #ff0033;
+}
+.attribution {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px; color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+}
+.bottom {
+    display: flex; justify-content: space-between; align-items: flex-end;
+}
+.tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px; color: rgba(255,255,255,0.3);
+    letter-spacing: 0.08em; line-height: 1.8;
+}
+.url {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px; color: #ff0033; font-weight: 700;
+    letter-spacing: 0.05em;
+}
+</style>
+</head>
+<body>
+<div class="post">
+    <div class="gradient-accent"></div>
+    <div class="gradient-accent-2"></div>
+    <div class="border-line"></div>
+    <div class="noise"></div>
+    <div class="content">
+        <div class="top">
+            <div class="marker">"</div>
+            <div class="logo">STORY<span>HUNT</span></div>
+        </div>
+        <div class="quote-block">
+            <div class="quote">The city is not a place.<br>It's a <span class="em">puzzle</span> waiting to be decoded.</div>
+            <div class="divider"></div>
+            <div class="attribution">— FIELD_NOTE // NYC_DISPATCH_042</div>
+        </div>
+        <div class="bottom">
+            <div class="tagline">DECODE_THE_CITY<br>LIVE_THE_STORY</div>
+            <div class="url">STORYHUNT.CITY</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
