@@ -227,7 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dotClass = isLive ? '' : 'status-dot--pending';
                     const badgeClass = isLive ? '' : 'coming-soon-badge';
                     const delay = (0.2 + i * 0.08).toFixed(2);
-                    const priceLabel = exp.price > 0 ? `$${exp.price}` : 'FREE';
+                    const originalPrice = exp.price > 0 ? Math.ceil(exp.price * 1.5) - 0.01 : 0;
+                    const priceLabel = exp.price > 0 ? `<span class="price-original">$${originalPrice.toFixed(2)}</span> $${exp.price}` : 'FREE';
                     const ctaLabel = exp.price > 0 ? 'BUY_ACCESS' : 'GET_FREE_ACCESS';
 
                     const backContent = isLive ? `
@@ -272,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <p class="card-tagline">${exp.web_tagline || ''}</p>
                                         ${isLive ? '<span class="card-langs mono">EN | ES</span>' : ''}
                                         <div class="card-front-footer">
-                                            <span class="card-price mono">${isLive ? (exp.price > 0 ? `$${exp.price} USD` : 'FREE') : 'COMING_SOON'}</span>
+                                            <span class="card-price mono">${isLive ? (exp.price > 0 ? `<span class="price-original">$${originalPrice.toFixed(2)}</span> $${exp.price} USD` : 'FREE') : 'COMING_SOON'}</span>
                                             ${frontCTA}
                                         </div>
                                         <span class="card-flip-hint mono always-visible">TAP_FOR_DETAILS &gt;</span>
