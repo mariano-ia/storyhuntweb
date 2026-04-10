@@ -75,9 +75,10 @@ def generate_content(page, api_key):
         print(f"  [CACHE] Using cached content for {slug}")
         return cached
 
-    # Build prompt
+    # Build prompt kwargs
+    activity_raw = page.get("activity") or ""
     kwargs = {
-        "activity_display": page.get("activity", "").replace("-", " ").title(),
+        "activity_display": activity_raw.replace("-", " ").title(),
         "slug": slug,
     }
     config = load_config()
@@ -85,10 +86,20 @@ def generate_content(page, api_key):
         kwargs["neighborhood_display"] = config["neighborhoods"].get(page["neighborhood"], page["neighborhood"].replace("-", " ").title())
     if page.get("audience"):
         kwargs["audience_display"] = config["audiences"].get(page["audience"], page["audience"].title())
+    if page.get("temporal"):
+        from build_config import TEMPORALS
+        kwargs["temporal_display"] = TEMPORALS.get(page["temporal"], page["temporal"].replace("-", " ").title())
+    if page.get("theme"):
+        from build_config import THEMES
+        kwargs["theme_display"] = THEMES.get(page["theme"], page["theme"].replace("-", " ").title())
 
     # Map activity slug to display name from config
     if page.get("activity") and page["activity"] in config["activities"]:
         kwargs["activity_display"] = config["activities"][page["activity"]]
+
+    # For comparison/best-of pages, pass the title
+    kwargs["display_title"] = page.get("title", "").replace(" | StoryHunt", "").replace(" — Which Is Better?", "").replace(" — Hidden Gems Guide", "")
+    kwargs["page_title"] = page.get("h1", "").rstrip(".")
 
     system_msg, user_msg = get_prompt(page["template"], **kwargs)
 
@@ -276,7 +287,7 @@ def main():
     parser = argparse.ArgumentParser(description="StoryHunt Programmatic SEO Generator")
     parser.add_argument("--limit", type=int, help="Max pages to generate")
     parser.add_argument("--slug", help="Generate a specific page by slug")
-    parser.add_argument("--template", choices=["A", "B", "C"], help="Only generate pages of this template type")
+    parser.add_argument("--template", choices=["A", "B", "C", "D", "E", "F", "G"], help="Only generate pages of this template type")
     parser.add_argument("--dry-run", action="store_true", help="Preview without generating files")
     parser.add_argument("--regenerate", action="store_true", help="Re-generate even published pages")
     parser.add_argument("--sitemap-only", action="store_true", help="Only update sitemap.xml")
