@@ -123,7 +123,9 @@
       "terminal_line": "$ storyhunt --scan=\"bryant_park\" --depth=\"below\"",
       "bg_image": "https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?w=1080",
       "image_file": "assets/posts/2026-04-10-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-10",
+      "post_id": "18060499697414181"
     },
     {
       "date": "2026-04-10",
@@ -137,7 +139,9 @@
       "subtext": "The Midtown Protocol. A new mystery walk through Manhattan's busiest corridors. Coming soon.",
       "bg_image": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1080",
       "image_file": "assets/posts/2026-04-10-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-10",
+      "post_id": "17952080051964966"
     },
     {
       "date": "2026-04-13",
