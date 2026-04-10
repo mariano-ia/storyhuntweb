@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://storyhunt.city/explore/">
+    <meta name="description"
+        content="Discover 40+ interactive mystery walks across NYC. Explore by neighborhood — SoHo, Chelsea, West Village — or by theme: haunted places, speakeasies, true crime. Decode the city.">
+    <meta name="keywords"
+        content="NYC mystery walks, interactive adventure NYC, explore NYC neighborhoods, StoryHunt, haunted places NYC, speakeasies NYC, true crime tours NYC">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://storyhunt.city/explore/">
+    <meta property="og:title" content="Explore NYC — Interactive Mystery Walks by Neighborhood & Theme | StoryHunt">
+    <meta property="og:description"
+        content="Discover 40+ interactive mystery walks across NYC. Explore by neighborhood — SoHo, Chelsea, West Village — or by theme: haunted places, speakeasies, true crime. Decode the city.">
+
+    <title>Explore NYC — Interactive Mystery Walks by Neighborhood & Theme | StoryHunt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Explore NYC — Interactive Mystery Walks by Neighborhood & Theme",
+      "description": "Discover 40+ interactive mystery walks across NYC. Explore by neighborhood or by theme.",
+      "url": "https://storyhunt.city/explore/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "NYC Mystery Walks",
+        "numberOfItems": 42,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "SoHo", "url": "https://storyhunt.city/explore/soho.html" },
+          { "@type": "ListItem", "position": 2, "name": "Chelsea", "url": "https://storyhunt.city/explore/chelsea.html" },
+          { "@type": "ListItem", "position": 3, "name": "Midtown", "url": "https://storyhunt.city/explore/midtown.html" },
+          { "@type": "ListItem", "position": 4, "name": "West Village", "url": "https://storyhunt.city/explore/west-village.html" },
+          { "@type": "ListItem", "position": 5, "name": "Central Park", "url": "https://storyhunt.city/explore/central-park.html" },
+          { "@type": "ListItem", "position": 6, "name": "Hidden Places NYC", "url": "https://storyhunt.city/explore/hidden-places-nyc.html" },
+          { "@type": "ListItem", "position": 7, "name": "Haunted Places NYC", "url": "https://storyhunt.city/explore/haunted-places-nyc.html" },
+          { "@type": "ListItem", "position": 8, "name": "Speakeasies NYC", "url": "https://storyhunt.city/explore/speakeasies-nyc.html" },
+          { "@type": "ListItem", "position": 9, "name": "True Crime Tours NYC", "url": "https://storyhunt.city/explore/true-crime-tours-nyc.html" },
+          { "@type": "ListItem", "position": 10, "name": "Ghost Tours NYC", "url": "https://storyhunt.city/explore/ghost-tours-nyc.html" }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EWN9RMYR9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-4EWN9RMYR9');
+    </script>
+
+    <style>
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+        .hub-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 1.4rem 1.6rem;
+            transition: all 0.3s ease;
+        }
+        .hub-card:hover {
+            border-color: var(--electric-blue);
+            background: rgba(0, 210, 255, 0.05);
+            transform: translateY(-2px);
+        }
+        .hub-card a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .hub-card a:hover {
+            color: var(--electric-blue);
+        }
+        .hub-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        .hub-section {
+            padding: 6vh 0 2vh;
+        }
+        .hub-section-title {
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            color: var(--electric-blue);
+            margin-bottom: 0.5rem;
+        }
+        .hub-section-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .hub-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div class="noise-overlay"></div>
+    <div class="grain-overlay"></div>
+    <div class="video-background">
+        <div class="video-overlay"></div>
+    </div>
+    <div class="map-grid"></div>
+
+    <nav class="nav">
+        <div class="container flex-nav">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/logo_story_hunt.png" alt="StoryHunt Logo" class="main-logo">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#experiences">EXPERIENCES</a>
+                <a href="../index.html#gallery">GALLERY</a>
+                <a href="../index.html#testimonials">HUNTERS</a>
+            </div>
+            <div class="nav-right">
+                <a href="#cta" class="nav-cta-btn mono">BOOK_NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch reveal-text" data-text="Explore NYC.">Explore NYC.</h1>
+                </div>
+                <p class="subtitle reveal-text">Choose your mission. Decode the city.</p>
+                <div class="hero-actions reveal-text" style="--d: 0.8s">
+                    <a href="#neighborhoods" class="primary-btn mono">
+                        <span class="btn-text">BROWSE_NEIGHBORHOODS</span>
+                        <span class="btn-hover">SELECT_YOUR_ZONE</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NYC Neighborhoods -->
+        <section class="neighborhood-content hub-section" id="neighborhoods">
+            <div class="container smaller">
+                <h2 class="hub-section-title mono reveal-text">NYC_NEIGHBORHOODS</h2>
+                <p class="hub-section-subtitle reveal-text">17 neighborhoods. Each one hides a different story.</p>
+                <div class="hub-grid">
+                    <div class="hub-card reveal-text" style="--d: 0.1s">
+                        <a href="soho.html">SoHo</a>
+                        <p>Cast-iron facades and 150 years of secrets beneath the cobblestones.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.12s">
+                        <a href="chelsea.html">Chelsea</a>
+                        <p>Art galleries, the High Line's ghost tracks, and a neighborhood that reinvented itself.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.14s">
+                        <a href="midtown.html">Midtown</a>
+                        <p>Hidden passages beneath the skyscrapers most people never look up to see.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.16s">
+                        <a href="central-park.html">Central Park</a>
+                        <p>843 acres of engineered wilderness hiding monuments, caves, and forgotten ruins.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.18s">
+                        <a href="west-village.html">West Village</a>
+                        <p>Crooked streets that broke the grid and the rebels who lived on them.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.2s">
+                        <a href="tribeca.html">TriBeCa</a>
+                        <p>Warehouse ghosts and the transformation from industrial grit to quiet luxury.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.22s">
+                        <a href="flatiron.html">Flatiron</a>
+                        <p>The building that shouldn't stand and the district it accidentally created.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.24s">
+                        <a href="dumbo.html">DUMBO</a>
+                        <p>Brooklyn's waterfront where cobblestone streets meet Manhattan Bridge views.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.26s">
+                        <a href="williamsburg.html">Williamsburg</a>
+                        <p>From Hasidic enclaves to street art corridors, layers that don't appear on maps.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.28s">
+                        <a href="harlem.html">Harlem</a>
+                        <p>The Renaissance that changed American culture, hiding in brownstone doorways.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.3s">
+                        <a href="bushwick.html">Bushwick</a>
+                        <p>Street murals, DIY galleries, and a neighborhood rewriting its own story.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.32s">
+                        <a href="times-square.html">Times Square</a>
+                        <p>Beneath the neon: speakeasies, secret theaters, and pre-electric New York.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.34s">
+                        <a href="greenwich-village.html">Greenwich Village</a>
+                        <p>Bohemian ghosts, jazz basements, and the birthplace of American counterculture.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.36s">
+                        <a href="bryant-park.html">Bryant Park</a>
+                        <p>A public park built on top of a forgotten reservoir and Civil War history.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.38s">
+                        <a href="high-line.html">High Line</a>
+                        <p>An abandoned rail line turned aerial garden with secrets at every turn.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.4s">
+                        <a href="upper-east-side.html">Upper East Side</a>
+                        <p>Gilded Age mansions, Museum Mile, and old money stories etched in limestone.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.42s">
+                        <a href="grand-central.html">Grand Central</a>
+                        <p>Secret platforms, a hidden bar, and a ceiling full of stars no one looks at.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NYC Themes -->
+        <section class="neighborhood-content hub-section" id="themes">
+            <div class="container smaller">
+                <h2 class="hub-section-title mono reveal-text">NYC_THEMES</h2>
+                <p class="hub-section-subtitle reveal-text">15 themes. Pick a lens to see the city differently.</p>
+                <div class="hub-grid">
+                    <div class="hub-card reveal-text" style="--d: 0.1s">
+                        <a href="hidden-places-nyc.html">Hidden Places in NYC</a>
+                        <p>Doors you've walked past a thousand times that lead somewhere extraordinary.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.12s">
+                        <a href="secret-spots-nyc.html">Secret Spots in NYC</a>
+                        <p>Rooftops, gardens, and rooms that locals keep to themselves.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.14s">
+                        <a href="urban-legends-nyc.html">Urban Legends of NYC</a>
+                        <p>Alligators in the sewers are just the beginning. Some legends are true.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.16s">
+                        <a href="mysteries-in-nyc.html">Mysteries in NYC</a>
+                        <p>Unsolved cases, unexplained symbols, and questions the city never answered.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.18s">
+                        <a href="weird-places-nyc.html">Weird Places in NYC</a>
+                        <p>The strange, the uncanny, and the places that make you look twice.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.2s">
+                        <a href="true-crime-tours-nyc.html">True Crime Tours NYC</a>
+                        <p>Walk the streets where history's darkest chapters unfolded.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.22s">
+                        <a href="haunted-places-nyc.html">Haunted Places in NYC</a>
+                        <p>Ghost sightings, cursed buildings, and restless spirits across five boroughs.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.24s">
+                        <a href="ghost-tours-nyc.html">Ghost Tours NYC</a>
+                        <p>After dark, the city tells a different story. Follow the cold spots.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.26s">
+                        <a href="speakeasies-nyc.html">Speakeasies NYC</a>
+                        <p>Hidden bars behind phone booths, bookshops, and unmarked doors.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.28s">
+                        <a href="mob-history-nyc.html">Mob History NYC</a>
+                        <p>Five families, hit lists, and the restaurants where deals were made.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.3s">
+                        <a href="abandoned-places-nyc.html">Abandoned Places in NYC</a>
+                        <p>Forgotten stations, empty hospitals, and ruins hiding in plain sight.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.32s">
+                        <a href="movie-locations-nyc.html">Movie Locations NYC</a>
+                        <p>Stand where your favorite scenes were filmed. See the city through the lens.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.34s">
+                        <a href="literary-tours-nyc.html">Literary Tours NYC</a>
+                        <p>The apartments, cafes, and streets where great American novels were born.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.36s">
+                        <a href="architectural-marvels-nyc.html">Architectural Marvels NYC</a>
+                        <p>Art Deco crowns, hidden gargoyles, and engineering feats above your head.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.38s">
+                        <a href="underground-tunnels-nyc.html">Underground Tunnels NYC</a>
+                        <p>Beneath the streets, a shadow city of tunnels, vaults, and forgotten passages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Dives -->
+        <section class="neighborhood-content hub-section" id="deep-dives">
+            <div class="container smaller">
+                <h2 class="hub-section-title mono reveal-text">DEEP_DIVES</h2>
+                <p class="hub-section-subtitle reveal-text">10 stories that go deeper. One theme, one neighborhood, no shortcuts.</p>
+                <div class="hub-grid">
+                    <div class="hub-card reveal-text" style="--d: 0.1s">
+                        <a href="haunted-places-greenwich-village.html">Haunted Places in Greenwich Village</a>
+                        <p>The most haunted square mile in New York and the spirits who refuse to leave.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.12s">
+                        <a href="true-crime-lower-east-side.html">True Crime on the Lower East Side</a>
+                        <p>Gangs, heists, and cold cases in Manhattan's grittiest blocks.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.14s">
+                        <a href="hidden-speakeasies-soho.html">Hidden Speakeasies of SoHo</a>
+                        <p>Prohibition never really ended here. You just need the password.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.16s">
+                        <a href="secret-gardens-central-park.html">Secret Gardens of Central Park</a>
+                        <p>Tucked-away sanctuaries most visitors walk right past.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.18s">
+                        <a href="mob-history-little-italy.html">Mob History of Little Italy</a>
+                        <p>The corner tables, the back rooms, and the feuds that shaped a neighborhood.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.2s">
+                        <a href="ghosts-of-broadway.html">Ghosts of Broadway</a>
+                        <p>Phantom actors, cursed theaters, and curtain calls from beyond.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.22s">
+                        <a href="abandoned-stations-nyc-subway.html">Abandoned Stations of the NYC Subway</a>
+                        <p>Sealed platforms and ghost stations beneath millions of commuters.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.24s">
+                        <a href="weird-history-williamsburg.html">Weird History of Williamsburg</a>
+                        <p>From sugar barons to counterfeit rings, the strange past beneath the murals.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.26s">
+                        <a href="literary-secrets-west-village.html">Literary Secrets of the West Village</a>
+                        <p>The brownstones where Kerouac typed, Cummings painted, and Dylan sang.</p>
+                    </div>
+                    <div class="hub-card reveal-text" style="--d: 0.28s">
+                        <a href="hidden-art-dumbo.html">Hidden Art of DUMBO</a>
+                        <p>Murals, installations, and guerrilla galleries under the Brooklyn Bridge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta" id="cta">
+            <div class="container smaller">
+                <h2 class="reveal-text">Ready to Hunt?</h2>
+                <p class="section-subtitle mono reveal-text" style="--d: 0.1s">
+                    LEAVE_YOUR_EMAIL. AS_SOON_AS_WE_GO_LIVE, YOU_GET_FREE_ACCESS.
+                </p>
+                <form action="https://storyhunt-app.vercel.app/api/contacts" method="POST"
+                    class="recruitment-form reveal-text" style="--d: 0.2s">
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="EMAIL_ADDRESS" required id="email" class="mono">
+                        <button type="submit" class="submit-btn mono">
+                            <span class="btn-text">REQUEST_ACCESS</span>
+                            <span class="btn-hover">EXECUTE_REQUEST</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="social-proof reveal-text" style="--d: 0.4s">
+                    <div class="avatar-stack">
+                        <span class="stack-avatar" style="background: #ff0033;">MK</span>
+                        <span class="stack-avatar" style="background: #00d2ff;">JR</span>
+                        <span class="stack-avatar" style="background: #00ff66;">AL</span>
+                        <span class="stack-avatar" style="background: #ff6600;">TS</span>
+                        <span class="stack-avatar" style="background: #cc00ff;">ND</span>
+                        <span class="stack-avatar" style="background: #ffcc00; color: #000;">WP</span>
+                    </div>
+                    <div class="social-proof-text">
+                        <span class="social-proof-count">500+</span>
+                        <span class="social-proof-label mono">HUNTERS_COMPLETED_THE_MISSION</span>
+                    </div>
+                </div>
+
+                <div class="trust-signals mono reveal-text" style="--d: 0.5s">
+                    <span>NO_SPAM_EVER</span>
+                    <span>INSTANT_CONFIRMATION</span>
+                    <span>FREE_CANCELLATION</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container flex-footer">
+            <div class="footer-left mono">
+                <p>LOCATION: NYC_ALL_BOROUGHS</p>
+                <p>STATUS: EXPLORING_COORDINATES</p>
+            </div>
+            <div class="footer-right mono">
+                <p>STORYHUNT &copy;</p>
+                <p class="made-by">MADE_BY_<a href="https://www.yacare.io" target="_blank"
+                        rel="noopener noreferrer">YACAR&Eacute;</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
