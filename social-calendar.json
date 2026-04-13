@@ -155,7 +155,9 @@
       "subtext": "75 1/2 Bedford Street. The narrowest house in NYC. The West Village hides stories in every doorway.",
       "bg_image": "https://images.unsplash.com/photo-1555109307-f7d9da25c244?w=1080",
       "image_file": "assets/posts/2026-04-13-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-13",
+      "post_id": "18523526155076748"
     },
     {
       "date": "2026-04-13",
@@ -169,7 +171,9 @@
       "subtext": "Some doors in this city have been open longer than most buildings have stood. You just have to know where to look.",
       "bg_image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1080",
       "image_file": "assets/posts/2026-04-13-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-13",
+      "post_id": "17861636640562166"
     },
     {
       "date": "2026-04-14",
