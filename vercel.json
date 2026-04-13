@@ -5,6 +5,7 @@
     { "source": "/secrets", "destination": "https://storyhunt-app.vercel.app/secrets" },
     { "source": "/intercepted", "destination": "https://storyhunt-app.vercel.app/intercepted" },
     { "source": "/voicemail", "destination": "https://storyhunt-app.vercel.app/voicemail" },
+    { "source": "/start", "destination": "https://storyhunt-app.vercel.app/start" },
     { "source": "/voicemail.mp3", "destination": "https://storyhunt-app.vercel.app/voicemail.mp3" },
     { "source": "/_next/:path*", "destination": "https://storyhunt-app.vercel.app/_next/:path*" }
   ]
