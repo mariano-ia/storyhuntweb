@@ -1057,7 +1057,8 @@
         "scavenger-hunt-in-meatpacking-district",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:52:11.528891+00:00"
     },
     {
       "slug": "mystery-walk-in-brooklyn-heights",
@@ -1078,7 +1079,8 @@
         "scavenger-hunt-in-brooklyn-heights",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:52:21.503405+00:00"
     },
     {
       "slug": "mystery-walk-in-bushwick",
@@ -1099,7 +1101,8 @@
         "mystery-walk-nyc",
         "scavenger-hunt-in-bushwick"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:52:28.787269+00:00"
     },
     {
       "slug": "mystery-walk-in-times-square",
@@ -1120,7 +1123,8 @@
         "mystery-walk-nyc",
         "scavenger-hunt-in-times-square"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:52:38.723517+00:00"
     },
     {
       "slug": "mystery-walk-in-high-line",
@@ -1141,7 +1145,8 @@
         "mystery-walk-nyc",
         "scavenger-hunt-in-high-line"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:52:51.507178+00:00"
     },
     {
       "slug": "mystery-walk-in-bryant-park",
@@ -1162,7 +1167,8 @@
         "mystery-walk-nyc",
         "scavenger-hunt-in-bryant-park"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:00.367313+00:00"
     },
     {
       "slug": "mystery-walk-in-grand-central",
@@ -1183,7 +1189,8 @@
         "mystery-walk-nyc",
         "scavenger-hunt-in-grand-central"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:10.364846+00:00"
     },
     {
       "slug": "walking-tour-in-soho",
@@ -1424,7 +1431,8 @@
         "scavenger-hunt-in-lower-east-side",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:17.993688+00:00"
     },
     {
       "slug": "walking-tour-in-east-village",
@@ -1445,7 +1453,8 @@
         "scavenger-hunt-in-east-village",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:30.387594+00:00"
     },
     {
       "slug": "walking-tour-in-upper-west-side",
@@ -1466,7 +1475,8 @@
         "scavenger-hunt-in-upper-west-side",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:41.052138+00:00"
     },
     {
       "slug": "walking-tour-in-flatiron",
@@ -1487,7 +1497,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-flatiron"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:48.706853+00:00"
     },
     {
       "slug": "walking-tour-in-financial-district",
@@ -1508,7 +1519,8 @@
         "scavenger-hunt-in-financial-district",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:53:59.695460+00:00"
     },
     {
       "slug": "walking-tour-in-hells-kitchen",
@@ -1529,7 +1541,8 @@
         "scavenger-hunt-in-hells-kitchen",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:54:08.818964+00:00"
     },
     {
       "slug": "walking-tour-in-chinatown",
@@ -1550,7 +1563,8 @@
         "scavenger-hunt-in-chinatown",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:54:17.318621+00:00"
     },
     {
       "slug": "walking-tour-in-little-italy",
@@ -1571,7 +1585,8 @@
         "scavenger-hunt-in-little-italy",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:54:26.619165+00:00"
     },
     {
       "slug": "walking-tour-in-nolita",
@@ -1592,7 +1607,8 @@
         "scavenger-hunt-in-nolita",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:54:36.261261+00:00"
     },
     {
       "slug": "walking-tour-in-meatpacking-district",
@@ -1613,7 +1629,8 @@
         "scavenger-hunt-in-meatpacking-district",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:54:46.298402+00:00"
     },
     {
       "slug": "walking-tour-in-brooklyn-heights",
@@ -1634,7 +1651,8 @@
         "scavenger-hunt-in-brooklyn-heights",
         "architectural-marvels-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:00.323074+00:00"
     },
     {
       "slug": "walking-tour-in-bushwick",
@@ -1655,7 +1673,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-bushwick"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:12.408767+00:00"
     },
     {
       "slug": "walking-tour-in-times-square",
@@ -1676,7 +1695,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-times-square"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:22.654496+00:00"
     },
     {
       "slug": "walking-tour-in-high-line",
@@ -1697,7 +1717,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-high-line"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:31.920258+00:00"
     },
     {
       "slug": "walking-tour-in-bryant-park",
@@ -1718,7 +1739,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-bryant-park"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:38.929595+00:00"
     },
     {
       "slug": "walking-tour-in-grand-central",
@@ -1739,7 +1761,8 @@
         "walking-tour-nyc",
         "scavenger-hunt-in-grand-central"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:55:49.476463+00:00"
     },
     {
       "slug": "date-ideas-in-soho",
@@ -1980,7 +2003,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:56:00.443027+00:00"
     },
     {
       "slug": "date-ideas-in-east-village",
@@ -2001,7 +2025,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:56:11.110810+00:00"
     },
     {
       "slug": "date-ideas-in-upper-west-side",
@@ -2022,7 +2047,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:56:31.611278+00:00"
     },
     {
       "slug": "date-ideas-in-flatiron",
@@ -2043,7 +2069,8 @@
         "scavenger-hunt-in-flatiron",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:56:41.848533+00:00"
     },
     {
       "slug": "date-ideas-in-financial-district",
@@ -2064,7 +2091,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:56:52.377478+00:00"
     },
     {
       "slug": "date-ideas-in-hells-kitchen",
@@ -2085,7 +2113,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:00.040631+00:00"
     },
     {
       "slug": "date-ideas-in-chinatown",
@@ -2106,7 +2135,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:10.176071+00:00"
     },
     {
       "slug": "date-ideas-in-little-italy",
@@ -2127,7 +2157,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:17.980048+00:00"
     },
     {
       "slug": "date-ideas-in-nolita",
@@ -2148,7 +2179,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:26.497350+00:00"
     },
     {
       "slug": "date-ideas-in-meatpacking-district",
@@ -2169,7 +2201,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:35.977525+00:00"
     },
     {
       "slug": "date-ideas-in-brooklyn-heights",
@@ -2190,7 +2223,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:44.907122+00:00"
     },
     {
       "slug": "date-ideas-in-bushwick",
@@ -2211,7 +2245,8 @@
         "scavenger-hunt-in-bushwick",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:57:52.490115+00:00"
     },
     {
       "slug": "date-ideas-in-times-square",
@@ -2232,7 +2267,8 @@
         "scavenger-hunt-in-times-square",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:01.816024+00:00"
     },
     {
       "slug": "date-ideas-in-high-line",
@@ -2253,7 +2289,8 @@
         "scavenger-hunt-in-high-line",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:14.661535+00:00"
     },
     {
       "slug": "date-ideas-in-bryant-park",
@@ -2274,7 +2311,8 @@
         "scavenger-hunt-in-bryant-park",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:25.941795+00:00"
     },
     {
       "slug": "date-ideas-in-grand-central",
@@ -2295,7 +2333,8 @@
         "scavenger-hunt-in-grand-central",
         "speakeasies-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:36.940608+00:00"
     },
     {
       "slug": "team-building-in-soho",
@@ -2536,7 +2575,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:48.071483+00:00"
     },
     {
       "slug": "team-building-in-east-village",
@@ -2557,7 +2597,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:58:57.486542+00:00"
     },
     {
       "slug": "team-building-in-upper-west-side",
@@ -2578,7 +2619,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:03.807885+00:00"
     },
     {
       "slug": "team-building-in-flatiron",
@@ -2599,7 +2641,8 @@
         "scavenger-hunt-in-flatiron",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:12.153679+00:00"
     },
     {
       "slug": "team-building-in-financial-district",
@@ -2620,7 +2663,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:19.096346+00:00"
     },
     {
       "slug": "team-building-in-hells-kitchen",
@@ -2641,7 +2685,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:31.922149+00:00"
     },
     {
       "slug": "team-building-in-chinatown",
@@ -2662,7 +2707,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:42.363163+00:00"
     },
     {
       "slug": "team-building-in-little-italy",
@@ -2683,7 +2729,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T13:59:54.160203+00:00"
     },
     {
       "slug": "team-building-in-nolita",
@@ -2704,7 +2751,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:03.083054+00:00"
     },
     {
       "slug": "team-building-in-meatpacking-district",
@@ -2725,7 +2773,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:11.164193+00:00"
     },
     {
       "slug": "team-building-in-brooklyn-heights",
@@ -2746,7 +2795,8 @@
         "hidden-places-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:19.361894+00:00"
     },
     {
       "slug": "team-building-in-bushwick",
@@ -2767,7 +2817,8 @@
         "scavenger-hunt-in-bushwick",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:28.740783+00:00"
     },
     {
       "slug": "team-building-in-times-square",
@@ -2788,7 +2839,8 @@
         "scavenger-hunt-in-times-square",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:45.028476+00:00"
     },
     {
       "slug": "team-building-in-high-line",
@@ -2809,7 +2861,8 @@
         "scavenger-hunt-in-high-line",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:00:58.198906+00:00"
     },
     {
       "slug": "team-building-in-bryant-park",
@@ -2830,7 +2883,8 @@
         "scavenger-hunt-in-bryant-park",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:01:14.574949+00:00"
     },
     {
       "slug": "team-building-in-grand-central",
@@ -2851,7 +2905,8 @@
         "scavenger-hunt-in-grand-central",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:01:23.228471+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-soho",
@@ -3092,7 +3147,8 @@
         "scavenger-hunt-in-lower-east-side",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:01:32.086923+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-east-village",
@@ -3113,7 +3169,8 @@
         "scavenger-hunt-in-east-village",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:01:43.936232+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-upper-west-side",
@@ -3155,7 +3212,8 @@
         "outdoor-escape-room-nyc",
         "scavenger-hunt-in-flatiron"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:05:29.701146+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-financial-district",
@@ -3176,7 +3234,8 @@
         "scavenger-hunt-in-financial-district",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:05:42.521814+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-hells-kitchen",
@@ -3197,7 +3256,8 @@
         "scavenger-hunt-in-hells-kitchen",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:05:56.049600+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-chinatown",
@@ -3218,7 +3278,8 @@
         "scavenger-hunt-in-chinatown",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:06:08.281638+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-little-italy",
@@ -3239,7 +3300,8 @@
         "scavenger-hunt-in-little-italy",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:06:18.844075+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-nolita",
@@ -3260,7 +3322,8 @@
         "scavenger-hunt-in-nolita",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:06:31.235895+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-meatpacking-district",
@@ -3281,7 +3344,8 @@
         "scavenger-hunt-in-meatpacking-district",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:06:42.470229+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-brooklyn-heights",
@@ -3302,7 +3366,8 @@
         "scavenger-hunt-in-brooklyn-heights",
         "mysteries-in-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:06:57.676071+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-bushwick",
@@ -3323,7 +3388,8 @@
         "outdoor-escape-room-nyc",
         "scavenger-hunt-in-bushwick"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:07:10.679132+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-times-square",
@@ -3344,7 +3410,8 @@
         "outdoor-escape-room-nyc",
         "scavenger-hunt-in-times-square"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:07:29.526470+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-high-line",
@@ -3365,7 +3432,8 @@
         "outdoor-escape-room-nyc",
         "scavenger-hunt-in-high-line"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:07:40.124736+00:00"
     },
     {
       "slug": "outdoor-escape-room-in-bryant-park",
@@ -3407,7 +3475,8 @@
         "outdoor-escape-room-nyc",
         "scavenger-hunt-in-grand-central"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:12:40.653455+00:00"
     },
     {
       "slug": "scavenger-hunt-for-couples",
@@ -3516,7 +3585,8 @@
         "scavenger-hunt-for-couples",
         "scavenger-hunt-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:13:00.052481+00:00"
     },
     {
       "slug": "scavenger-hunt-for-friends",
@@ -3537,7 +3607,8 @@
         "scavenger-hunt-for-couples",
         "scavenger-hunt-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:13:17.034881+00:00"
     },
     {
       "slug": "scavenger-hunt-for-adults",
@@ -3558,7 +3629,8 @@
         "scavenger-hunt-for-couples",
         "scavenger-hunt-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:13:28.375180+00:00"
     },
     {
       "slug": "scavenger-hunt-for-coworkers",
@@ -3579,7 +3651,8 @@
         "scavenger-hunt-for-couples",
         "scavenger-hunt-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-13T14:13:39.011444+00:00"
     },
     {
       "slug": "scavenger-hunt-for-kids",

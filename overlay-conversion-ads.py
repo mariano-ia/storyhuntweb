@@ -62,7 +62,7 @@ for video in VIDEOS:
 
     total += 1
 
-    # Build overlay HTML with custom copy + modified CTA
+    # Build overlay HTML — hide .bottom (CTA/URL drawn by ffmpeg directly on black bar)
     inject = f"""<script>
     var loc = document.getElementById('location');
     var head = document.getElementById('headline');
@@ -70,10 +70,8 @@ for video in VIDEOS:
     if (loc) loc.innerHTML = `{video['location']}`;
     if (head) head.innerHTML = `{video['headline']}`;
     if (sub) sub.innerHTML = `{video['subtext']}`;
-    var cta = document.querySelector('.swipe-cta');
-    if (cta) cta.innerHTML = 'START_YOUR_HUNT →';
-    var url = document.querySelector('.url');
-    if (url) url.innerHTML = 'STORYHUNT.CITY/START';
+    var bottom = document.querySelector('.bottom');
+    if (bottom) bottom.style.display = 'none';
     </script>"""
     html = template_html.replace("</body>", inject + "</body>")
 
@@ -82,11 +80,13 @@ for video in VIDEOS:
         f.write(html)
         tmp_html = f.name
 
-    # Screenshot overlay as PNG
+    # Screenshot overlay as PNG — force device scale factor 1 for exact 1080x1920
     overlay_png = os.path.join(VIDEOS_DIR, f"overlay-{video['file'].replace('.mp4','.png')}")
     subprocess.run([
         CHROME, "--headless", "--disable-gpu", "--no-sandbox",
         "--default-background-color=00000000",
+        "--force-device-scale-factor=1",
+        "--hide-scrollbars",
         "--window-size=1080,1920",
         f"--screenshot={overlay_png}",
         f"file://{tmp_html}"
@@ -97,14 +97,26 @@ for video in VIDEOS:
         print(f"  [{total}] {video['file']} — FAIL (no overlay PNG)")
         continue
 
-    # Composite: video + overlay PNG
+    # Composite: video → scale 1080x1920 → overlay PNG → drawbox black bars → drawtext CTA/URL
     output_name = video['file'].replace('.mp4', '-final.mp4')
     output_path = os.path.join(VIDEOS_DIR, output_name)
+    font_path = "/System/Library/Fonts/Monaco.ttf"
+    if not os.path.exists(font_path):
+        font_path = "/System/Library/Fonts/Menlo.ttc"
     result = subprocess.run([
         FFMPEG, "-y",
         "-i", input_path,
         "-i", overlay_png,
-        "-filter_complex", "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920[bg];[bg][1:v]overlay=0:0",
+        "-filter_complex",
+        "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920[bg];"
+        "[1:v]scale=1080:1920[ov];"
+        "[bg][ov]overlay=0:0:format=auto,"
+        "drawbox=x=0:y=0:w=1080:h=6:color=black@1:t=fill,"
+        "drawbox=x=0:y=1780:w=1080:h=140:color=black@1:t=fill,"
+        f"drawtext=fontfile='{font_path}':text='START_YOUR_HUNT →':"
+        "fontcolor=0xff0033:fontsize=32:x=(w-tw)/2:y=1818,"
+        f"drawtext=fontfile='{font_path}':text='STORYHUNT.CITY/START':"
+        "fontcolor=white@0.45:fontsize=22:x=(w-tw)/2:y=1870",
         "-c:a", "copy",
         output_path
     ], capture_output=True, timeout=120)

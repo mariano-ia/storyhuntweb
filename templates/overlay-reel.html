@@ -3,11 +3,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
-.story { width: 1080px; height: 1920px; position: relative; overflow: hidden; font-family: 'Inter', sans-serif; background: transparent; }
+html, body { width: 1080px; height: 1920px; margin: 0; padding: 0; overflow: hidden; background: transparent; }
+.story { position: fixed; top: 0; left: 0; width: 1080px; height: 1920px; overflow: hidden; font-family: 'Inter', sans-serif; background: transparent; }
 .vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%); }
-.darken { position: absolute; inset: 0; background: rgba(0,0,0,0.3); }
-.content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 56px; }
+.darken { position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
+.top-fade { position: absolute; left: 0; right: 0; top: 0; height: 220px; background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%); }
+.content { position: relative; z-index: 3; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 56px 180px 56px; }
 .top { display: flex; justify-content: space-between; align-items: center; }
 .status { font-family: 'Space Mono', monospace; font-size: 18px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
 .dot { width: 12px; height: 12px; background: #ff0033; border-radius: 50%; box-shadow: 0 0 12px #ff0033; }
@@ -25,6 +26,7 @@ body { width: 1080px; height: 1920px; overflow: hidden; background: transparent;
 <div class="story">
     <div class="darken"></div>
     <div class="vignette"></div>
+    <div class="top-fade"></div>
     <div class="content">
         <div class="top">
             <div class="status"><div class="dot"></div>LIVE_TRANSMISSION</div>
