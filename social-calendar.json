@@ -187,7 +187,9 @@
       "subtext": "Brooklyn Bridge's Architect. Decode the story of the man who built what he couldn't cross. Play it now at storyhunt.city",
       "bg_image": "https://images.unsplash.com/photo-1470004914212-05527e49370b?w=1080",
       "image_file": "assets/posts/2026-04-14-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-14",
+      "post_id": "17900590803258734"
     },
     {
       "date": "2026-04-14",
@@ -203,7 +205,9 @@
       "terminal_line": "$ storyhunt --building=\"chrysler\" --look=\"up\"",
       "bg_image": "https://images.unsplash.com/photo-1541336032412-2048a678540d?w=1080",
       "image_file": "assets/posts/2026-04-14-pm-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-14",
+      "post_id": "18076385879442075"
     },
     {
       "date": "2026-04-15",
