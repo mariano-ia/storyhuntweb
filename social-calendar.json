@@ -221,7 +221,9 @@
       "subtext": "You get a message. You follow it. The city answers back. That's how a StoryHunt works.",
       "bg_image": "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1080",
       "image_file": "assets/posts/2026-04-15-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-15",
+      "post_id": "18231609601309665"
     },
     {
       "date": "2026-04-15",
@@ -235,7 +237,9 @@
       "subtext": "City Hall station. Stained glass, tile arches, and silence. Some of the best architecture in NYC is underground.",
       "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1080",
       "image_file": "assets/posts/2026-04-15-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-15",
+      "post_id": "17957115687086494"
     },
     {
       "date": "2026-04-16",
