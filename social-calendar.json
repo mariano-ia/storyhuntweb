@@ -252,7 +252,9 @@
       "attribution": "— STORYHUNT",
       "bg_image": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1080",
       "image_file": "assets/posts/2026-04-16-am-quote.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-16",
+      "post_id": "17861431680565895"
     },
     {
       "date": "2026-04-16",
@@ -266,7 +268,9 @@
       "subtext": "The Village Sessions. A mystery walk through the streets where American culture was rewritten. Coming soon.",
       "bg_image": "https://images.unsplash.com/photo-1543716091-a840c05249ec?w=1080",
       "image_file": "assets/posts/2026-04-16-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-16",
+      "post_id": "18125663311520897"
     },
     {
       "date": "2026-04-17",
