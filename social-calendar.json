@@ -286,7 +286,9 @@
       "terminal_line": "$ storyhunt --scan=\"brooklyn_bridge\" --history=\"construction\"",
       "bg_image": "https://images.unsplash.com/photo-1558507334-57e3081dbaf0?w=1080",
       "image_file": "assets/posts/2026-04-17-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-17",
+      "post_id": "17886013131375099"
     },
     {
       "date": "2026-04-17",
@@ -300,7 +302,9 @@
       "subtext": "Hook & Ladder 8. Open since 1903. Tribeca holds more stories than any movie could fit.",
       "bg_image": "https://images.unsplash.com/photo-1524168948265-9be8bcaf784c?w=1080",
       "image_file": "assets/posts/2026-04-17-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-17",
+      "post_id": "18110310187885092"
     },
     {
       "date": "2026-04-20",
