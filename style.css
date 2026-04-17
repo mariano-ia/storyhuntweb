@@ -1271,6 +1271,28 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.starting-point-badge {
+    background: rgba(255, 0, 51, 0.08);
+    border: 1px solid rgba(255, 0, 51, 0.25);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+}
+
+.starting-point-label {
+    font-size: 0.6rem;
+    color: #ff0033;
+    letter-spacing: 0.15em;
+    margin-bottom: 4px;
+}
+
+.starting-point-value {
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 600;
+}
+
 .card-meta {
     display: grid;
     grid-template-columns: 1fr 1fr;

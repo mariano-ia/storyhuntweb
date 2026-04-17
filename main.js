@@ -234,6 +234,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     const backContent = isLive ? `
                         <h3>${(exp.name || '').toUpperCase()}</h3>
                         <p class="card-description">${exp.web_description || ''}</p>
+                        ${exp.starting_point ? `
+                        <div class="starting-point-badge">
+                            <div class="starting-point-label">START_POINT</div>
+                            <div class="starting-point-value">${exp.starting_point}</div>
+                        </div>` : ''}
                         <div class="card-meta">
                             ${exp.duration ? `<div><span class="label">DURATION:</span> ${exp.duration.toUpperCase()}</div>` : ''}
                             ${exp.distance ? `<div><span class="label">DISTANCE:</span> ${exp.distance.toUpperCase()}</div>` : ''}
