@@ -318,7 +318,9 @@
       "subtext": "Brooklyn Bridge's Architect. The Financial District holds the clues. Your phone holds the questions. Play now at storyhunt.city",
       "bg_image": "https://images.unsplash.com/photo-1428817308800-4b20a0782df3?w=1080",
       "image_file": "assets/posts/2026-04-20-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-20",
+      "post_id": "17974636215010051"
     },
     {
       "date": "2026-04-20",
@@ -332,7 +334,9 @@
       "subtext": "A narrator guides you. The city holds the answers. Every corner could be a clue. That's the feeling.",
       "bg_image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=1080",
       "image_file": "assets/posts/2026-04-20-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-20",
+      "post_id": "17933865657238897"
     },
     {
       "date": "2026-04-21",
