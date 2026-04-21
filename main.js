@@ -271,6 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <div class="card-status mono ${badgeClass}">
                                         <span class="status-dot ${dotClass}"></span> ${statusLabel}
                                     </div>
+                                    <span class="card-flip-badge mono">TAP_FOR_MORE_DETAILS</span>
                                     ${exp.web_image ? `<img class="card-image" src="${exp.web_image}" alt="${exp.name}" loading="lazy">` : '<div class="card-image" style="background:#111;"></div>'}
                                     <div class="card-content">
                                         ${exp.location ? `<span class="card-location-badge mono">${exp.location.toUpperCase()}</span>` : ''}
@@ -281,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
                                             <span class="card-price mono">${isLive ? (exp.price > 0 ? `<span class="price-original">$${originalPrice.toFixed(2)}</span> $${exp.price} USD` : 'FREE') : 'COMING_SOON'}</span>
                                             ${frontCTA}
                                         </div>
-                                        <span class="card-flip-hint mono always-visible">TAP_FOR_DETAILS &gt;</span>
                                     </div>
                                 </div>
                                 <div class="card-back">

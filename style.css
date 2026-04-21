@@ -1402,7 +1402,7 @@ footer {
     margin-bottom: 0.25rem;
 }
 
-/* Flip hint styling */
+/* Flip hint styling (back face only — FLIP_BACK) */
 .card-flip-hint {
     font-family: var(--font-mono);
     text-transform: uppercase;
@@ -1414,8 +1414,22 @@ footer {
     display: block;
 }
 
-.card-flip-hint.always-visible {
-    opacity: 0.7;
+/* Square badge on front face, top-right corner */
+.card-flip-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    padding: 0.45rem 0.7rem;
+    background: var(--electric-blue);
+    color: #000;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    border-radius: 2px;
+    pointer-events: none;
 }
 
 .experience-card:hover .card-flip-hint {
