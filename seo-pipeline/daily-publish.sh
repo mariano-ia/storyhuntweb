@@ -111,11 +111,18 @@ if [ "$pending" -lt "$BATCH_SIZE" ]; then
     BATCH_SIZE=$pending
 fi
 
-# Step 4: Pull latest first (avoid merge conflicts on push)
+# Step 4: Pull latest first (with stash protection for unstaged changes)
 log "Pulling latest from origin..."
+stash_needed=0
+if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+    git stash push -u -m "cron-auto-stash-$(date +%s)" 2>&1 | tee -a "$LOG_FILE" && stash_needed=1
+fi
 git pull --rebase origin main 2>&1 | tee -a "$LOG_FILE" || {
     log "WARNING: git pull failed. Continuing anyway."
 }
+if [ "$stash_needed" = "1" ]; then
+    git stash pop 2>&1 | tee -a "$LOG_FILE" || log "WARNING: stash pop had conflicts"
+fi
 
 # Step 5: Generate pages
 log "Generating $BATCH_SIZE pages..."
