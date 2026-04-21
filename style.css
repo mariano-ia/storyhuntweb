@@ -1001,11 +1001,27 @@ footer {
     }
 }
 
-/* For modern mobile with high performance, we can allow video */
-@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+/* Mobile: keep the static poster, never play the looping video */
+@media (max-width: 768px) {
     #bg-video {
-        display: block;
-        opacity: 0.6;
+        display: none !important;
+    }
+
+    .video-background {
+        background-image: url('bg_mobile.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .noise-overlay,
+    .grain-overlay,
+    .map-grid {
+        display: none;
+    }
+
+    .glitch::before,
+    .glitch::after {
+        display: none;
     }
 }
 
