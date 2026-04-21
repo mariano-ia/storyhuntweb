@@ -10,6 +10,7 @@ import subprocess
 import base64
 import tempfile
 import ssl
+import time
 import certifi
 import urllib.request
 
@@ -22,23 +23,51 @@ CALENDAR_FILE = os.path.join(BASE_DIR, "social-calendar.json")
 os.makedirs(POSTS_DIR, exist_ok=True)
 
 
+FALLBACK_BGS = [
+    "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1080",
+    "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=1080",
+    "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1080",
+]
+
+
+def _try_download(url, attempts=3):
+    ctx = ssl.create_default_context(cafile=certifi.where())
+    last_err = None
+    for i in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
+                return resp.read()
+        except Exception as e:
+            last_err = e
+            if i < attempts - 1:
+                time.sleep(1.5 * (i + 1))
+    print(f"    WARNING: download failed after {attempts} attempts ({url}): {last_err}")
+    return None
+
+
 def download_image_as_base64(url):
-    """Download image and return as base64 data URI."""
-    try:
-        ctx = ssl.create_default_context(cafile=certifi.where())
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
-            data = resp.read()
-            return f"data:image/jpeg;base64,{base64.b64encode(data).decode()}"
-    except Exception as e:
-        print(f"    WARNING: Could not download {url}: {e}")
+    """Download image as base64 data URI. Retries, then tries fallback URLs. Returns None only if all sources fail."""
+    data = _try_download(url)
+    if data is None:
+        for fb in FALLBACK_BGS:
+            if fb == url:
+                continue
+            print(f"    trying fallback: {fb}")
+            data = _try_download(fb, attempts=2)
+            if data is not None:
+                break
+    if data is None:
         return None
+    return f"data:image/jpeg;base64,{base64.b64encode(data).decode()}"
 
 
 def build_mystery_html(post):
     """Build mystery/spotlight/behind template with embedded data."""
     bg_b64 = download_image_as_base64(post["bg_image"]) if post.get("bg_image") else None
-    bg_css = f"url('{bg_b64}')" if bg_b64 else "linear-gradient(135deg, #0a0a0a, #1a1a2e)"
+    if not bg_b64:
+        raise RuntimeError(f"bg_image unavailable for {post.get('image_file')} — refusing to render overlay-only PNG")
+    bg_css = f"url('{bg_b64}')"
 
     return f"""<!DOCTYPE html>
 <html><head><meta charset="UTF-8">
@@ -202,7 +231,12 @@ def render_post(post):
         print(f"  SKIP unknown template: {template}")
         return False
 
-    html = builder(post)
+    try:
+        html = builder(post)
+    except RuntimeError as e:
+        print(f"  FAIL  {post['image_file']} — {e}")
+        return False
+
     out_path = os.path.join(BASE_DIR, post["image_file"])
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
