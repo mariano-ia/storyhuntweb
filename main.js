@@ -285,9 +285,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                 </div>
                                 <div class="card-back">
+                                    <span class="card-flip-badge">FLIP_BACK</span>
                                     ${backContent}
                                     ${backCTA}
-                                    <span class="card-flip-hint">&lt; FLIP_BACK</span>
                                 </div>
                             </div>
                         </div>
