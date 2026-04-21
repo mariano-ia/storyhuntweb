@@ -1895,7 +1895,9 @@ footer {
     }
 
     .experience-card {
-        height: 420px;
+        aspect-ratio: auto;
+        width: 100%;
+        height: 560px;
     }
 
     .card-back {
