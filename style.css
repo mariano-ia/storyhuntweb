@@ -1001,26 +1001,18 @@ footer {
     }
 }
 
-/* Mobile: keep the static poster, never play the looping video */
-@media (max-width: 768px) {
+/* For modern mobile with high performance, we can allow video */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
     #bg-video {
-        display: none !important;
+        display: block;
+        opacity: 0.6;
     }
+}
 
-    .video-background {
-        background-image: url('bg_mobile.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .noise-overlay,
-    .grain-overlay,
-    .map-grid {
-        display: none;
-    }
-
-    .glitch::before,
-    .glitch::after {
+/* Mobile: hide hero chat animation (bubbles + typing indicator) */
+@media (max-width: 768px) {
+    .hero-right,
+    .hero-chat {
         display: none;
     }
 }
