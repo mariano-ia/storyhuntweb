@@ -350,7 +350,9 @@
       "subtext": "Every building in SoHo tells two stories. The one you see, and the one that burned down before it.",
       "bg_image": "https://images.unsplash.com/photo-1506804900235-e9e81616d9c2?w=1080",
       "image_file": "assets/posts/2026-04-21-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-21",
+      "post_id": "18074246942240494"
     },
     {
       "date": "2026-04-21",
@@ -366,7 +368,9 @@
       "terminal_line": "$ storyhunt --park=\"central\" --find=\"cave\"",
       "bg_image": "https://images.unsplash.com/photo-1576788903675-61fc4acfab21?w=1080",
       "image_file": "assets/posts/2026-04-21-pm-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-21",
+      "post_id": "18054725492507683"
     },
     {
       "date": "2026-04-22",
