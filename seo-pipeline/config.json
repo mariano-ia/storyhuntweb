@@ -4621,7 +4621,8 @@
         "outdoor-escape-room-for-couples",
         "outdoor-escape-room-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:50:19.894691+00:00"
     },
     {
       "slug": "outdoor-escape-room-for-coworkers",
@@ -4642,7 +4643,8 @@
         "outdoor-escape-room-for-couples",
         "outdoor-escape-room-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:50:28.919206+00:00"
     },
     {
       "slug": "outdoor-escape-room-for-kids",
@@ -4663,7 +4665,8 @@
         "outdoor-escape-room-for-couples",
         "outdoor-escape-room-in-soho"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:50:40.703294+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-this-weekend",
@@ -4704,7 +4707,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:50:51.445382+00:00"
     },
     {
       "slug": "date-ideas-nyc-this-weekend",
@@ -4725,7 +4729,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:01.835408+00:00"
     },
     {
       "slug": "things-to-do-nyc-this-weekend",
@@ -4745,7 +4750,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:12.118534+00:00"
     },
     {
       "slug": "walking-tour-nyc-this-weekend",
@@ -4765,7 +4771,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:20.488861+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-tonight",
@@ -4785,7 +4792,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:27.844571+00:00"
     },
     {
       "slug": "mystery-walk-nyc-tonight",
@@ -4805,7 +4813,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:39.893215+00:00"
     },
     {
       "slug": "date-ideas-nyc-tonight",
@@ -4826,7 +4835,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:48.430849+00:00"
     },
     {
       "slug": "things-to-do-nyc-tonight",
@@ -4846,7 +4856,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:51:57.119307+00:00"
     },
     {
       "slug": "walking-tour-nyc-tonight",
@@ -4866,7 +4877,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:52:06.144365+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-today",
@@ -4906,7 +4918,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:56:42.051374+00:00"
     },
     {
       "slug": "date-ideas-nyc-today",
@@ -4927,7 +4940,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:56:49.678367+00:00"
     },
     {
       "slug": "things-to-do-nyc-today",
@@ -4947,7 +4961,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:56:58.184211+00:00"
     },
     {
       "slug": "walking-tour-nyc-today",
@@ -4967,7 +4982,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:07.504504+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-winter",
@@ -4987,7 +5003,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:18.260556+00:00"
     },
     {
       "slug": "mystery-walk-nyc-winter",
@@ -5007,7 +5024,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:25.920393+00:00"
     },
     {
       "slug": "date-ideas-nyc-winter",
@@ -5028,7 +5046,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:35.461964+00:00"
     },
     {
       "slug": "things-to-do-nyc-winter",
@@ -5048,7 +5067,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:45.345052+00:00"
     },
     {
       "slug": "walking-tour-nyc-winter",
@@ -5068,7 +5088,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:57:54.295992+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-summer",
@@ -5088,7 +5109,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:58:06.959838+00:00"
     },
     {
       "slug": "mystery-walk-nyc-summer",
@@ -5108,7 +5130,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:58:15.957622+00:00"
     },
     {
       "slug": "date-ideas-nyc-summer",
@@ -5129,7 +5152,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-04-21T15:58:24.101577+00:00"
     },
     {
       "slug": "things-to-do-nyc-summer",
