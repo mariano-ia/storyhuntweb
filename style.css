@@ -1908,6 +1908,34 @@ footer {
         height: 560px;
     }
 
+    /* Mobile: replace 3D flip with cross-fade to dodge iOS Safari
+       backface-visibility bug that leaks mirrored front through the back */
+    .card-inner {
+        transform-style: flat;
+    }
+    .experience-card.flipped .card-inner {
+        transform: none;
+    }
+    .card-front,
+    .card-back {
+        transition: opacity 0.35s ease, visibility 0.35s;
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+    }
+    .card-back {
+        transform: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .experience-card.flipped .card-front {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .experience-card.flipped .card-back {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .card-back {
         padding: 1.5rem;
     }
