@@ -383,7 +383,9 @@
       "attribution": "— STORYHUNT",
       "bg_image": "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?w=1080",
       "image_file": "assets/posts/2026-04-22-am-quote.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-22",
+      "post_id": "18141238327444777"
     },
     {
       "date": "2026-04-22",
@@ -397,7 +399,9 @@
       "subtext": "The Midtown Protocol. Manhattan's most crowded streets hold its best-kept secrets. Coming soon.",
       "bg_image": "https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?w=1080",
       "image_file": "assets/posts/2026-04-22-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-22",
+      "post_id": "18411219343177035"
     },
     {
       "date": "2026-04-23",
