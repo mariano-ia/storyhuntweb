@@ -415,7 +415,9 @@
       "subtext": "DUMBO. The best view in Brooklyn is the one tourists never find. It's below, not above.",
       "bg_image": "https://images.unsplash.com/photo-1543716091-a840c05249ec?w=1080",
       "image_file": "assets/posts/2026-04-23-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-23",
+      "post_id": "18186551890328824"
     },
     {
       "date": "2026-04-23",
@@ -429,7 +431,9 @@
       "subtext": "An AI narrator guides each hunt. It adapts. It teases. It never gives away the answer. You have to earn it.",
       "bg_image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1080",
       "image_file": "assets/posts/2026-04-23-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-23",
+      "post_id": "17999183915926036"
     },
     {
       "date": "2026-04-24",
