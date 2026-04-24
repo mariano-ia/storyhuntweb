@@ -449,7 +449,9 @@
       "terminal_line": "$ storyhunt --scan=\"wall_street\" --history=\"origin\"",
       "bg_image": "https://images.unsplash.com/photo-1522083165195-3424ed129620?w=1080",
       "image_file": "assets/posts/2026-04-24-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-24",
+      "post_id": "18090403736586643"
     },
     {
       "date": "2026-04-24",
@@ -463,7 +465,9 @@
       "subtext": "The High Line. What you walk on was built for cargo, not people. The ghosts of industry are in the rails.",
       "bg_image": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=1080",
       "image_file": "assets/posts/2026-04-24-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-24",
+      "post_id": "17886377028482468"
     },
     {
       "date": "2026-04-27",
