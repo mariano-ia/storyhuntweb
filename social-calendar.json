@@ -481,7 +481,9 @@
       "subtext": "The Financial District. The oldest streets in Manhattan hold the newest mysteries. Where Brooklyn Bridge's Architect begins.",
       "bg_image": "https://images.unsplash.com/photo-1470004914212-05527e49370b?w=1080",
       "image_file": "assets/posts/2026-04-27-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-27",
+      "post_id": "18093054827183591"
     },
     {
       "date": "2026-04-27",
@@ -494,7 +496,9 @@
       "attribution": "— STORYHUNT",
       "bg_image": "https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?w=1080",
       "image_file": "assets/posts/2026-04-27-pm-quote.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-04-27",
+      "post_id": "18022756274652701"
     }
   ]
 }
