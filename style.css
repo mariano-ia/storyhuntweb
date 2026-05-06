@@ -368,11 +368,12 @@ section {
 }
 
 .hero-trust {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.7);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    line-height: 1.5;
 }
 
 .hero-actions {
@@ -1999,24 +2000,8 @@ footer {
         padding: 1.8rem 1.5rem;
     }
 
-    /* WHEN section: 2 columns side-by-side on mobile (they're comparative options) */
-    .when-section { padding: 2.5rem 0 1.5rem; }
-    .when-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0 1rem; }
-    .when-card { padding: 0.9rem 0.7rem; border-radius: 10px; }
-    .when-card-label { font-size: 0.55rem; margin-bottom: 0.5rem; letter-spacing: 0.06em; line-height: 1.3; }
-    .when-card-headline { font-size: 0.8rem; margin-bottom: 0.3rem; }
-    .when-card-body { font-size: 0.7rem; line-height: 1.45; }
-
-    /* WHAT_YOU_GET: tighter on mobile */
-    .wyg-section { padding: 1rem 0 3rem; }
-    .wyg-list { padding: 0 1rem; }
-    .wyg-item { font-size: 0.85rem; padding: 0.6rem 0.85rem; }
-
-    /* FAQ: tighter on mobile */
-    .faq-section { padding: 2.5rem 0 2rem; }
-    .faq-list { padding: 0 1rem; }
-    .faq-item summary { font-size: 0.9rem; padding: 0.85rem 0; }
-    .faq-item p { font-size: 0.85rem; }
+    /* (Mobile overrides for .when, .wyg, .faq sections moved to end of file
+       so they apply AFTER the base rules — CSS cascade order matters.) */
 
     .card-meta {
         grid-template-columns: 1fr;
@@ -2188,4 +2173,54 @@ footer {
 @keyframes faqCursorBlink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+/* ─── Mobile overrides for new sections ────────────────────────
+   IMPORTANT: must come AFTER the base rules (which are above) so
+   they win the cascade. Earlier overrides inside the main 768px
+   block were placed BEFORE the base rules and were getting overridden.
+*/
+@media (max-width: 768px) {
+    /* WHEN: 2 columns side-by-side, comfortable font sizes */
+    .when-section { padding: 2.5rem 0 1.5rem; }
+    .when-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.6rem;
+        padding: 0 1rem;
+    }
+    .when-card {
+        padding: 1rem 0.85rem;
+        border-radius: 10px;
+    }
+    .when-card-label {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.06em;
+        line-height: 1.3;
+    }
+    .when-card-headline {
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+    }
+    .when-card-body {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+    /* WHAT_YOU_GET: comfortable on mobile */
+    .wyg-section { padding: 1rem 0 3rem; }
+    .wyg-list { padding: 0 1rem; }
+    .wyg-item {
+        font-size: 0.88rem;
+        padding: 0.7rem 0.95rem;
+    }
+
+    /* FAQ: comfortable summary + answer */
+    .faq-section { padding: 2.5rem 0 2rem; }
+    .faq-list { padding: 0 1rem; }
+    .faq-item summary {
+        font-size: 0.92rem;
+        padding: 0.95rem 0;
+    }
+    .faq-item p { font-size: 0.88rem; }
 }
