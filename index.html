@@ -6,24 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://storyhunt.city/">
     <meta name="description"
-        content="StoryHunt is an interactive urban adventure and mystery walk in NYC. Solve clues, uncover hidden history, and decode the city on your own. Not a tour — an experience. Book your mission now.">
+        content="StoryHunt NYC: a 2-hour self-guided mystery walk through the New York City nobody else sees. Your phone sends real-time clues. No app, no guide, no tour group. From $9.99 per group.">
     <meta name="keywords"
-        content="StoryHunt, interactive urban adventure, NYC scavenger hunt, mystery walk, escape room alternative, city game, storytelling">
+        content="things to do in NYC, self-guided NYC tour, NYC scavenger hunt, mystery walk NYC, hidden NYC, unique experiences NYC, escape room alternative NYC, NYC date ideas">
 
     <!-- Open Graph / Meta -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://storyhunt.city/">
-    <meta property="og:title" content="StoryHunt | Interactive Urban Adventure">
+    <meta property="og:title" content="StoryHunt NYC | Self-guided mystery walks through hidden New York">
     <meta property="og:description"
-        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour. Decode the city.">
+        content="The 2-hour walk that shows you the NYC nobody else sees. Your phone sends real-time clues. No app, no guide, no tour group.">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="StoryHunt | Interactive Urban Adventure">
+    <meta property="twitter:title" content="StoryHunt NYC | Self-guided mystery walks">
     <meta property="twitter:description"
-        content="StoryHunt is an interactive urban adventure and mystery walk. Not just a tour. Decode the city.">
+        content="The 2-hour walk that shows you the NYC nobody else sees. Your phone sends real-time clues.">
 
-    <title>StoryHunt | Interactive Urban Adventure</title>
+    <title>StoryHunt NYC | Self-guided mystery walks through hidden New York</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -33,25 +34,36 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff0033%22/></svg>">
     <link rel="stylesheet" href="style.css">
 
-    <!-- JSON-LD Schema for StoryHunt -->
+    <!-- JSON-LD Schema for StoryHunt NYC -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "StoryHunt",
+      "@type": "TouristAttraction",
+      "name": "StoryHunt NYC",
       "url": "https://storyhunt.city/",
-      "description": "An interactive urban adventure and mystery game played in the physical world.",
-      "applicationCategory": "GameApplication",
-      "genre": "Urban Adventure, Scavenger Hunt",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "0"
+      "description": "Self-guided 2-hour mystery walks through hidden New York. Your phone sends real-time clues. No app, no guide, no tour group.",
+      "image": "https://storyhunt.city/bg.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "addressCountry": "US"
       },
-      "creator": {
-        "@type": "Organization",
-        "name": "StoryHunt"
-      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7580,
+        "longitude": -73.9855
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "9.99",
+        "highPrice": "14.99",
+        "url": "https://storyhunt.city/start"
+      },
+      "isAccessibleForFree": false,
+      "publicAccess": true,
+      "tourBookingPage": "https://storyhunt.city/start"
     }
     </script>
 
@@ -126,13 +138,18 @@
                 <div class="hero-split">
                     <div class="hero-left">
                         <div class="glitch-wrapper">
-                            <h1 class="glitch reveal-text" id="hero-h1" data-text="Decode the City. Live the Story.">Decode the City.<br>Live the Story.</h1>
+                            <h1 class="glitch reveal-text" id="hero-h1" data-text="The 2-hour walk that shows you the NYC nobody else sees.">The 2-hour walk<br>that shows you the<br><span style="color:#ff0033">NYC</span> nobody else sees.</h1>
                         </div>
-                        <p class="subtitle reveal-text" id="typewriter-text"></p>
+                        <p class="subtitle reveal-text" style="--d: 0.4s">
+                            Your phone sends real-time clues. You walk where they tell you.
+                        </p>
+                        <p class="hero-trust mono reveal-text" style="--d: 0.6s">
+                            No app · No guide · No tour group · 2 hours
+                        </p>
                         <div class="hero-actions reveal-text" style="--d: 0.8s">
                             <a href="#experiences" class="primary-btn mono">
-                                <span class="btn-text">EXPLORE_MISSIONS</span>
-                                <span class="btn-hover">CHOOSE_YOUR_CITY</span>
+                                <span class="btn-text">CHOOSE_YOUR_HUNT</span>
+                                <span class="btn-hover">START_THE_MISSION</span>
                             </a>
                         </div>
                     </div>
@@ -440,8 +457,8 @@
     <footer class="footer">
         <div class="container flex-footer">
             <div class="footer-left mono">
-                <p>THIS_IS_NOT_A_TOUR.</p>
-                <p>LAUNCHING_GLOBALLY.</p>
+                <p>STORYHUNT_NYC // ACTIVE</p>
+                <p style="opacity: 0.5;">COMING_SOON: BUENOS_AIRES · TOKYO · MEXICO_CITY</p>
             </div>
             <div class="footer-right mono">
                 <p>STORYHUNT ©</p>
@@ -468,27 +485,36 @@
             p.textContent = '';
         });
 
-        var activeTimer = null;
+        // Each <p> tracks its OWN timer + cursor cleanup.
+        // Sharing a global timer caused close-of-A to kill type-of-B because
+        // toggle events fire async (B's open handler starts B's timer BEFORE
+        // A's close handler fires).
+        function stopTyping(p) {
+            if (p._shTimer) { clearInterval(p._shTimer); p._shTimer = null; }
+            if (p._shCursorTimeout) { clearTimeout(p._shCursorTimeout); p._shCursorTimeout = null; }
+        }
 
         function typeText(p, text) {
-            if (activeTimer) { clearInterval(activeTimer); activeTimer = null; }
+            stopTyping(p);
             p.innerHTML = '<span class="faq-text"></span><span class="faq-cursor">|</span>';
             var span = p.querySelector('.faq-text');
             var cursor = p.querySelector('.faq-cursor');
-            var i = 0;
             var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             if (reduced) {
                 span.textContent = text;
-                cursor.remove();
+                if (cursor) cursor.remove();
                 return;
             }
-            activeTimer = setInterval(function() {
+            var i = 0;
+            p._shTimer = setInterval(function() {
                 i++;
                 span.textContent = text.slice(0, i);
                 if (i >= text.length) {
-                    clearInterval(activeTimer);
-                    activeTimer = null;
-                    setTimeout(function(){ if (cursor && cursor.parentNode) cursor.remove(); }, 600);
+                    clearInterval(p._shTimer);
+                    p._shTimer = null;
+                    p._shCursorTimeout = setTimeout(function(){
+                        if (cursor && cursor.parentNode) cursor.remove();
+                    }, 600);
                 }
             }, 18);
         }
@@ -504,8 +530,10 @@
                     if (p && p.dataset.fullText) typeText(p, p.dataset.fullText);
                 } else {
                     var p = item.querySelector('p');
-                    if (p) p.textContent = '';
-                    if (activeTimer) { clearInterval(activeTimer); activeTimer = null; }
+                    if (p) {
+                        stopTyping(p);
+                        p.textContent = '';
+                    }
                 }
             });
         });

@@ -364,7 +364,14 @@ section {
     color: var(--text-muted);
     font-weight: 400;
     max-width: 600px;
-    min-height: 3em;
+    margin-bottom: 0.8rem;
+}
+
+.hero-trust {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
@@ -1971,9 +1978,45 @@ footer {
         grid-row: span 1;
     }
 
+    /* Testimonials: horizontal swipeable carousel on mobile (uno al lado del otro) */
     .testimonials-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 1rem;
+        padding: 0 1rem 1rem;
+        margin: 1.5rem -1rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
     }
+    .testimonials-grid::-webkit-scrollbar { display: none; }
+    .testimonial-card {
+        flex: 0 0 calc(100% - 2rem);
+        max-width: 320px;
+        scroll-snap-align: center;
+        padding: 1.8rem 1.5rem;
+    }
+
+    /* WHEN section: tighter padding + smaller font on mobile */
+    .when-section { padding: 2.5rem 0 1.5rem; }
+    .when-grid { grid-template-columns: 1fr; gap: 0.7rem; padding: 0 1rem; }
+    .when-card { padding: 1.1rem 1rem; }
+    .when-card-label { font-size: 0.65rem; margin-bottom: 0.4rem; }
+    .when-card-headline { font-size: 0.9rem; }
+    .when-card-body { font-size: 0.8rem; line-height: 1.5; }
+
+    /* WHAT_YOU_GET: tighter on mobile */
+    .wyg-section { padding: 1rem 0 3rem; }
+    .wyg-list { padding: 0 1rem; }
+    .wyg-item { font-size: 0.85rem; padding: 0.6rem 0.85rem; }
+
+    /* FAQ: tighter on mobile */
+    .faq-section { padding: 2.5rem 0 2rem; }
+    .faq-list { padding: 0 1rem; }
+    .faq-item summary { font-size: 0.9rem; padding: 0.85rem 0; }
+    .faq-item p { font-size: 0.85rem; }
 
     .card-meta {
         grid-template-columns: 1fr;
