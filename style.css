@@ -2097,11 +2097,15 @@ footer {
 }
 .faq-list {
     max-width: 720px;
+    width: 100%;
     margin: 1.5rem auto 0;
+    box-sizing: border-box;
 }
 .faq-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding: 0.2rem 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 .faq-item summary {
     cursor: pointer;
@@ -2131,4 +2135,14 @@ footer {
     color: #94A3B8;
     font-size: 0.9rem;
     line-height: 1.6;
+    min-height: 1.6em;
+}
+.faq-cursor {
+    color: #00d2ff;
+    margin-left: 2px;
+    animation: faqCursorBlink 0.8s step-end infinite;
+}
+@keyframes faqCursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }

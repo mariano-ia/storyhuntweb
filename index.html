@@ -454,6 +454,64 @@
 
     <script src="main.js"></script>
 
+    <!-- FAQ: single-open accordion + typewriter on reveal -->
+    <script>
+    (function() {
+        var items = document.querySelectorAll('.faq-item');
+        if (!items.length) return;
+
+        // Cache original text + replace with empty paragraph for typing
+        items.forEach(function(item) {
+            var p = item.querySelector('p');
+            if (!p) return;
+            p.dataset.fullText = p.textContent;
+            p.textContent = '';
+        });
+
+        var activeTimer = null;
+
+        function typeText(p, text) {
+            if (activeTimer) { clearInterval(activeTimer); activeTimer = null; }
+            p.innerHTML = '<span class="faq-text"></span><span class="faq-cursor">|</span>';
+            var span = p.querySelector('.faq-text');
+            var cursor = p.querySelector('.faq-cursor');
+            var i = 0;
+            var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduced) {
+                span.textContent = text;
+                cursor.remove();
+                return;
+            }
+            activeTimer = setInterval(function() {
+                i++;
+                span.textContent = text.slice(0, i);
+                if (i >= text.length) {
+                    clearInterval(activeTimer);
+                    activeTimer = null;
+                    setTimeout(function(){ if (cursor && cursor.parentNode) cursor.remove(); }, 600);
+                }
+            }, 18);
+        }
+
+        items.forEach(function(item) {
+            item.addEventListener('toggle', function() {
+                if (item.open) {
+                    // Close all OTHER items (single-open behavior)
+                    items.forEach(function(other) {
+                        if (other !== item && other.open) other.open = false;
+                    });
+                    var p = item.querySelector('p');
+                    if (p && p.dataset.fullText) typeText(p, p.dataset.fullText);
+                } else {
+                    var p = item.querySelector('p');
+                    if (p) p.textContent = '';
+                    if (activeTimer) { clearInterval(activeTimer); activeTimer = null; }
+                }
+            });
+        });
+    })();
+    </script>
+
     <!-- A/B: hero copy (mirrors /start cookie + variant) -->
     <script>
     (function() {
