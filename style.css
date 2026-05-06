@@ -1999,13 +1999,13 @@ footer {
         padding: 1.8rem 1.5rem;
     }
 
-    /* WHEN section: tighter padding + smaller font on mobile */
+    /* WHEN section: 2 columns side-by-side on mobile (they're comparative options) */
     .when-section { padding: 2.5rem 0 1.5rem; }
-    .when-grid { grid-template-columns: 1fr; gap: 0.7rem; padding: 0 1rem; }
-    .when-card { padding: 1.1rem 1rem; }
-    .when-card-label { font-size: 0.65rem; margin-bottom: 0.4rem; }
-    .when-card-headline { font-size: 0.9rem; }
-    .when-card-body { font-size: 0.8rem; line-height: 1.5; }
+    .when-grid { grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0 1rem; }
+    .when-card { padding: 0.9rem 0.7rem; border-radius: 10px; }
+    .when-card-label { font-size: 0.55rem; margin-bottom: 0.5rem; letter-spacing: 0.06em; line-height: 1.3; }
+    .when-card-headline { font-size: 0.8rem; margin-bottom: 0.3rem; }
+    .when-card-body { font-size: 0.7rem; line-height: 1.45; }
 
     /* WHAT_YOU_GET: tighter on mobile */
     .wyg-section { padding: 1rem 0 3rem; }
