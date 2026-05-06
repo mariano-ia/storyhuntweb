@@ -2010,3 +2010,125 @@ footer {
         font-size: 1.2rem;
     }
 }
+/* ─── WHEN section (planning vs already in NYC) ─────────────────── */
+.when-section {
+    padding: 4rem 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+.when-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.when-card {
+    padding: 1.5rem 1.4rem;
+    border-radius: 12px;
+}
+.when-card--planning {
+    background: rgba(0, 210, 255, 0.04);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+.when-card--here {
+    background: rgba(255, 0, 51, 0.04);
+    border: 1px solid rgba(255, 0, 51, 0.2);
+}
+.when-card-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+}
+.when-card--planning .when-card-label { color: #00d2ff; }
+.when-card--here .when-card-label { color: #ff0033; }
+.when-card-headline {
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+}
+.when-card-body {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ─── WHAT_YOU_GET checklist ─────────────────────────────────── */
+.wyg-section {
+    padding: 2rem 0 4rem;
+    position: relative;
+    z-index: 2;
+}
+.wyg-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto 0;
+    display: grid;
+    gap: 0.6rem;
+    max-width: 600px;
+}
+.wyg-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #CBD5E1;
+    line-height: 1.5;
+}
+.wyg-check {
+    color: #00ff66;
+    font-family: 'Space Mono', 'Fira Code', monospace;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+/* ─── FAQ accordion (uses native <details>) ───────────────────── */
+.faq-section {
+    padding: 4rem 0 3rem;
+    position: relative;
+    z-index: 2;
+}
+.faq-list {
+    max-width: 720px;
+    margin: 1.5rem auto 0;
+}
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.2rem 0;
+}
+.faq-item summary {
+    cursor: pointer;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+    content: '▾';
+    color: #00d2ff;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+.faq-item[open] summary::after { transform: rotate(180deg); }
+.faq-item p {
+    padding: 0 0 1rem;
+    margin: 0;
+    color: #94A3B8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}

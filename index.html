@@ -72,6 +72,17 @@
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1719479962357595&ev=PageView&noscript=1" alt=""/></noscript>
+
+    <!-- PostHog (analytics + session recording) -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing alias debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_m3Spde8sNLCTWysZXTyVqXPTzsFibQmJ3BBixBEuu4Zi', {
+            api_host: 'https://us.i.posthog.com',
+            person_profiles: 'identified_only',
+            capture_pageview: true,
+            session_recording: { maskAllInputs: true }
+        });
+    </script>
 </head>
 
 <body class="loading">
@@ -115,7 +126,7 @@
                 <div class="hero-split">
                     <div class="hero-left">
                         <div class="glitch-wrapper">
-                            <h1 class="glitch reveal-text" data-text="Decode the City. Live the Story.">Decode the City.<br>Live the Story.</h1>
+                            <h1 class="glitch reveal-text" id="hero-h1" data-text="Decode the City. Live the Story.">Decode the City.<br>Live the Story.</h1>
                         </div>
                         <p class="subtitle reveal-text" id="typewriter-text"></p>
                         <div class="hero-actions reveal-text" style="--d: 0.8s">
@@ -153,6 +164,9 @@
                             <span class="hiw-tag">EN | ES</span>
                             <span class="hiw-tag">$9-15 USD</span>
                         </div>
+                        <p class="mono" style="font-size: 0.6rem; color: #00d2ff; letter-spacing: 0.1em; margin-top: 0.6rem; opacity: 0.85;">
+                            COMING_TO_NYC // BUY_NOW · ACTIVATE_ON_ARRIVAL
+                        </p>
                     </div>
                     <div class="hiw-arrow reveal-text" style="--d: 0.15s">
                         <span class="mono">&gt;&gt;</span>
@@ -178,6 +192,41 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- WHEN: trip planning vs already in NYC -->
+        <section class="when-section" id="when">
+            <div class="container">
+                <h2 class="section-title reveal-text">WHEN</h2>
+                <div class="when-grid">
+                    <div class="when-card when-card--planning reveal-text" style="--d: 0.1s">
+                        <div class="when-card-label mono">🛬 PLANNING_YOUR_TRIP</div>
+                        <p class="when-card-headline">Buy now.</p>
+                        <p class="when-card-body">Your 30-day clock starts the first time you open the link — not before.</p>
+                    </div>
+                    <div class="when-card when-card--here reveal-text" style="--d: 0.2s">
+                        <div class="when-card-label mono">📍 ALREADY_IN_NYC</div>
+                        <p class="when-card-headline">Buy now.</p>
+                        <p class="when-card-body">Get your access link in under 60 seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT_YOU_GET checklist -->
+        <section class="wyg-section" id="what-you-get">
+            <div class="container smaller">
+                <p class="section-subtitle mono reveal-text">WHAT_YOU_GET</p>
+                <ul class="wyg-list">
+                    <li class="wyg-item reveal-text" style="--d: 0.05s"><span class="wyg-check">✓</span> A unique link sent to your email after purchase</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.1s"><span class="wyg-check">✓</span> Works on any modern phone — no app to download</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.15s"><span class="wyg-check">✓</span> Pause and resume anytime within 30 days from first tap</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.2s"><span class="wyg-check">✓</span> One link covers your whole group</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.25s"><span class="wyg-check">✓</span> Live chat-style narration — not a recording</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.3s"><span class="wyg-check">✓</span> GPS-friendly hints in case you get lost</li>
+                    <li class="wyg-item reveal-text" style="--d: 0.35s"><span class="wyg-check">✓</span> Email support if something goes wrong</li>
+                </ul>
             </div>
         </section>
 
@@ -309,6 +358,63 @@
             </div>
         </section>
 
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <p class="section-subtitle mono reveal-text">FREQUENTLY_ASKED</p>
+                <div class="faq-list reveal-text" style="--d: 0.1s">
+                    <details class="faq-item">
+                        <summary>Do I need an app? Is this a download?</summary>
+                        <p>No. It runs in your phone’s browser. Nothing to install, nothing to update.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do I need international data?</summary>
+                        <p>You need basic 4G/5G to receive clues as you walk. Most US carriers and prepaid SIMs work fine. Wifi-only doesn’t work mid-walk.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What if I get lost?</summary>
+                        <p>Each clue includes GPS-friendly hints (street names, landmarks). You can also tap "I’m stuck" to get the next hint without losing the experience.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What if it rains?</summary>
+                        <p>You can pause and resume on a different day. The 30-day window starts on first tap, so no rush.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is it safe to walk alone?</summary>
+                        <p>All routes go through public, well-trafficked NYC neighborhoods. Designed to feel adventurous, not dangerous. Best done in daylight.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What time of day works best?</summary>
+                        <p>Anytime between 9am and 9pm. Most hunts assume daylight so you can see the visual details.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How long is the walk?</summary>
+                        <p>2–3 hours total, ~2–3 km of walking with frequent stops. You can pause anytime.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I do it with my partner or friends?</summary>
+                        <p>Yes — one purchase covers your whole group. You walk and decode together, sharing the same chat.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What kind of clues are these?</summary>
+                        <p>Real chat messages from a narrator character. Sometimes riddles, sometimes "go to X and find Y", sometimes "look up here — what do you see?".</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What if my phone dies mid-walk?</summary>
+                        <p>Use the same link the next day to continue where you left off. You have 30 days from first tap.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What’s the refund policy?</summary>
+                        <p>If something is genuinely broken on our end, full refund. Just email hello@storyhunt.city.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Will my battery survive?</summary>
+                        <p>About 3–5% per hour of active use. Bring a portable charger if you’re paranoid — we recommend it anyway.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <!-- Newsletter / Notify -->
         <section class="cta" id="cta">
             <div class="container smaller">
@@ -347,6 +453,44 @@
     </footer>
 
     <script src="main.js"></script>
+
+    <!-- A/B: hero copy (mirrors /start cookie + variant) -->
+    <script>
+    (function() {
+        var COOKIE = 'sh_exp_hero-copy-v1';
+        function readCookie(name) {
+            var m = document.cookie.split('; ').find(function(r){ return r.indexOf(name + '=') === 0; });
+            return m ? decodeURIComponent(m.split('=')[1]) : null;
+        }
+        function writeCookie(name, value, days) {
+            var exp = new Date(Date.now() + days * 86400000).toUTCString();
+            document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + exp + '; path=/; SameSite=Lax';
+        }
+        var variant = readCookie(COOKIE);
+        if (!variant) {
+            variant = Math.random() < 0.5 ? 'control' : 'emotional';
+            writeCookie(COOKIE, variant, 90);
+        }
+        // Apply to home hero
+        if (variant === 'emotional') {
+            var h1 = document.getElementById('hero-h1');
+            if (h1) {
+                h1.innerHTML = 'Decode the <span style="color:#ff0033">NYC</span><br>most tourists never see';
+                h1.setAttribute('data-text', 'Decode the NYC most tourists never see');
+            }
+        }
+        // Tag PostHog with variant
+        function tagPosthog() {
+            if (window.posthog && window.posthog.register) {
+                window.posthog.register({ 'experiment_hero-copy-v1': variant });
+                window.posthog.capture('experiment_assigned', { experiment_id: 'hero-copy-v1', variant: variant });
+            } else {
+                setTimeout(tagPosthog, 300);
+            }
+        }
+        tagPosthog();
+    })();
+    </script>
 </body>
 
 </html>
