@@ -80,17 +80,17 @@ body {{ background: #000; width: 1080px; height: 1080px; overflow: hidden; }}
 .scanlines {{ position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px); }}
 .content {{ position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 64px; }}
 .top-bar {{ display: flex; justify-content: space-between; align-items: flex-start; }}
-.status {{ font-family: 'Space Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.4); letter-spacing: 0.05em; }}
-.status .dot {{ display: inline-block; width: 8px; height: 8px; background: #ff0033; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 8px #ff0033; }}
-.logo {{ font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
+.status {{ font-family: 'Space Mono', monospace; font-size: 22px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }}
+.status .dot {{ display: inline-block; width: 12px; height: 12px; background: #ff0033; border-radius: 50%; margin-right: 10px; box-shadow: 0 0 10px #ff0033; }}
+.logo {{ font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
 .logo span {{ color: #ff0033; }}
-.middle {{ display: flex; flex-direction: column; gap: 20px; }}
-.location {{ font-family: 'Space Mono', monospace; font-size: 14px; color: #00d2ff; letter-spacing: 0.15em; text-transform: uppercase; }}
-.headline {{ font-size: 52px; font-weight: 900; color: #fff; line-height: 1.1; max-width: 800px; text-shadow: 3px 0 #ff0033, -3px 0 #00d2ff; }}
-.subtext {{ font-size: 18px; color: rgba(255,255,255,0.7); line-height: 1.5; max-width: 700px; }}
+.middle {{ display: flex; flex-direction: column; gap: 24px; }}
+.location {{ font-family: 'Space Mono', monospace; font-size: 24px; color: #00d2ff; letter-spacing: 0.15em; text-transform: uppercase; }}
+.headline {{ font-size: 76px; font-weight: 900; color: #fff; line-height: 1.1; max-width: 900px; text-shadow: 4px 0 #ff0033, -4px 0 #00d2ff; }}
+.subtext {{ font-size: 32px; color: rgba(255,255,255,0.8); line-height: 1.45; max-width: 850px; }}
 .bottom-bar {{ display: flex; justify-content: space-between; align-items: flex-end; }}
-.cta {{ font-family: 'Space Mono', monospace; font-size: 16px; color: #ff0033; letter-spacing: 0.1em; font-weight: 700; border: 1px solid #ff0033; padding: 12px 24px; }}
-.coords {{ font-family: 'Space Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.3); text-align: right; line-height: 1.8; }}
+.cta {{ font-family: 'Space Mono', monospace; font-size: 26px; color: #ff0033; letter-spacing: 0.1em; font-weight: 700; border: 2px solid #ff0033; padding: 16px 30px; }}
+.coords {{ font-family: 'Space Mono', monospace; font-size: 20px; color: rgba(255,255,255,0.4); text-align: right; line-height: 1.6; }}
 </style></head>
 <body>
 <div class="post">
@@ -127,19 +127,19 @@ body {{ background: #000; width: 1080px; height: 1080px; overflow: hidden; }}
 .grid {{ position: absolute; inset: 0; background: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; }}
 .content {{ position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 64px; }}
 .header {{ display: flex; justify-content: space-between; align-items: flex-start; }}
-.tag {{ font-size: 13px; color: #050505; background: #00d2ff; padding: 6px 14px; font-weight: 700; letter-spacing: 0.08em; }}
-.logo {{ font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
+.tag {{ font-size: 22px; color: #050505; background: #00d2ff; padding: 10px 20px; font-weight: 700; letter-spacing: 0.08em; }}
+.logo {{ font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
 .logo span {{ color: #ff0033; }}
-.body {{ display: flex; flex-direction: column; gap: 32px; }}
-.terminal-line {{ font-size: 13px; color: rgba(255,255,255,0.3); }}
+.body {{ display: flex; flex-direction: column; gap: 36px; }}
+.terminal-line {{ font-size: 22px; color: rgba(255,255,255,0.45); }}
 .terminal-line .prompt {{ color: #ff0033; }}
-.fact-number {{ font-size: 140px; font-weight: 700; color: #ff0033; line-height: 1; opacity: 0.9; text-shadow: 0 0 40px rgba(255,0,51,0.3); }}
-.fact-label {{ font-size: 14px; color: rgba(255,255,255,0.5); letter-spacing: 0.15em; text-transform: uppercase; margin-top: -8px; }}
-.fact-text {{ font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #fff; line-height: 1.4; max-width: 750px; }}
+.fact-number {{ font-size: 180px; font-weight: 700; color: #ff0033; line-height: 1; opacity: 0.9; text-shadow: 0 0 50px rgba(255,0,51,0.35); }}
+.fact-label {{ font-size: 24px; color: rgba(255,255,255,0.6); letter-spacing: 0.15em; text-transform: uppercase; margin-top: -8px; }}
+.fact-text {{ font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 700; color: #fff; line-height: 1.35; max-width: 880px; }}
 .fact-text .highlight {{ color: #00d2ff; }}
 .footer {{ display: flex; justify-content: space-between; align-items: flex-end; }}
-.source {{ font-size: 12px; color: rgba(255,255,255,0.25); line-height: 1.8; }}
-.cta {{ font-size: 14px; color: #00d2ff; font-weight: 700; letter-spacing: 0.1em; border-bottom: 2px solid #00d2ff; padding-bottom: 4px; }}
+.source {{ font-size: 20px; color: rgba(255,255,255,0.4); line-height: 1.6; }}
+.cta {{ font-size: 24px; color: #00d2ff; font-weight: 700; letter-spacing: 0.1em; border-bottom: 3px solid #00d2ff; padding-bottom: 6px; }}
 </style></head>
 <body>
 <div class="post">
@@ -180,17 +180,17 @@ body {{ background: #000; width: 1080px; height: 1080px; overflow: hidden; }}
 .border-line {{ position: absolute; inset: 32px; border: 1px solid rgba(255,255,255,0.06); }}
 .content {{ position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px; }}
 .top {{ display: flex; justify-content: space-between; align-items: flex-start; }}
-.marker {{ font-family: 'Space Mono', monospace; font-size: 64px; color: rgba(255,0,51,0.25); font-weight: 700; line-height: 1; }}
-.logo {{ font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
+.marker {{ font-family: 'Space Mono', monospace; font-size: 96px; color: rgba(255,0,51,0.3); font-weight: 700; line-height: 1; }}
+.logo {{ font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
 .logo span {{ color: #ff0033; }}
-.quote-block {{ display: flex; flex-direction: column; gap: 32px; }}
-.quote {{ font-size: 44px; font-weight: 900; color: #fff; line-height: 1.25; max-width: 800px; letter-spacing: -0.01em; }}
-.quote .em {{ color: #00d2ff; text-decoration: underline; text-decoration-color: rgba(0,210,255,0.3); text-underline-offset: 6px; }}
-.divider {{ width: 60px; height: 3px; background: #ff0033; }}
-.attribution {{ font-family: 'Space Mono', monospace; font-size: 14px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }}
+.quote-block {{ display: flex; flex-direction: column; gap: 36px; }}
+.quote {{ font-size: 64px; font-weight: 900; color: #fff; line-height: 1.2; max-width: 900px; letter-spacing: -0.01em; }}
+.quote .em {{ color: #00d2ff; text-decoration: underline; text-decoration-color: rgba(0,210,255,0.4); text-underline-offset: 8px; }}
+.divider {{ width: 80px; height: 4px; background: #ff0033; }}
+.attribution {{ font-family: 'Space Mono', monospace; font-size: 24px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em; }}
 .bottom {{ display: flex; justify-content: space-between; align-items: flex-end; }}
-.tagline {{ font-family: 'Space Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; line-height: 1.8; }}
-.url {{ font-family: 'Space Mono', monospace; font-size: 16px; color: #ff0033; font-weight: 700; letter-spacing: 0.05em; }}
+.tagline {{ font-family: 'Space Mono', monospace; font-size: 22px; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; line-height: 1.6; }}
+.url {{ font-family: 'Space Mono', monospace; font-size: 26px; color: #ff0033; font-weight: 700; letter-spacing: 0.05em; }}
 </style></head>
 <body>
 <div class="post">
@@ -245,12 +245,14 @@ def render_post(post):
         tmp_html = f.name
 
     try:
+        # Render at extra height to absorb Chrome's headless viewport offset,
+        # then crop top 1080x1080 so the post fills the frame edge-to-edge.
         result = subprocess.run([
             CHROME,
             "--headless=new",
             "--disable-gpu",
             f"--screenshot={out_path}",
-            "--window-size=1080,1080",
+            "--window-size=1080,1220",
             "--hide-scrollbars",
             f"file://{tmp_html}",
         ], capture_output=True, timeout=30, text=True)
@@ -258,6 +260,13 @@ def render_post(post):
             print(f"    CHROME: {result.stderr[:200]}")
 
         if os.path.exists(out_path):
+            try:
+                from PIL import Image
+                with Image.open(out_path) as im:
+                    if im.size != (1080, 1080):
+                        im.crop((0, 0, 1080, 1080)).save(out_path)
+            except Exception as crop_err:
+                print(f"    CROP_WARN: {crop_err}")
             size = os.path.getsize(out_path)
             print(f"  OK  {post['image_file']} ({size:,} bytes)")
             return True
