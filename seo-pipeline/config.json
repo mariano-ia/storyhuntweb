@@ -4898,7 +4898,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:24:19.009269+00:00"
     },
     {
       "slug": "mystery-walk-nyc-today",
@@ -5173,7 +5174,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:24:31.463346+00:00"
     },
     {
       "slug": "walking-tour-nyc-summer",
@@ -5193,7 +5195,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:24:42.707435+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-spring",
@@ -5213,7 +5216,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:24:52.428041+00:00"
     },
     {
       "slug": "mystery-walk-nyc-spring",
@@ -5254,7 +5258,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:28:29.892712+00:00"
     },
     {
       "slug": "things-to-do-nyc-spring",
@@ -5274,7 +5279,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:28:37.204803+00:00"
     },
     {
       "slug": "walking-tour-nyc-spring",
@@ -5294,7 +5300,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:28:51.102977+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-fall",
@@ -5314,7 +5321,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:00.859177+00:00"
     },
     {
       "slug": "mystery-walk-nyc-fall",
@@ -5334,7 +5342,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:14.006164+00:00"
     },
     {
       "slug": "date-ideas-nyc-fall",
@@ -5355,7 +5364,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:22.710915+00:00"
     },
     {
       "slug": "things-to-do-nyc-fall",
@@ -5375,7 +5385,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:32.297135+00:00"
     },
     {
       "slug": "walking-tour-nyc-fall",
@@ -5395,7 +5406,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:41.579032+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-rainy-day",
@@ -5415,7 +5427,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:51.138555+00:00"
     },
     {
       "slug": "mystery-walk-nyc-rainy-day",
@@ -5435,7 +5448,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:29:58.569258+00:00"
     },
     {
       "slug": "date-ideas-nyc-rainy-day",
@@ -5456,7 +5470,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:13.891411+00:00"
     },
     {
       "slug": "things-to-do-nyc-rainy-day",
@@ -5476,7 +5491,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:22.835647+00:00"
     },
     {
       "slug": "walking-tour-nyc-rainy-day",
@@ -5496,7 +5512,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:31.585056+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-valentines-day",
@@ -5516,7 +5533,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:40.828424+00:00"
     },
     {
       "slug": "mystery-walk-nyc-valentines-day",
@@ -5536,7 +5554,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:50.625003+00:00"
     },
     {
       "slug": "date-ideas-nyc-valentines-day",
@@ -5557,7 +5576,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:30:57.595435+00:00"
     },
     {
       "slug": "things-to-do-nyc-valentines-day",
@@ -5577,7 +5597,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:31:04.252405+00:00"
     },
     {
       "slug": "walking-tour-nyc-valentines-day",
@@ -5617,7 +5638,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:34:42.365031+00:00"
     },
     {
       "slug": "mystery-walk-nyc-halloween",
@@ -5637,7 +5659,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:34:50.485045+00:00"
     },
     {
       "slug": "date-ideas-nyc-halloween",
@@ -5658,7 +5681,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:35:00.466623+00:00"
     },
     {
       "slug": "things-to-do-nyc-halloween",
@@ -5678,7 +5702,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:35:08.578398+00:00"
     },
     {
       "slug": "walking-tour-nyc-halloween",
@@ -5718,7 +5743,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:38:45.399657+00:00"
     },
     {
       "slug": "mystery-walk-nyc-christmas",
@@ -5738,7 +5764,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:38:53.653152+00:00"
     },
     {
       "slug": "date-ideas-nyc-christmas",
@@ -5759,7 +5786,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:01.326096+00:00"
     },
     {
       "slug": "things-to-do-nyc-christmas",
@@ -5779,7 +5807,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:07.579789+00:00"
     },
     {
       "slug": "walking-tour-nyc-christmas",
@@ -5799,7 +5828,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:14.613062+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-new-years-eve",
@@ -5819,7 +5849,8 @@
       "related_slugs": [
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:22.087770+00:00"
     },
     {
       "slug": "mystery-walk-nyc-new-years-eve",
@@ -5839,7 +5870,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:30.779247+00:00"
     },
     {
       "slug": "date-ideas-nyc-new-years-eve",
@@ -5860,7 +5892,8 @@
         "things-to-do-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:39.733835+00:00"
     },
     {
       "slug": "things-to-do-nyc-new-years-eve",
@@ -5880,7 +5913,8 @@
       "related_slugs": [
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:48.079170+00:00"
     },
     {
       "slug": "walking-tour-nyc-new-years-eve",
@@ -5900,7 +5934,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:39:58.385022+00:00"
     },
     {
       "slug": "haunted-walking-tour-nyc",
@@ -5945,7 +5980,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:40:06.493624+00:00"
     },
     {
       "slug": "haunted-mystery-walk-nyc",
@@ -5967,7 +6003,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:40:16.802239+00:00"
     },
     {
       "slug": "true-crime-walking-tour-nyc",
@@ -5989,7 +6026,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:40:28.203525+00:00"
     },
     {
       "slug": "true-crime-scavenger-hunt-nyc",
@@ -6011,7 +6049,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:40:36.670186+00:00"
     },
     {
       "slug": "true-crime-mystery-walk-nyc",
@@ -6033,7 +6072,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:40:46.469010+00:00"
     },
     {
       "slug": "history-walking-tour-nyc",
@@ -6077,7 +6117,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:44:44.708928+00:00"
     },
     {
       "slug": "history-mystery-walk-nyc",
@@ -6099,7 +6140,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:44:52.854019+00:00"
     },
     {
       "slug": "art-walking-tour-nyc",
@@ -6121,7 +6163,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:12.769167+00:00"
     },
     {
       "slug": "art-scavenger-hunt-nyc",
@@ -6143,7 +6186,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:21.881325+00:00"
     },
     {
       "slug": "art-mystery-walk-nyc",
@@ -6165,7 +6209,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:30.855657+00:00"
     },
     {
       "slug": "food-walking-tour-nyc",
@@ -6187,7 +6232,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:39.679858+00:00"
     },
     {
       "slug": "food-scavenger-hunt-nyc",
@@ -6209,7 +6255,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:50.424186+00:00"
     },
     {
       "slug": "food-mystery-walk-nyc",
@@ -6231,7 +6278,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:45:59.066802+00:00"
     },
     {
       "slug": "speakeasy-walking-tour-nyc",
@@ -6253,7 +6301,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:46:08.343880+00:00"
     },
     {
       "slug": "speakeasy-scavenger-hunt-nyc",
@@ -6275,7 +6324,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:46:20.836567+00:00"
     },
     {
       "slug": "speakeasy-mystery-walk-nyc",
@@ -6297,7 +6347,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:47:47.134215+00:00"
     },
     {
       "slug": "architecture-walking-tour-nyc",
@@ -6319,7 +6370,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:47:55.338938+00:00"
     },
     {
       "slug": "architecture-scavenger-hunt-nyc",
@@ -6341,7 +6393,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:03.972352+00:00"
     },
     {
       "slug": "architecture-mystery-walk-nyc",
@@ -6363,7 +6416,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:12.438321+00:00"
     },
     {
       "slug": "literary-walking-tour-nyc",
@@ -6385,7 +6439,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:20.082571+00:00"
     },
     {
       "slug": "literary-scavenger-hunt-nyc",
@@ -6407,7 +6462,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:30.851899+00:00"
     },
     {
       "slug": "literary-mystery-walk-nyc",
@@ -6429,7 +6485,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:46.532809+00:00"
     },
     {
       "slug": "street-art-walking-tour-nyc",
@@ -6451,7 +6508,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:48:55.766466+00:00"
     },
     {
       "slug": "street-art-scavenger-hunt-nyc",
@@ -6495,7 +6553,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:53:30.301799+00:00"
     },
     {
       "slug": "underground-walking-tour-nyc",
@@ -6517,7 +6576,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:53:46.361126+00:00"
     },
     {
       "slug": "underground-scavenger-hunt-nyc",
@@ -6539,7 +6599,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:53:57.401439+00:00"
     },
     {
       "slug": "underground-mystery-walk-nyc",
@@ -6561,7 +6622,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:54:10.590364+00:00"
     },
     {
       "slug": "prohibition-walking-tour-nyc",
@@ -6583,7 +6645,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:54:22.082233+00:00"
     },
     {
       "slug": "prohibition-scavenger-hunt-nyc",
@@ -6605,7 +6668,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:54:32.068516+00:00"
     },
     {
       "slug": "prohibition-mystery-walk-nyc",
@@ -6627,7 +6691,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:54:42.418903+00:00"
     },
     {
       "slug": "ghost-walking-tour-nyc",
@@ -6649,7 +6714,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:54:53.213111+00:00"
     },
     {
       "slug": "ghost-scavenger-hunt-nyc",
@@ -6671,7 +6737,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:55:05.078913+00:00"
     },
     {
       "slug": "ghost-mystery-walk-nyc",
@@ -6693,7 +6760,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:55:18.129421+00:00"
     },
     {
       "slug": "noir-walking-tour-nyc",
@@ -6715,7 +6783,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:55:33.738644+00:00"
     },
     {
       "slug": "noir-scavenger-hunt-nyc",
@@ -6737,7 +6806,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:55:46.902153+00:00"
     },
     {
       "slug": "noir-mystery-walk-nyc",
@@ -6759,7 +6829,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:55:59.240983+00:00"
     },
     {
       "slug": "music-walking-tour-nyc",
@@ -6781,7 +6852,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:56:09.522569+00:00"
     },
     {
       "slug": "music-scavenger-hunt-nyc",
@@ -6803,7 +6875,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:56:18.949406+00:00"
     },
     {
       "slug": "music-mystery-walk-nyc",
@@ -6825,7 +6898,8 @@
         "urban-legends-nyc",
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:56:27.531027+00:00"
     },
     {
       "slug": "storyhunt-vs-escape-room-nyc",
@@ -6868,7 +6942,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:56:41.790068+00:00"
     },
     {
       "slug": "outdoor-escape-room-vs-bar-crawl-nyc",
@@ -6889,7 +6964,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:56:52.850240+00:00"
     },
     {
       "slug": "interactive-walk-vs-museum-nyc",
@@ -6910,7 +6986,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:02.401144+00:00"
     },
     {
       "slug": "scavenger-hunt-vs-pub-crawl-nyc",
@@ -6931,7 +7008,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:14.208518+00:00"
     },
     {
       "slug": "mystery-walk-vs-escape-room-nyc",
@@ -6952,7 +7030,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:23.365414+00:00"
     },
     {
       "slug": "storyhunt-vs-walking-tour-nyc",
@@ -6973,7 +7052,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:33.320826+00:00"
     },
     {
       "slug": "interactive-adventure-vs-dinner-date-nyc",
@@ -6994,7 +7074,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:42.422369+00:00"
     },
     {
       "slug": "scavenger-hunt-vs-ghost-tour-nyc",
@@ -7015,7 +7096,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:57:51.037721+00:00"
     },
     {
       "slug": "outdoor-adventure-vs-broadway-show-nyc",
@@ -7036,7 +7118,8 @@
         "mystery-walk-nyc",
         "things-to-do-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:58:04.167517+00:00"
     },
     {
       "slug": "best-hidden-places-soho",
@@ -7079,7 +7162,8 @@
         "greenwich-village",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:58:18.892910+00:00"
     },
     {
       "slug": "best-haunted-spots-west-village",
@@ -7100,7 +7184,8 @@
         "west-village",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:58:29.868472+00:00"
     },
     {
       "slug": "best-street-art-bushwick",
@@ -7121,7 +7206,8 @@
         "bushwick",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:58:40.582606+00:00"
     },
     {
       "slug": "best-hidden-spots-central-park",
@@ -7142,7 +7228,8 @@
         "central-park",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:59:41.789177+00:00"
     },
     {
       "slug": "best-history-walks-harlem",
@@ -7163,7 +7250,8 @@
         "harlem",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T18:59:52.707367+00:00"
     },
     {
       "slug": "best-food-spots-chinatown",
@@ -7183,7 +7271,8 @@
         "hidden-places-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:00:04.152621+00:00"
     },
     {
       "slug": "best-art-galleries-chelsea",
@@ -7204,7 +7293,8 @@
         "chelsea",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:00:18.874447+00:00"
     },
     {
       "slug": "best-crime-history-lower-east-side",
@@ -7224,7 +7314,8 @@
         "true-crime-lower-east-side",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:00:28.575356+00:00"
     },
     {
       "slug": "best-nightlife-east-village",
@@ -7244,7 +7335,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:00:42.946592+00:00"
     },
     {
       "slug": "best-literary-spots-west-village",
@@ -7265,7 +7357,8 @@
         "west-village",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:00:54.239054+00:00"
     },
     {
       "slug": "best-architecture-midtown",
@@ -7286,7 +7379,8 @@
         "midtown",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:01:07.143347+00:00"
     },
     {
       "slug": "best-views-dumbo",
@@ -7307,7 +7401,8 @@
         "dumbo",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-07T19:01:24.312512+00:00"
     },
     {
       "slug": "best-music-venues-williamsburg",
