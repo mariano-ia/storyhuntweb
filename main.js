@@ -199,6 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('experience-grid');
     const subtitle = document.getElementById('missions-subtitle');
 
+    // Global experience cache — used by showLangPicker to look up name + starting_point
+    window.__shExperiences = {};
+
     if (grid) {
         fetch(`${API_BASE}/api/public/experiences`)
             .then(res => res.json())
@@ -208,6 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     grid.innerHTML = '<p class="mono" style="text-align:center;color:var(--text-muted);grid-column:1/-1;">STANDBY_MODE // NO_MISSIONS_AVAILABLE</p>';
                     return;
                 }
+
+                // Cache experiences by id so modal can pull name/start/price
+                experiences.forEach(e => { window.__shExperiences[e.id] = e; });
 
                 const published = experiences.filter(e => e.status === 'published').length;
                 const coming = experiences.filter(e => e.status === 'coming_soon').length;
@@ -309,55 +315,200 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // ─── Language Picker (pre-checkout) ─────────────────────────────────────────
-    window.showLangPicker = function(experienceId) {
-        // Remove any existing picker
+    // ─── Language detection (URL > localStorage > navigator) ────────────────
+    function detectLang() {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get('lang');
+        if (urlLang === 'es' || urlLang === 'en') return urlLang;
+        try {
+            const stored = window.localStorage.getItem('storyhunt_lang');
+            if (stored === 'es' || stored === 'en') return stored;
+        } catch {}
+        const browserLang = (navigator.language || '').toLowerCase();
+        return browserLang.startsWith('es') ? 'es' : 'en';
+    }
+
+    function detectPromoFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return (params.get('promo') || '').trim().toUpperCase();
+    }
+
+    // ─── Language Picker / Checkout Modal (mirrors /start React modal) ─────
+    window.showLangPicker = function(experienceId, experienceData) {
         const existing = document.getElementById('lang-picker-overlay');
         if (existing) existing.remove();
 
+        // Fall back to global cache if no explicit data passed (existing onclick handlers
+        // call showLangPicker('${exp.id}') without the data object).
+        const exp = experienceData || (window.__shExperiences && window.__shExperiences[experienceId]) || {};
+
+        let currentLang = detectLang();
+        let showPromo = detectPromoFromUrl() !== '';
+        const initialPromo = detectPromoFromUrl();
+        const expName = exp.name || '';
+        const startingPoint = exp.starting_point || '';
+        const price = exp.price || 0;
+
         const overlay = document.createElement('div');
         overlay.id = 'lang-picker-overlay';
-        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease';
-        overlay.innerHTML = `
-            <div style="background:#0a0a0a;border:1px solid rgba(124,58,237,0.4);border-radius:12px;padding:2.5rem;max-width:360px;width:90%;text-align:center;">
-                <p class="mono" style="color:#7C3AED;font-size:0.75rem;margin-bottom:0.5rem;letter-spacing:2px;">SELECT_LANGUAGE</p>
-                <p class="mono" style="color:rgba(255,255,255,0.5);font-size:0.7rem;margin-bottom:1.5rem;">CHOOSE_YOUR_PREFERRED_LANGUAGE</p>
-                <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                    <button class="mono" onclick="startCheckout('${experienceId}', 'en')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer;">ENGLISH</button>
-                    <button class="mono" onclick="startCheckout('${experienceId}', 'es')" style="display:block;width:100%;padding:0.9rem;font-size:0.8rem;font-weight:700;letter-spacing:2px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:6px;cursor:pointer;">ESPANOL</button>
+        overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn 0.2s ease';
+
+        function copyFor(lang) {
+            return lang === 'es'
+                ? {
+                    eyebrow: 'ESTÁS POR DESBLOQUEAR',
+                    intro: 'Una vez que pagues, podés <strong style="color:#fff;">jugar ahora o guardar el link para tu viaje</strong>. Tu reloj de 30 días arranca cuando toques “Start hunt” en el punto de partida — no cuando pagás.',
+                    startPointLabel: 'PUNTO_DE_INICIO',
+                    cta: 'Continuar al pago',
+                    ctaHint: '→ Pago seguro vía Stripe',
+                    emailLabel: 'Email (opcional)',
+                    emailHint: 'Para enviarte el link de acceso',
+                    emailPlaceholder: 'tu@email.com',
+                    promoToggle: '¿Tenés un código promo?',
+                    promoPlaceholder: 'CODIGO',
+                    priceFooter: 'por grupo · paga 1 vez, jugás cuando quieras',
+                    loading: 'PROCESANDO...',
+                  }
+                : {
+                    eyebrow: "YOU'RE ABOUT TO UNLOCK",
+                    intro: 'After payment, you can <strong style="color:#fff;">play now or save the link for your trip</strong>. Your 30-day clock starts when you tap “Start hunt” at the meeting point — not when you pay.',
+                    startPointLabel: 'MEET_POINT',
+                    cta: 'Continue to checkout',
+                    ctaHint: '→ Secure payment via Stripe',
+                    emailLabel: 'Email (optional)',
+                    emailHint: 'To send you your access link',
+                    emailPlaceholder: 'you@email.com',
+                    promoToggle: 'Have a promo code?',
+                    promoPlaceholder: 'CODE',
+                    priceFooter: 'per group · pay once, play whenever',
+                    loading: 'PROCESSING...',
+                  };
+        }
+
+        function render() {
+            const t = copyFor(currentLang);
+            overlay.innerHTML = `
+                <div style="position:relative;width:100%;max-width:420px;background:#0A0A0A;border:1px solid rgba(255,0,51,0.3);border-radius:16px;padding:24px 24px 20px;max-height:92vh;overflow-y:auto;font-family:'Space Mono',monospace;box-sizing:border-box;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                        <div style="display:inline-flex;background:rgba(255,255,255,0.05);border-radius:999px;padding:3px;border:1px solid rgba(255,255,255,0.08);">
+                            <button data-lang="en" style="padding:5px 14px;background:${currentLang==='en'?'#ff0033':'transparent'};border:none;border-radius:999px;color:${currentLang==='en'?'#fff':'#94A3B8'};font-family:inherit;font-size:11px;font-weight:700;letter-spacing:0.08em;cursor:pointer;">EN</button>
+                            <button data-lang="es" style="padding:5px 14px;background:${currentLang==='es'?'#ff0033':'transparent'};border:none;border-radius:999px;color:${currentLang==='es'?'#fff':'#94A3B8'};font-family:inherit;font-size:11px;font-weight:700;letter-spacing:0.08em;cursor:pointer;">ES</button>
+                        </div>
+                        <button id="lp-close" style="background:none;border:none;color:#4B5563;cursor:pointer;padding:4px;font-size:20px;line-height:1;">×</button>
+                    </div>
+
+                    <p style="font-family:inherit;font-size:10px;color:#00d2ff;letter-spacing:0.15em;margin:0 0 6px;">${t.eyebrow}</p>
+                    <h2 style="font-family:inherit;font-size:18px;color:#fff;margin:0 0 14px;text-transform:uppercase;letter-spacing:0.01em;line-height:1.25;">${expName}</h2>
+
+                    <p style="font-family:'Inter',sans-serif;font-size:13px;color:#94A3B8;line-height:1.6;margin:0 0 14px;">${t.intro}</p>
+
+                    ${startingPoint ? `
+                    <div style="padding:10px 12px;background:rgba(255,0,51,0.06);border:1px solid rgba(255,0,51,0.2);border-radius:8px;margin-bottom:16px;">
+                        <div style="font-family:inherit;font-size:9px;color:#ff0033;letter-spacing:0.12em;margin-bottom:3px;">${t.startPointLabel}</div>
+                        <div style="font-family:'Inter',sans-serif;font-size:13px;color:#fff;font-weight:500;">${startingPoint}</div>
+                    </div>
+                    ` : ''}
+
+                    <label style="display:block;font-family:inherit;font-size:11px;color:#94A3B8;letter-spacing:0.05em;margin-bottom:4px;">${t.emailLabel} <span style="color:#4B5563;font-weight:400;">— ${t.emailHint}</span></label>
+                    <input id="lp-email" type="email" inputmode="email" autocomplete="email" placeholder="${t.emailPlaceholder}" style="width:100%;padding:11px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,210,255,0.2);border-radius:8px;color:#fff;font-family:'Inter',sans-serif;font-size:14px;outline:none;margin-bottom:14px;box-sizing:border-box;" />
+
+                    <button id="lp-cta" style="width:100%;padding:14px 24px;background:#ff0033;border:none;border-radius:10px;color:#fff;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:0.05em;cursor:pointer;min-height:50px;margin-bottom:6px;">${t.cta} →</button>
+                    <p style="font-family:inherit;font-size:10px;color:#4B5563;text-align:center;margin:0 0 12px;letter-spacing:0.05em;">${t.ctaHint}</p>
+
+                    <div style="margin-bottom:14px;">
+                        ${showPromo
+                            ? `<input id="lp-promo" type="text" placeholder="${t.promoPlaceholder}" value="${initialPromo}" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-family:inherit;font-size:13px;text-align:center;text-transform:uppercase;letter-spacing:0.1em;outline:none;box-sizing:border-box;" />`
+                            : `<button id="lp-promo-toggle" style="background:transparent;border:none;color:#94A3B8;font-family:inherit;font-size:11px;letter-spacing:0.05em;cursor:pointer;padding:0;">▸ ${t.promoToggle}</button>`
+                        }
+                    </div>
+
+                    <div style="padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);text-align:center;font-family:inherit;font-size:11px;color:#64748B;letter-spacing:0.04em;">
+                        <span style="color:#ff0033;font-size:16px;font-weight:700;margin-right:6px;">$${price.toFixed(2)}</span>${t.priceFooter}
+                    </div>
+                    <p id="lp-error" style="display:none;margin-top:12px;font-family:inherit;font-size:12px;color:#ff0033;text-align:center;"></p>
                 </div>
-                <div style="margin-top:1.2rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;">
-                    <input id="promo-code-input" type="text" placeholder="PROMO_CODE" class="mono" style="width:100%;padding:0.6rem;font-size:0.7rem;letter-spacing:2px;background:rgba(255,255,255,0.05);color:#fff;border:1px solid rgba(255,255,255,0.15);border-radius:4px;text-align:center;text-transform:uppercase;" />
-                </div>
-                <button class="mono" onclick="document.getElementById('lang-picker-overlay').remove()" style="background:none;border:none;color:rgba(255,255,255,0.3);margin-top:1rem;cursor:pointer;font-size:0.7rem;">CANCEL</button>
-            </div>
-        `;
+            `;
+
+            // Wire interactions
+            overlay.querySelector('#lp-close').addEventListener('click', () => overlay.remove());
+            overlay.querySelectorAll('[data-lang]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentLang = btn.getAttribute('data-lang');
+                    render();
+                });
+            });
+            const promoToggle = overlay.querySelector('#lp-promo-toggle');
+            if (promoToggle) {
+                promoToggle.addEventListener('click', () => { showPromo = true; render(); });
+            }
+            overlay.querySelector('#lp-cta').addEventListener('click', () => doCheckout(experienceId));
+        }
+
+        async function doCheckout(expId) {
+            const t = copyFor(currentLang);
+            const cta = overlay.querySelector('#lp-cta');
+            const error = overlay.querySelector('#lp-error');
+            const email = (overlay.querySelector('#lp-email') || {}).value || '';
+            const promo = (overlay.querySelector('#lp-promo') || {}).value || initialPromo;
+            cta.disabled = true;
+            cta.textContent = t.loading;
+            error.style.display = 'none';
+            try { window.localStorage.setItem('storyhunt_lang', currentLang); } catch {}
+
+            try {
+                const body = { experience_id: expId, lang: currentLang };
+                if (promo.trim()) body.coupon_code = promo.trim().toUpperCase();
+                if (email.trim()) body.email = email.trim();
+
+                const res = await fetch(`${API_BASE}/api/checkout`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body),
+                });
+                const data = await res.json();
+                if (data.url) {
+                    if (window.posthog && window.posthog.capture) {
+                        window.posthog.capture('add_payment_info', { content_ids: [expId], value: price, currency: 'USD' });
+                    }
+                    window.location.href = data.url;
+                } else {
+                    error.textContent = data.error || 'Error creating checkout session';
+                    error.style.display = 'block';
+                    cta.disabled = false;
+                    cta.textContent = t.cta + ' →';
+                }
+            } catch (err) {
+                console.error('Checkout error:', err);
+                error.textContent = 'Connection error. Please try again.';
+                error.style.display = 'block';
+                cta.disabled = false;
+                cta.textContent = t.cta + ' →';
+            }
+        }
+
+        render();
         overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
         document.body.appendChild(overlay);
+
+        // Fire InitiateCheckout
+        if (window.posthog && window.posthog.capture) {
+            window.posthog.capture('begin_checkout', { content_ids: [experienceId], value: price, currency: 'USD' });
+        }
     };
 
-    // ─── Stripe Checkout ──────────────────────────────────────────────────────
+    // Backwards-compat shim — old onclick handlers may still call startCheckout(id, lang)
     window.startCheckout = async function(experienceId, lang) {
-        // Read promo code before closing picker
-        const promoInput = document.getElementById('promo-code-input');
-        const couponCode = promoInput ? promoInput.value.trim().toUpperCase() : '';
-        // Close lang picker
-        const picker = document.getElementById('lang-picker-overlay');
-        if (picker) picker.remove();
+        try { window.localStorage.setItem('storyhunt_lang', lang); } catch {}
         try {
             const body = { experience_id: experienceId, lang: lang };
-            if (couponCode) body.coupon_code = couponCode;
             const res = await fetch(`${API_BASE}/api/checkout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body),
             });
             const data = await res.json();
-            if (data.url) {
-                window.location.href = data.url;
-            } else {
-                alert(data.error || 'Error creating checkout session');
-            }
+            if (data.url) window.location.href = data.url;
+            else alert(data.error || 'Error creating checkout session');
         } catch (err) {
             console.error('Checkout error:', err);
             alert('Connection error. Please try again.');
