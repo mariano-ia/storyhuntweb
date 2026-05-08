@@ -5237,7 +5237,8 @@
       "related_slugs": [
         "mystery-walk-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:00:15.794059+00:00"
     },
     {
       "slug": "date-ideas-nyc-spring",
@@ -5618,7 +5619,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:00:30.327322+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-halloween",
@@ -5723,7 +5725,8 @@
       "related_slugs": [
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:00:42.479894+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc-christmas",
@@ -6095,7 +6098,8 @@
         "movie-locations-nyc",
         "walking-tour-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:00:53.484526+00:00"
     },
     {
       "slug": "history-scavenger-hunt-nyc",
@@ -6531,7 +6535,8 @@
         "secret-spots-nyc",
         "scavenger-hunt-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:01:05.481360+00:00"
     },
     {
       "slug": "street-art-mystery-walk-nyc",
@@ -7423,7 +7428,8 @@
         "williamsburg",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:01:18.378873+00:00"
     },
     {
       "slug": "best-mob-spots-little-italy",
@@ -7443,7 +7449,8 @@
         "mob-history-little-italy",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:01:33.381332+00:00"
     },
     {
       "slug": "best-underground-spots-nyc",
@@ -7463,7 +7470,8 @@
         "underground-tunnels-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:01:46.093077+00:00"
     },
     {
       "slug": "best-date-spots-nyc",
@@ -7483,7 +7491,8 @@
         "speakeasies-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:01:58.945745+00:00"
     },
     {
       "slug": "best-secret-spots-brooklyn",
@@ -7504,7 +7513,8 @@
         "dumbo",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:02:10.877114+00:00"
     },
     {
       "slug": "best-weird-places-nyc",
@@ -7524,7 +7534,8 @@
         "weird-places-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:02:23.973032+00:00"
     },
     {
       "slug": "best-ghost-stories-nyc",
@@ -7544,7 +7555,8 @@
         "haunted-places-nyc",
         "hidden-places-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:02:36.869838+00:00"
     },
     {
       "slug": "scavenger-hunt-nyc",
@@ -7785,7 +7797,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:02:48.780842+00:00"
     },
     {
       "slug": "unique-experiences-nyc",
@@ -7806,7 +7819,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:03:04.708802+00:00"
     },
     {
       "slug": "adventure-activities-nyc",
@@ -7827,7 +7841,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:03:17.618834+00:00"
     },
     {
       "slug": "romantic-things-to-do-nyc",
@@ -7848,7 +7863,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:03:30.243439+00:00"
     },
     {
       "slug": "cheap-things-to-do-nyc",
@@ -7869,7 +7885,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:03:42.624991+00:00"
     },
     {
       "slug": "free-things-to-do-nyc",
@@ -7890,7 +7907,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:03:54.198716+00:00"
     },
     {
       "slug": "unusual-things-to-do-nyc",
@@ -7911,7 +7929,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:04:04.890475+00:00"
     },
     {
       "slug": "outdoor-activities-nyc",
@@ -7932,7 +7951,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:04:17.954783+00:00"
     },
     {
       "slug": "rainy-day-activities-nyc",
@@ -7953,7 +7973,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:04:29.834390+00:00"
     },
     {
       "slug": "group-activities-nyc",
@@ -7974,7 +7995,8 @@
         "mysteries-in-nyc",
         "secret-spots-nyc"
       ],
-      "status": "pending"
+      "status": "published",
+      "generated_at": "2026-05-08T14:04:40.896921+00:00"
     }
   ]
 }
