@@ -216,10 +216,55 @@ body {{ background: #000; width: 1080px; height: 1080px; overflow: hidden; }}
 </body></html>"""
 
 
+def build_howitworks_html(post):
+    """Build HOW_IT_WORKS template — solid black bg, cyan tag, headline + subtext."""
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+body {{ background: #000; width: 1080px; height: 1080px; overflow: hidden; }}
+.post {{ width: 1080px; height: 1080px; position: relative; overflow: hidden; background: #000; font-family: 'Inter', sans-serif; }}
+.content {{ position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 64px; }}
+.header {{ display: flex; justify-content: space-between; align-items: flex-start; }}
+.tag {{ font-family: 'Space Mono', monospace; font-size: 26px; color: #050505; background: #00d2ff; padding: 12px 24px; font-weight: 700; letter-spacing: 0.1em; }}
+.logo {{ font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }}
+.logo span {{ color: #ff0033; }}
+.middle {{ display: flex; flex-direction: column; gap: 32px; }}
+.headline {{ font-size: 96px; font-weight: 900; color: #fff; line-height: 1.05; max-width: 950px; letter-spacing: -0.02em; }}
+.headline .em {{ color: #00d2ff; }}
+.divider {{ width: 100px; height: 4px; background: #00d2ff; }}
+.subtext {{ font-size: 36px; color: rgba(255,255,255,0.85); line-height: 1.4; max-width: 900px; }}
+.bottom-bar {{ display: flex; justify-content: space-between; align-items: flex-end; }}
+.cta {{ font-family: 'Space Mono', monospace; font-size: 26px; color: #00d2ff; letter-spacing: 0.1em; font-weight: 700; border: 2px solid #00d2ff; padding: 16px 30px; }}
+.url {{ font-family: 'Space Mono', monospace; font-size: 22px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }}
+</style></head>
+<body>
+<div class="post">
+    <div class="content">
+        <div class="header">
+            <div class="tag">HOW IT WORKS</div>
+            <div class="logo">STORY<span>HUNT</span></div>
+        </div>
+        <div class="middle">
+            <div class="headline">{post['headline']}</div>
+            <div class="divider"></div>
+            <div class="subtext">{post['subtext']}</div>
+        </div>
+        <div class="bottom-bar">
+            <div class="cta">DECODE_THE_CITY →</div>
+            <div class="url">storyhunt.city</div>
+        </div>
+    </div>
+</div>
+</body></html>"""
+
+
 BUILDERS = {
     "mystery": build_mystery_html,
     "data": build_data_html,
     "quote": build_quote_html,
+    "howitworks": build_howitworks_html,
 }
 
 
