@@ -467,9 +467,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const data = await res.json();
                 if (data.url) {
+                    // Fire add_payment_info with send_instantly so PostHog flushes before
+                    // navigation steals the page. 300ms wait covers fbq/gtag if loaded.
                     if (window.posthog && window.posthog.capture) {
-                        window.posthog.capture('add_payment_info', { content_ids: [expId], value: price, currency: 'USD' });
+                        window.posthog.capture('add_payment_info', { content_ids: [expId], value: price, currency: 'USD' }, { send_instantly: true });
                     }
+                    await new Promise(r => setTimeout(r, 300));
                     window.location.href = data.url;
                 } else {
                     error.textContent = data.error || 'Error creating checkout session';
