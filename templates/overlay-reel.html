@@ -8,13 +8,13 @@ html, body { width: 1080px; height: 1920px; margin: 0; padding: 0; overflow: hid
 .vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%); }
 .darken { position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
 .top-fade { position: absolute; left: 0; right: 0; top: 0; height: 220px; background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%); }
-.content { position: relative; z-index: 3; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 80px 56px 180px 56px; }
+.content { position: relative; z-index: 3; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; padding: 80px 56px 180px 56px; }
 .top { display: flex; justify-content: space-between; align-items: center; }
 .status { font-family: 'Space Mono', monospace; font-size: 18px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
 .dot { width: 12px; height: 12px; background: #ff0033; border-radius: 50%; box-shadow: 0 0 12px #ff0033; }
 .logo { font-family: 'Space Mono', monospace; font-size: 18px; font-weight: 700; color: #fff; letter-spacing: 0.1em; }
 .logo span { color: #ff0033; }
-.middle { display: flex; flex-direction: column; gap: 28px; }
+.middle { display: flex; flex-direction: column; gap: 28px; margin-top: 80px; text-align: left; }
 .location { font-family: 'Space Mono', monospace; font-size: 22px; color: #00d2ff; letter-spacing: 0.15em; }
 .headline { font-size: 96px; font-weight: 900; color: #fff; line-height: 1.05; text-shadow: 4px 0 #ff0033, -4px 0 #00d2ff; }
 .subtext { font-size: 38px; color: rgba(255,255,255,0.75); line-height: 1.35; max-width: 950px; }
