@@ -512,7 +512,9 @@
       "subtext": "112 Prince Street has fooled SoHo for 50 years. The trompe-l'œil that became part of NYC mythology.",
       "bg_image": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1080",
       "image_file": "assets/posts/2026-05-11-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-11",
+      "post_id": "18111608653858113"
     },
     {
       "date": "2026-05-11",
@@ -526,7 +528,9 @@
       "subtext": "Your phone gets a clue. You walk to where it points. Two hours of mystery. No tour. No bus. Just NYC.",
       "bg_image": "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=1080",
       "image_file": "assets/posts/2026-05-11-pm-howitworks.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-11",
+      "post_id": "17893570455463751"
     },
     {
       "date": "2026-05-12",
