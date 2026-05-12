@@ -545,7 +545,9 @@
       "fact_text": "488 Broadway housed the world's <span class='highlight'>first commercial elevator</span>. Earlier than the Statue of Liberty.",
       "terminal_line": "$ storyhunt --query=\"haughwout\" --year=1857",
       "image_file": "assets/posts/2026-05-12-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-12",
+      "post_id": "18127824367520464"
     },
     {
       "date": "2026-05-12",
@@ -559,7 +561,9 @@
       "subtext": "Field report from a SoHo hunter. The clue wasn't on a plaque — it was the building itself.",
       "bg_image": "https://images.unsplash.com/photo-1506804900235-e9e81616d9c2?w=1080",
       "image_file": "assets/posts/2026-05-12-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-12",
+      "post_id": "17947508342997706"
     },
     {
       "date": "2026-05-13",
