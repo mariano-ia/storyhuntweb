@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { role: 'narrator', text: "Did you know 21 elephants once walked across the Brooklyn Bridge?" },
             { role: 'user', text: "wait, elephants??" },
             { role: 'narrator', text: "1883 opening day. P.T. Barnum led them to prove it wouldn't collapse. You're standing on the same stones." },
+            { role: 'narrator', text: "That's the safe version. The real one waits on the other side." },
         ],
     ];
 
