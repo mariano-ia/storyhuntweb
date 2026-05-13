@@ -577,7 +577,9 @@
       "subtext": "Cortlandt Alley. Two blocks. The set for 90% of fictional NYC crimes. Most New Yorkers have never walked it.",
       "bg_image": "https://images.unsplash.com/photo-1524168948265-9be8bcaf784c?w=1080",
       "image_file": "assets/posts/2026-05-13-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-13",
+      "post_id": "18356092081229972"
     },
     {
       "date": "2026-05-13",
@@ -591,7 +593,9 @@
       "subtext": "Greene Street's cast-iron buildings were built to look like stone. The whole block is industrial trompe-l'œil.",
       "bg_image": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1080",
       "image_file": "assets/posts/2026-05-13-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-13",
+      "post_id": "17966384970101731"
     },
     {
       "date": "2026-05-14",
