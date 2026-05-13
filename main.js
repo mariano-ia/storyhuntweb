@@ -32,27 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ─── Chat Demo Animation (Hero + HOW_IT_WORKS) ─────────────────────────────
+    // Matches /start landing's hero exchange so both surfaces tell the same hook.
+    // Anchor hook: 21 elephants crossing the Brooklyn Bridge on opening week — a
+    // real, verifiable, NYC-only fact that frames the product as "the city is
+    // weirder than you think, and the narrator knows the weird parts".
     const chatConversations = [
         [
-            { role: 'narrator', text: "Look up. The ceiling above you holds a secret most people walk right past." },
-            { role: 'user', text: "The constellation mural on the ceiling?" },
-            { role: 'narrator', text: "Yes. But did you notice? The stars are painted backwards. A deliberate mistake... or a message?" },
-            { role: 'user', text: "Wait, backwards? Like a mirror?" },
-            { role: 'narrator', text: "Exactly. Now find the one constellation that IS correct. That's your next clue." },
-        ],
-        [
-            { role: 'narrator', text: "You're standing where a man jumped to his death in 1886. Except... he didn't die." },
-            { role: 'user', text: "What happened to him?" },
-            { role: 'narrator', text: "He survived. And what he built next changed this city forever. Look at the plaque on your left." },
-            { role: 'user', text: "I see it! Washington Roebling?" },
-            { role: 'narrator', text: "The man who built the bridge from his bedroom window. Now cross it. Your next clue is waiting on the other side." },
-        ],
-        [
-            { role: 'narrator', text: "There's a door behind you. Most people think it's a janitor's closet." },
-            { role: 'user', text: "I see a small green door with no sign" },
-            { role: 'narrator', text: "That's the one. In 1924, this was the entrance to a speakeasy run by a woman known only as 'The Duchess'." },
-            { role: 'user', text: "No way. Can I open it?" },
-            { role: 'narrator', text: "Try knocking three times. Slowly." },
+            { role: 'narrator', text: "Did you know 21 elephants once walked across the Brooklyn Bridge?" },
+            { role: 'user', text: "wait, elephants??" },
+            { role: 'narrator', text: "1883 opening day. P.T. Barnum led them to prove it wouldn't collapse. You're standing on the same stones." },
         ],
     ];
 
