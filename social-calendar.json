@@ -610,7 +610,9 @@
       "fact_text": "Old St. Patrick's hides <span class='highlight'>catacombs</span> on Mulberry St. Open by appointment only.",
       "terminal_line": "$ storyhunt --scan=\"mulberry_st\" --depth=\"basement\"",
       "image_file": "assets/posts/2026-05-14-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-14",
+      "post_id": "17892090300494893"
     },
     {
       "date": "2026-05-14",
@@ -624,7 +626,9 @@
       "subtext": "Open the link in your inbox. The chat starts. The city becomes the puzzle. Nothing to download.",
       "bg_image": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1080",
       "image_file": "assets/posts/2026-05-14-pm-howitworks.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-14",
+      "post_id": "18118316047684194"
     },
     {
       "date": "2026-05-15",
