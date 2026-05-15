@@ -642,7 +642,9 @@
       "subtext": "Lt. Petrosino fought NYC's first mafia from Mulberry St. Killed in Sicily, 1909. The square bears his name.",
       "bg_image": "https://images.unsplash.com/photo-1506804900235-e9e81616d9c2?w=1080",
       "image_file": "assets/posts/2026-05-15-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-15",
+      "post_id": "17874546636664899"
     },
     {
       "date": "2026-05-15",
@@ -656,7 +658,9 @@
       "subtext": "While SoHo poses for the camera, you're solving something. Two hours. Self-paced. Real city behind the storefronts.",
       "bg_image": "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1080",
       "image_file": "assets/posts/2026-05-15-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-15",
+      "post_id": "18055111301738346"
     },
     {
       "date": "2026-05-18",
