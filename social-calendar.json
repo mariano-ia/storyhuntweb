@@ -674,7 +674,9 @@
       "subtext": "Doyers Street earned its name: bloodiest mile in NYC during the Tong wars. Today it looks like a cute alley. It isn't.",
       "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1080",
       "image_file": "assets/posts/2026-05-18-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-18",
+      "post_id": "18355580389242787"
     },
     {
       "date": "2026-05-18",
@@ -688,7 +690,9 @@
       "subtext": "Pause when you want a coffee. Resume when you're ready. The chat waits. NYC isn't going anywhere.",
       "bg_image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=1080",
       "image_file": "assets/posts/2026-05-18-pm-howitworks.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-18",
+      "post_id": "18103207750792319"
     },
     {
       "date": "2026-05-19",
