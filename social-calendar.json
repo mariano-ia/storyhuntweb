@@ -707,7 +707,9 @@
       "fact_text": "97 Orchard Street housed <span class='highlight'>7,000 immigrants</span> between 1863 and 1935. Now the Tenement Museum.",
       "terminal_line": "$ storyhunt --address=\"97_orchard\" --years=\"1863-1935\"",
       "image_file": "assets/posts/2026-05-19-am-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-19",
+      "post_id": "18011866892890119"
     },
     {
       "date": "2026-05-19",
@@ -721,7 +723,9 @@
       "subtext": "Mosco Street used to be Bandit's Roost — Jacob Riis photographed it. The clue points to where the photo was taken.",
       "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1080",
       "image_file": "assets/posts/2026-05-19-pm-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-19",
+      "post_id": "17890579548473531"
     },
     {
       "date": "2026-05-20",
