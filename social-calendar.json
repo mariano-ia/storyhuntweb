@@ -739,7 +739,9 @@
       "subtext": "Eldridge Street Synagogue's stained glass was sealed in 1955. Rediscovered by accident in 1986. Restored by 2007.",
       "bg_image": "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=1080",
       "image_file": "assets/posts/2026-05-20-am-mystery.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-20",
+      "post_id": "18097805135325076"
     },
     {
       "date": "2026-05-20",
@@ -754,7 +756,9 @@
       "fact_text": "McSorley's Old Ale House (E 7th) served <span class='highlight'>Lincoln, Lennon, Hendrix</span>. Same wood floor.",
       "terminal_line": "$ storyhunt --bar=\"mcsorleys\" --since=1854",
       "image_file": "assets/posts/2026-05-20-pm-data.png",
-      "status": "pending"
+      "status": "published",
+      "published_date": "2026-05-20",
+      "post_id": "17945037945014679"
     },
     {
       "date": "2026-05-21",
