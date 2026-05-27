@@ -322,6 +322,44 @@ document.addEventListener('DOMContentLoaded', () => {
         return (params.get('promo') || '').trim().toUpperCase();
     }
 
+    // ─── Campaign attribution (newsletter / UTM) ───────────────────────────
+    // Capture utm_* from the landing URL and persist (last-touch) so it survives
+    // the browse → modal → Stripe flow, then ride along in the /api/checkout body.
+    // Backend stores it on the sale (fulfillment.ts → sales.utm_source).
+    // MIRRORED in StoryHuntABM /start page.tsx (dual-surface rule) — keep in sync.
+    function captureAttribution() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const utm_source = params.get('utm_source');
+            if (!utm_source) return; // only (re)write when a campaign param arrives
+            window.localStorage.setItem('sh_attribution', JSON.stringify({
+                utm_source,
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                referrer: document.referrer || '',
+            }));
+        } catch (e) { /* localStorage unavailable */ }
+    }
+
+    function getAttribution() {
+        try {
+            const raw = window.localStorage.getItem('sh_attribution');
+            if (raw) return JSON.parse(raw);
+        } catch (e) { /* ignore */ }
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const utm_source = params.get('utm_source');
+            if (utm_source) return {
+                utm_source,
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                referrer: document.referrer || '',
+            };
+        } catch (e) { /* ignore */ }
+        return null;
+    }
+    captureAttribution(); // persist newsletter/UTM on landing for later checkout
+
     // ─── Language Picker / Checkout Modal (mirrors /start React modal) ─────
     window.showLangPicker = function(experienceId, experienceData) {
         const existing = document.getElementById('lang-picker-overlay');
@@ -448,6 +486,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const body = { experience_id: expId, lang: currentLang };
                 if (promo.trim()) body.coupon_code = promo.trim().toUpperCase();
                 if (email.trim()) body.email = email.trim();
+                const attr = getAttribution();
+                if (attr && attr.utm_source) {
+                    body.utm_source = attr.utm_source;
+                    if (attr.utm_medium) body.utm_medium = attr.utm_medium;
+                    if (attr.utm_campaign) body.utm_campaign = attr.utm_campaign;
+                    if (attr.referrer) body.referrer = attr.referrer;
+                }
 
                 const res = await fetch(`${API_BASE}/api/checkout`, {
                     method: 'POST',
@@ -493,6 +538,13 @@ document.addEventListener('DOMContentLoaded', () => {
         try { window.localStorage.setItem('storyhunt_lang', lang); } catch {}
         try {
             const body = { experience_id: experienceId, lang: lang };
+            const attr = getAttribution();
+            if (attr && attr.utm_source) {
+                body.utm_source = attr.utm_source;
+                if (attr.utm_medium) body.utm_medium = attr.utm_medium;
+                if (attr.utm_campaign) body.utm_campaign = attr.utm_campaign;
+                if (attr.referrer) body.referrer = attr.referrer;
+            }
             const res = await fetch(`${API_BASE}/api/checkout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
