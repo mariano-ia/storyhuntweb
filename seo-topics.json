@@ -1,8 +1,8 @@
 {
   "description": "NYC SEO topics bank for StoryHunt programmatic content. Each day, the cron agent picks the next 'pending' topic, generates a page, and marks it 'published'.",
   "topics": [
-    { "slug": "rooftop-bars-nyc", "title": "Secret Rooftop Bars in NYC", "angle": "Hidden rooftop bars with views most tourists never find", "status": "pending" },
-    { "slug": "chinatown-secrets", "title": "Chinatown's Hidden World", "angle": "Underground malls, secret temples, and dim sum history", "status": "pending" },
+    { "slug": "rooftop-bars-nyc", "title": "Secret Rooftop Bars in NYC", "angle": "Hidden rooftop bars with views most tourists never find", "status": "published", "published_date": "2026-10-03" },
+    { "slug": "chinatown-secrets", "title": "Chinatown's Hidden World", "angle": "Underground malls, secret temples, and dim sum history", "status": "published", "published_date": "2026-10-03" },
     { "slug": "prohibition-history-nyc", "title": "Prohibition Era NYC", "angle": "The bootleggers, the raids, and the bars that survived", "status": "pending" },
     { "slug": "street-food-nyc", "title": "NYC Street Food Secrets", "angle": "Cart culture, hidden food spots, and the vendors behind the icons", "status": "pending" },
     { "slug": "jazz-clubs-harlem", "title": "Jazz Clubs of Harlem", "angle": "From the Cotton Club to today's hidden jam sessions", "status": "pending" },
